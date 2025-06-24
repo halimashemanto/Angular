@@ -29,4 +29,20 @@ constructor(private studentService : StudentService,
   }
 
 
+   deleteStudent(id: string): void {
+    this.studentService.deleteStudent(id).subscribe({
+      next: () => {
+
+        console.log("Student deleted");
+        this.loadAllStudent();
+        this.cdr.reattach();
+      },
+      error: (err) => {
+        console.log('Error deleting student:', err);
+      }
+    });
+  }
+
+
+
 }

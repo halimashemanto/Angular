@@ -1,36 +1,22 @@
 {
-"students": [
-{
-"id": 1,
-"name": "Suprova",
-"email": "suprova@gmail.com",
-"contactNo": "018763678291"
-
-},
-{
-"id": 2,
-"name": "Simki",
-"email": "simki@gmail.com",
-"contactNo": "01498297229797"
-},
-{
-    "id": 3,
-"name": "Shemanto",
-"email": "shemanto@gmail.com",
-"contactNo": "018763678291"
-},
-{
-"id": 4,
-"name": "Suhaib",
-"email": "suhaib@gmail.com",
-"contactNo": "018763678291"
-},
-{
-"id": 5,
-"name": "Suprova",
-"email": "suprova@gmail.com",
-"contactNo": "018763678291"
+  "students": [
+    {
+      "id": "1",
+      "name": "Suprova",
+      "email": "suprova@gmail.com",
+      "contactNo": "018763678291"
+    },
+    {
+      "id": "2",
+      "name": "Simki",
+      "email": "simki@gmail.com",
+      "contactNo": "01498297229797"
+    },
+    {
+      "id": "ab1e",
+      "name": "shawon",
+      "email": "hgcf@gmail.com",
+      "contactNo": "756464"
+    }
+  ]
 }
-]
-}
-

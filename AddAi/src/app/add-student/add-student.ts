@@ -37,7 +37,7 @@ export class AddStudent implements OnInit {
       next: (res) => {
         console.log("Saved Student", res);
         this.fromGroup.reset();
-        this.router.navigate(['/allstu']);
+        this.router.navigate(['/viewstu']);
 
       },
 

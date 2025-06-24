@@ -3,18 +3,20 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { ViewAllStudent } from './view-all-student/view-all-student';
-import { AddStudent } from './add-student/add-student';
-import { Home } from './home/home';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { Home } from './home/home';
+import { ViewAllDoctor } from './view-all-doctor/view-all-doctor';
+import { AddDoctor } from './add-doctor/add-doctor';
+import { EnterProcess } from './enter-process/enter-process';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     App,
-    ViewAllStudent,
-    AddStudent,
-    Home
+    Home,
+    ViewAllDoctor,
+    AddDoctor,
+    EnterProcess
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,8 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
     provideHttpClient(
       withFetch()
     )
+    
+  
   ],
   bootstrap: [App]
 })

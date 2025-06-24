@@ -10,7 +10,7 @@ export class StudentService {
 
   baseUrl: string = "http://localhost:3000/students";
 
-  constructor(private http: HttpClient) { }
+  constructor(private http:HttpClient) { }
 
   getAllStudent(): Observable<any> {
 
