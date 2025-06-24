@@ -8,17 +8,31 @@ import { StudentModel } from '../model/student/StudentModel';
 })
 export class StudentService {
 
-  baseUrl ="http://localhost:3000/students";
+  baseUrl: string = "http://localhost:3000/students";
 
-  constructor(private http: HttpClient){
+  constructor(private http: HttpClient) { }
 
-    getAllStudent(): Observable<any>
-    
-      return this.http.get(this.baseUrl);
+  getAllStudent(): Observable<any> {
 
-
-    
+    return this.http.get(this.baseUrl);
 
   }
+
+  saveStudent(student: StudentModel): Observable<any> {
+
+    return this.http.post(this.baseUrl, student);
+
+  }
+
+  deleteStudent(id: string): Observable<any> {
+    return this.http.delete(this.baseUrl + "/" + id);
+  }
+
+
+
+
+
+
+
 
 }

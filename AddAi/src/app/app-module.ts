@@ -6,6 +6,7 @@ import { App } from './app';
 import { ViewAllStudent } from './view-all-student/view-all-student';
 import { AddStudent } from './add-student/add-student';
 import { Home } from './home/home';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { Home } from './home/home';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
