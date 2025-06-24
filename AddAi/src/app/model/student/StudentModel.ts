@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ]
 })
-export class StudentModelModule { 
+export class StudentModel { 
 
   id !: number;
   name !: string;

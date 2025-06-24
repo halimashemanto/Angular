@@ -3,16 +3,18 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { ViewAllStudent } from './view-all-student/view-all-student';
-import { AddStudent } from './add-student/add-student';
-import { Home } from './home/home';
+import { HomeComponent } from './home-component/home-component';
+import { AllEmployee } from './all-employee/all-employee';
+import { UpdateEmployee } from './update-employee/update-employee';
+import { ViewAllEmployee } from './view-all-employee/view-all-employee';
 
 @NgModule({
   declarations: [
     App,
-    ViewAllStudent,
-    AddStudent,
-    Home
+    HomeComponent,
+    AllEmployee,
+    UpdateEmployee,
+    ViewAllEmployee
   ],
   imports: [
     BrowserModule,

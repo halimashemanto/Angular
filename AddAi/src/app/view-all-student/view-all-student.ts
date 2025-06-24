@@ -15,13 +15,8 @@ constructor(private studentService : StudentService){}
 
 
   ngOnInit(): void {
-   this.loadAllStudent();
+
   }
 
-
-  loadAllStudent(){
-
-    this.students = this.studentService.getAllStudent();
-  }
 
 }
