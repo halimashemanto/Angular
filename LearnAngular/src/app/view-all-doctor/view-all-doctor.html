@@ -1,14 +1,14 @@
 <div class="container">
-    <h1 class="my-2 text-center">All Doctor's</h1>
+    <h1 class="my-2 text-center">All Doctor</h1>
     <table class="table table-striped">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Name</th>
                 <th>Location</th>
-                <th>Chamber</th>
                 <th>Specalist</th>
-                <th>Chamber</th>
+                <th>Chamber</th>  
+                <th>Gender</th>              
                 <th>Action</th>
             </tr>
 
@@ -19,11 +19,12 @@
             <tr *ngFor="let  d of doctor | async">
                 <td>{{d.id}}</td>
                 <td>{{d.name}}</td>
-                <td>{{d.location}}</td>]
+                <td>{{d.location}}</td>
                 <td>{{d.specalist}}</td>
                 <td>{{d.chamber}}</td>
+                <td>{{d.gender}}</td>
                 <td>
-                     <button class="btn btn-warning m-1 p-1">Edit</button>
+                     <button class="btn btn-warning m-1 p-1" (click)="getDoctorById(d.id)">Edit</button>
                     <button class="btn btn-danger m-1 p-1" (click)="deleteDoctor(d.id)">Delete</button>
 
 

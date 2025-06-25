@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DoctorServiceService } from '../service/doctor-service.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-view-all-doctor',
@@ -11,25 +12,25 @@ import { DoctorServiceService } from '../service/doctor-service.service';
 export class ViewAllDoctor implements OnInit {
 
 
-    doctor:any;
+  doctor: any;
 
-constructor(private doctorService : DoctorServiceService,
-  private router : Router,
-  private cdr : ChangeDetectorRef){}
+  constructor(private doctorService: DoctorServiceService,
+    private router: Router,
+    private cdr: ChangeDetectorRef) { }
 
- ngOnInit(): void {
+  ngOnInit(): void {
     this.loadAllDoctor();
   }
- 
 
-  loadAllDoctor(){
 
-    this.doctor = this.doctorService. getAllDoctor();
+  loadAllDoctor() {
+
+    this.doctor = this.doctorService.getAllDoctor();
 
   }
 
 
-   deleteDoctor(id: string): void {
+  deleteDoctor(id: string): void {
     this.doctorService.deleteDoctor(id).subscribe({
       next: () => {
 
@@ -38,10 +39,30 @@ constructor(private doctorService : DoctorServiceService,
         this.cdr.reattach();
       },
       error: (error) => {
-        console.log( error);
+        console.log(error);
       }
     });
   }
- 
+
+
+  getDoctorById(id: string): void {
+    this.doctorService.getDoctorById(id).subscribe({
+
+      next: () => {
+
+        this.router.navigate(['/updateDoctor', id]);
+
+      },
+      error: (error) => {
+
+        console.log(error);
+      }
+
+
+    })
+
+  }
+
+
 
 }

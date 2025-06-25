@@ -39,14 +39,6 @@
       "chamber": "Anowar Khan Modern Hospital",
       "specalist": "Medicine",
       "gender": "Male"
-    },
-    {
-      "id": "ce34",
-      "name": "shawon",
-      "location": "Lalbagh",
-      "chamber": "Azimpur",
-      "specalist": "Neouroscience",
-      "gender": "male"
     }
   ]
 }

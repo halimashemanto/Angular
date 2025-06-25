@@ -9,6 +9,7 @@ import { ViewAllDoctor } from './view-all-doctor/view-all-doctor';
 import { AddDoctor } from './add-doctor/add-doctor';
 import { EnterProcess } from './enter-process/enter-process';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UpdateDoctor } from './update-doctor/update-doctor';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     Home,
     ViewAllDoctor,
     AddDoctor,
-    EnterProcess
+    EnterProcess,
+    UpdateDoctor
   ],
   imports: [
     BrowserModule,
