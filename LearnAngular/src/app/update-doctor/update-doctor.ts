@@ -23,7 +23,7 @@ export class UpdateDoctor implements OnInit {
   private cdr : ChangeDetectorRef) { }
 
   ngOnInit(): void {
-
+    this.lodeDoctorById();
   }
 
   lodeDoctorById() {
@@ -53,7 +53,7 @@ export class UpdateDoctor implements OnInit {
     this.doctorService.updateDoctor(this.id, this.doctor)
       .subscribe({
         next: () => {
-          this.router.navigate(['/updateDoctor']);
+          this.router.navigate(['/addDoctor']);
         },
         error: (err) => {
           
