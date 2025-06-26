@@ -1,0 +1,34 @@
+<div class="container">
+    <h1 class="my-2 text-center">Department of a Hospital</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name Of Department's</th>
+                
+                <th>Action</th>
+            </tr>
+
+
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let d of departments | async">
+                <td>{{d.id}}</td>
+                <td>{{d.nameOfDepartment}}</td>
+               
+                <td>
+                     <button class="btn btn-warning m-1 p-1">Edit</button>
+                    <button class="btn btn-danger m-1 p-1" (click)="deleteDepartment(d.id)">Delete</button>
+
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+

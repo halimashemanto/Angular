@@ -1,5 +1,5 @@
 {
-  "doctorsList": [
+  "doctors": [
     {
       "id": "4748",
       "name": "MD. Abdus Shakur Khan",
@@ -25,15 +25,15 @@
       "gender": "Female"
     },
     {
-      "id": "8908",
-      "name": "Kamrul Islam",
-      "location": "Shamoly",
+      "name": "Kamrul Islam Hasan",
+      "location": "Shamoly Dhaka",
       "chamber": "CKD Hospital",
       "specalist": "Urology",
-      "gender": "Male"
+      "gender": "Maljhge",
+      "id": "8908"
     },
     {
-      "id": "4748",
+      "id": "474",
       "name": "Reza Mahmudul ",
       "location": "Dhanmondi",
       "chamber": "Anowar Khan Modern Hospital",

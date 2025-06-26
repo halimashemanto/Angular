@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { DoctorModel } from '../../model/DoctorModel';
+import { Doctor } from '../../model/doctor';
 import { DoctorServiceService } from '../service/doctor-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { error } from 'console';
@@ -14,50 +14,46 @@ import { error } from 'console';
 export class UpdateDoctor implements OnInit {
 
   id: string = '';
-  doctor: DoctorModel = new DoctorModel();
+  doctor: Doctor = new Doctor();
 
   constructor(
     private doctorService: DoctorServiceService,
     private router: Router,
     private route: ActivatedRoute,
-  private cdr : ChangeDetectorRef) { }
+    private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
-
+    this.lodeDoctorById();
   }
 
   lodeDoctorById() {
 
     this.id = this.route.snapshot.params['id'];
+
     this.doctorService.getDoctorById(this.id).subscribe({
-
       next: (res) => {
-
         this.doctor = (res);
         this.cdr.markForCheck();
-
       },
-
-      error : (error) => {
+      error: (error) => {
         console.log(error);
-
       }
-
-
-
-
     })
 
   }
- updateDoctor(): void {
+  updateDoctor(): void {
+    this.doctor = new Doctor();
+    this.id = this.route.snapshot.params['id'];
     this.doctorService.updateDoctor(this.id, this.doctor)
       .subscribe({
-        next: () => {
-          this.router.navigate(['/updateDoctor']);
+        next: (res) => {
+          console.log(res)
+          this.router.navigate(['/viewDoctor']);
         },
         error: (err) => {
-          
-          console.error(err);
+
+          this.router.navigate(['/updateDoctor/:id']);
+          console.log(err);
 
         }
       });

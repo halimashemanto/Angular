@@ -1,0 +1,60 @@
+{
+  "departmentModel": [
+    {
+      "id": "1",
+      "name of department": "Medicine"
+    },
+    {
+      "id": "2",
+      "name of department": "Cardiology"
+    },
+    {
+      "id": "3",
+      "name of department": "Neurology"
+    },
+    {
+      "id": "4",
+      "name of department": "Dermatology"
+    },
+    {
+      "id": "5",
+      "name of department": "Obstetrics & Gynecology "
+    },
+    {
+      "id": "6",
+      "name of department": "Endocrinology"
+    },
+    {
+      "id": "7",
+      "name of department": "MediPhysical Medicine and Rehabilitation"
+    },
+    {
+      "id": "8",
+      "name of department": "Pathology"
+    },
+    {
+      "id": "9",
+      "name of department": "Radiology"
+    },
+    {
+      "id": "10",
+      "nameOfDepartment": "Psychiatry"
+    },
+    {
+      "id": "11",
+      "name of department": "Anesthesiology"
+    },
+    {
+      "id": "12",
+      "name of department": "Allergy and Immunology"
+    },
+    {
+      "id": "13",
+      "name of department": "Emergency Medicine"
+    },
+    {
+      "id": "bbd6",
+      "name": ""
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { DoctorModel } from '../../model/DoctorModel';
+import { Doctor } from '../../model/doctor';
 import { Router } from 'express';
 
 @Injectable({
@@ -9,7 +9,7 @@ import { Router } from 'express';
 })
 export class DoctorServiceService {
 
-  baseUrl: string = "http://localhost:3000/doctorsList";
+  baseUrl: string = "http://localhost:3000/doctors";
   constructor(private http: HttpClient) { }
 
   getAllDoctor(): Observable<any> {
@@ -17,7 +17,7 @@ export class DoctorServiceService {
     return this.http.get(this.baseUrl);
   }
 
-  saveDoctor(doctor: DoctorModel): Observable<any> {
+  saveDoctor(doctor: Doctor): Observable<any> {
     return this.http.post(this.baseUrl, doctor);
   }
 
@@ -32,9 +32,9 @@ export class DoctorServiceService {
   }
 
   
-updateDoctor(id:string, doctor:DoctorModel):Observable<any>{
+updateDoctor(id:string, doctor:Doctor):Observable<any>{
 
-return this.http.put(this.baseUrl+ '/'+id,DoctorModel);
+return this.http.put(this.baseUrl+'/'+id, Doctor);
 
 }          
 
