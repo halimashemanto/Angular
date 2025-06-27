@@ -29,7 +29,11 @@ export class DoctorService {
     return this.http.delete(this.baseUrl + "/" + id);
   }
 
+  getDoctorNameById(id:string):Observable<any>{
 
+      return this.http.get(this.baseUrl+'/'+id);
+
+  }
 
 
 

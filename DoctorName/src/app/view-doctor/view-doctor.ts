@@ -45,5 +45,27 @@ constructor(private doctorService : DoctorService,
   }
 
 
+  getDoctorNameById(id:string):void{
+
+    this.doctorService.getDoctorNameById(id).subscribe({
+
+      next:(res)=>{
+        this.router.navigate(['/updateDoctor'])
+
+      },
+      error:(error)=> {
+
+        console.log(error);
+      }
+
+    });
+
+  }
+
+
+
+
+
+
 
 }
