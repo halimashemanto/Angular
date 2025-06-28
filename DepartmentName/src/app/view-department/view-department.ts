@@ -11,7 +11,8 @@ import { Router } from '@angular/router';
 export class ViewDepartment implements OnInit {
   departments:any;
 
-constructor(private departmentService : DepartmentService,
+constructor(
+  private departmentService : DepartmentService,
   private router : Router,
   private cdr : ChangeDetectorRef){}
 
@@ -25,6 +26,7 @@ constructor(private departmentService : DepartmentService,
   loadAllDepartment(){
 
     this.departments = this.departmentService. getAllDepartment();
+    console.log(this.departments.nameOfDepartment);
 
   }
 

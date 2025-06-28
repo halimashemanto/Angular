@@ -30,8 +30,8 @@ export class AddDepartment implements OnInit {
 
   addDepartment(): void {
 
-    const department= { ...this.fromGroup.value };
-    this.departmentService.saveDepartment(department).subscribe({
+    const departments= { ...this.fromGroup.value };
+    this.departmentService.saveDepartment(departments).subscribe({
 
       next: (res) => {
         console.log("Saved Department", res);

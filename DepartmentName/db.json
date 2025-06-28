@@ -2,58 +2,46 @@
   "departmentModel": [
     {
       "id": "1",
-      "name of department": "Medicine"
+      "nameOfDepartment": "Medicine"
     },
     {
       "id": "2",
-      "name of department": "Cardiology"
+      "nameOfDepartment": "Cardiology"
     },
     {
       "id": "3",
-      "name of department": "Neurology"
+      "nameOfDepartment": "Neurology"
     },
     {
       "id": "4",
-      "name of department": "Dermatology"
+      "nameOfDepartment": "Dermatology"
     },
     {
       "id": "5",
-      "name of department": "Obstetrics & Gynecology "
+      "nameOfDepartment": "Obstetrics & Gynecology "
     },
     {
       "id": "6",
-      "name of department": "Endocrinology"
+      "nameOfDepartment": "Endocrinology"
     },
     {
       "id": "7",
-      "name of department": "MediPhysical Medicine and Rehabilitation"
-    },
-    {
-      "id": "8",
-      "name of department": "Pathology"
-    },
-    {
-      "id": "9",
-      "name of department": "Radiology"
+      "nameOfDepartment": "MediPhysical Medicine and Rehabilitation"
     },
     {
       "id": "10",
       "nameOfDepartment": "Psychiatry"
     },
     {
-      "id": "11",
-      "name of department": "Anesthesiology"
+      "id": "dcb1",
+      "nameOfDepartment": ""
     },
     {
-      "id": "12",
-      "name of department": "Allergy and Immunology"
+      "id": "f4be",
+      "nameOfDepartment": ""
     },
     {
-      "id": "13",
-      "name of department": "Emergency Medicine"
-    },
-    {
-      "id": "bbd6",
+      "id": "201e",
       "name": ""
     }
   ]
