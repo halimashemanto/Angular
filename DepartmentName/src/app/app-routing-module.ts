@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { Home } from './home/home';
-import { AddDepartment } from './add-department/add-department';
-import { ViewDepartment } from './view-department/view-department';
-import { UpdateDepartment } from './update-department/update-department';
+import { Home } from './Department/home/home';
+import { AddDepartment } from './Department/add-department/add-department';
+import { ViewDepartment } from './Department/view-department/view-department';
+import { UpdateDepartment } from './Department/update-department/update-department';
 
 const routes: Routes = [
 {path:'', component:Home},

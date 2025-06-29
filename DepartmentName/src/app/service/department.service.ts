@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { DepartmentModel } from '../../model/departmentModel';
+import { DepartmentModel } from '../model/departmentModel';
+
 
 @Injectable({
   providedIn: 'root'

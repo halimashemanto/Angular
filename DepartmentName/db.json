@@ -36,5 +36,60 @@
       "id": "6835",
       "nameOfDepartment": "apple"
     }
+  ],
+
+
+ "doctor": [
+    {
+      "id": "4748",
+      "name": "MD. Abdus Shakur Khan",
+      "location": "Dhanmondi",
+      "chamber": "Anowar Khan Modern Hospital",
+      "specalist": "Medicine",
+      "gender": "Male"
+    },
+    {
+      "id": "5321",
+      "name": "Sahriyar Islam",
+      "location": "Lalbagh",
+      "chamber": "Ibn Sina Trust and Hospital",
+      "specalist": "Aurthopedic",
+      "gender": "Male"
+    },
+    {
+      "id": "3962",
+      "name": "Mahabuba Nargis",
+      "location": "Shamoly",
+      "chamber": "Bangladesh Specialized Hospital",
+      "specalist": "Gynee",
+      "gender": "Female"
+    },
+    {
+      "name": "Kamrul Islam Hasan",
+      "location": "Shamoly Dhaka",
+      "chamber": "CKD Hospital",
+      "specalist": "Urology",
+      "gender": "Maljhge",
+      "id": "8908"
+    },
+    {
+      "id": "474",
+      "name": "Reza Mahmudul ",
+      "location": "Dhanmondi",
+      "chamber": "Anowar Khan Modern Hospital",
+      "specalist": "Medicine",
+      "gender": "Male"
+    }
   ]
+
+
+
+
+
+
+
+
+
+
+
 }

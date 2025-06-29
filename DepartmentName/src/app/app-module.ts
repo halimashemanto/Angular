@@ -3,13 +3,17 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { AddDepartment } from './add-department/add-department';
-import { ViewDepartment } from './view-department/view-department';
-import { UpdateDepartment } from './update-department/update-department';
+import { AddDepartment } from './Department/add-department/add-department';
+import { ViewDepartment } from './Department/view-department/view-department';
+import { UpdateDepartment } from './Department/update-department/update-department';
 
-import { Home } from './home/home';
+import { Home } from './Department/home/home';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { Viewalldoctor } from './viewalldoctor/viewalldoctor';
+import { Viewalldoctorname } from './viewalldoctorname/viewalldoctorname';
+import { Addalldoctorname } from './addalldoctorname/addalldoctorname';
+import { Updatealldoctorname } from './updatealldoctorname/updatealldoctorname';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
     AddDepartment,
     ViewDepartment,
     UpdateDepartment,  
-    Home
+    Home, Viewalldoctor, Viewalldoctorname, Addalldoctorname, Updatealldoctorname
   ],
   imports: [
     BrowserModule,
