@@ -21,7 +21,7 @@ export class AddDepartment implements OnInit {
   ngOnInit(): void {
     this.fromGroup = this.formBuilder.group({
 
-      name: ['']
+      nameOfDepartment: ['']
      
 
     });
