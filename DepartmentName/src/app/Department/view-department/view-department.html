@@ -5,6 +5,7 @@
             <tr>
                 <th>Id</th>
                 <th>Name Of Department's</th>
+                <th>Docot's Name</th>
                 
                 <th>Action</th>
             </tr>
@@ -13,9 +14,10 @@
         </thead>
 
         <tbody>
-            <tr *ngFor="let d of departments | async">
+            <tr *ngFor="let d of departments ">
                 <td>{{d.id}}</td>
                 <td>{{d.nameOfDepartment}}</td>
+                <td>{{d.doctor?.name}}</td>
                
                 <td>
                      <button class="btn btn-warning m-1 p-1">Edit</button>

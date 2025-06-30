@@ -4,12 +4,21 @@
         <h1 class="jumborton">Department's Name</h1>
     </div>
 
-    <form [fromGroup]="fromGroup"  method="post">
+    <form [formGroup]="fromGroup"  method="post">
         <div class="row">
             <div class="col-md-6">
                 <label for="exampleInputEmail1" class="form-label">Name OF Departments</label>
                 <input type="text" class="form-control" id="name" formControlName="nameOfDepartment" >
             </div>
+
+            </div>
+
+              <div class="col-md-6 " formGroupName="doctor">
+                <div class="invalid-feedback">Please select a doctor.</div>
+                <label for="location" class="form-label">Doctor:</label>
+                <select id="location" formControlName="name" class="form-select" required>
+                    <option *ngFor="let doctor of doctors" [ngValue]="doctors.name">{{doctors.name}}</option>
+                </select>
 
             </div>
 

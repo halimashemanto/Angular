@@ -10,7 +10,7 @@ import { UpdateDepartment } from './Department/update-department/update-departme
 import { Home } from './Department/home/home';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
-import { Viewalldoctor } from './viewalldoctor/viewalldoctor';
+
 import { Viewalldoctorname } from './viewalldoctorname/viewalldoctorname';
 import { Addalldoctorname } from './addalldoctorname/addalldoctorname';
 import { Updatealldoctorname } from './updatealldoctorname/updatealldoctorname';
@@ -21,7 +21,7 @@ import { Updatealldoctorname } from './updatealldoctorname/updatealldoctorname';
     AddDepartment,
     ViewDepartment,
     UpdateDepartment,  
-    Home, Viewalldoctor, Viewalldoctorname, Addalldoctorname, Updatealldoctorname
+    Home,  Viewalldoctorname, Addalldoctorname, Updatealldoctorname
   ],
   imports: [
     BrowserModule,

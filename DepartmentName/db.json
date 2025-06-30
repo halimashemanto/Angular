@@ -2,11 +2,30 @@
   "departmentModel": [
     {
       "id": "1",
-      "nameOfDepartment": "Medicine"
+      "nameOfDepartment": "Medicine",
+
+       "doctor": 
+    {
+      "id": "4748",
+      "name": "MD. Abdus Shakur Khan",
+      "location": "Dhanmondi",
+      "chamber": "Anowar Khan Modern Hospital",
+      "specalist": "Medicine",
+      "gender": "Male"
+    }
     },
     {
       "id": "2",
-      "nameOfDepartment": "Cardiology"
+      "nameOfDepartment": "Cardiology",
+       "doctor": {
+         "id": "3962",
+      "name": "Mahabuba Nargis",
+      "location": "Shamoly",
+      "chamber": "Bangladesh Specialized Hospital",
+      "specalist": "Gynee",
+      "gender": "Female"
+
+       }
     },
     {
       "id": "3",

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DepartmentModel } from '../model/departmentModel';
+import { Doctor } from '../model/doctor.model';
 
 
 @Injectable({
@@ -13,7 +14,7 @@ export class DepartmentService  {
 
   constructor(private http : HttpClient) { }
 
-    getAllDepartment(): Observable<any> {
+  getAllDepartment(): Observable<any> {
 
     return this.http.get(this.baseUrl);
 
@@ -29,6 +30,19 @@ export class DepartmentService  {
     return this.http.delete(this.baseUrl + "/" + id);
   }
 
+
+  
+  getDepartmentById(id: string): Observable<any> {
+
+    return this.http.get(this.baseUrl+'/'+id);
+
+  }
+
+  updateDepartment(id: string, doctor: Doctor): Observable<any>{
+
+    return this.http.put(this.baseUrl+'/'+id, doctor);
+
+  }
 
 
  

@@ -1,1 +1,39 @@
-<p>viewalldoctorname works!</p>
+<div class="container">
+    <h1 class="my-2 text-center">All Doctor</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Specalist</th>
+                <th>Chamber</th>
+                <th>Gender</th>
+                <th>Action</th>
+            </tr>
+
+
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let  d of doctor ">
+                <td>{{d.id}}</td>
+                <td>{{d.name}}</td>
+                <td>{{d.location}}</td>
+                <td>{{d.specalist}}</td>
+                <td>{{d.chamber}}</td>
+                <td>{{d.gender}}</td>
+                <td>
+                    <button class="btn btn-warning m-1 p-1" (click)="getDoctorById(d.id)">Edit</button>
+                    <button class="btn btn-danger m-1 p-1" (click)="deleteDoctor(d.id)">Delete</button>
+
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
