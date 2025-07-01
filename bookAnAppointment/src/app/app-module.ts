@@ -7,6 +7,8 @@ import { ViewBook } from './view-book/view-book';
 import { AddBook } from './add-book/add-book';
 import { UpdateBook } from './update-book/update-book';
 import { Home } from './home/home';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,17 @@ import { Home } from './home/home';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-    provideClientHydration(withEventReplay())
+    provideClientHydration(withEventReplay()),
+    provideHttpClient(
+      withFetch()
+    )
   ],
   bootstrap: [App]
 })
