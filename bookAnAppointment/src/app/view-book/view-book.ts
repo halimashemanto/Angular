@@ -17,13 +17,15 @@ constructor(
   private router: Router,
   private cdr: ChangeDetectorRef){}
 
-  ngOnInit(): void {
+ngOnInit(): void {
     this.loadAllBook();
   }
+
 loadAllBook(){
 
   this.books = this.bookService.getAllBook();
 }
+
 deleteBook(id:string):void{
   this.bookService.deleteBook(id).subscribe({
 
@@ -40,6 +42,23 @@ console.log(error);
   });
 
 }
+ getBookById(id: string):void{
+    this.bookService.getBookById(id).subscribe({
+      next : (res) =>{
+  
+        this.router.navigate(['/updateBook',id]);
+      },
+
+      error: (err) =>{
+
+        console.log(err);
+      }
+
+    });
+
+  }
+
+
 
 
 }

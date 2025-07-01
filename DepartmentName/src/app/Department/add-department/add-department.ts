@@ -54,10 +54,10 @@ export class AddDepartment implements OnInit {
 
   loadDoctorName(): void {
 
-    this.doctor.getAllDepartment().subscribe({
+    this.doctors.getAllDepartment().subscribe({
 
-      next : (doctors) => {
-        this.doctors = doctors;
+      next : (doctor) => {
+        this.doctors = doctor;
 
       },
       error: (error) => {

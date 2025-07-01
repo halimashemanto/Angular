@@ -1,18 +1,20 @@
 {
-    "bookModel": [
-        {
-            "id": "01",
-            "name": "shawon",
-            "email": "shawon@gmail.com",
-            "phone": "0198723498",
-            "date": "01-4-2"
-        },
-        {
-            "id": "02",
-            "name": "habib",
-            "email": "shawon@gmail.com",
-            "phone": "0198723498",
-            "date": "01-4-2"
-        }
-    ]
+  "bookModel": [
+    {
+      "id": "01",
+      "name": "shawon",
+      "email": "shawonsajgufvasduhfysdaf@gmail.com",
+      "phone": "0198723498",
+      "date": "01-4-2",
+      "slot": "Evening"
+    },
+    {
+      "id": "02",
+      "name": "habib",
+      "email": "shawon@gmail.com",
+      "phone": "0198723498",
+      "date": "01-4-2",
+      "slot": "Evening"
+    }
+  ]
 }
