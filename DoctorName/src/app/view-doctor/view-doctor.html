@@ -1,0 +1,36 @@
+<div class="" style="background-color: rgb(199, 247, 231);">
+    <h1 class="my-2 text-center" style="background-color:  rgb(204, 244, 230);">Name of Doctor</h1>
+    <table class="table table-striped ">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Specialist</th>
+                <th>Hospital Name</th>
+                <th>Action</th>
+            </tr>
+
+
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let n of doctors | async">
+                <td>{{n.id}}</td>
+                <td>{{n.name}}</td>
+                <td>{{n.specialist}}</td>
+                <td>{{n.hospital}}</td>
+                <td>
+                     <button class="btn btn-warning m-1 p-1">Edit</button>
+                    <button class="btn btn-danger m-1 p-1" (click)="deleteDoctorName(n.id)">Delete</button>
+
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+

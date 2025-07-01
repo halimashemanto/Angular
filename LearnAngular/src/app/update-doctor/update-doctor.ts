@@ -46,9 +46,14 @@ export class UpdateDoctor implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.doctorService.updateDoctor(this.id, this.doctor)
       .subscribe({
+<<<<<<< HEAD
         next: (res) => {
           console.log(res)
           this.router.navigate(['/viewDoctor']);
+=======
+        next: () => {
+          this.router.navigate(['/addDoctor']);
+>>>>>>> 30397600012002495313fce3b454b8e23e1d660b
         },
         error: (err) => {
 

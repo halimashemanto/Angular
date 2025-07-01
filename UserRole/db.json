@@ -1,0 +1,53 @@
+{
+  "userModel": [
+    {
+      "id": "1",
+      "name": "simki",
+      "email": "",
+      "contactNo": "",
+      "role": ""
+    },
+    {
+      "id": "2",
+      "name": "Shemanto",
+      "email": "shemanto2gmail.com",
+      "contactNo": "01234567",
+      "role": "Doctor"
+    },
+    {
+      "id": "3",
+      "name": "Suprova",
+      "email": "",
+      "contactNo": "",
+      "role": "receptionist"
+    },
+    {
+      "id": "4",
+      "name": "",
+      "email": "",
+      "contactNo": "",
+      "role": ""
+    },
+    {
+      "id": "c060",
+      "name": "Suprova Shemanto",
+      "email": "hgcf@gmail.com",
+      "contactNo": "01628195945",
+      "role": "gfdfgd"
+    },
+    {
+      "id": "eef6",
+      "name": null,
+      "email": null,
+      "contactNo": null,
+      "role": null
+    },
+    {
+      "id": "5b5f",
+      "name": null,
+      "email": null,
+      "contactNo": null,
+      "role": null
+    }
+  ]
+}
