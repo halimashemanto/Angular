@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { BookService } from '../sevice/book.service';
+import { BookService } from '../../service/book.service';
 import { Router } from '@angular/router';
 
 @Component({

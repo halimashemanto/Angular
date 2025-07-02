@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { BookModel } from '../../model/bookModel.model';
-import { BookService } from '../sevice/book.service';
+import { BookService } from '../../service/book.service';
 
 import { ActivatedRoute, Router } from '@angular/router';
 

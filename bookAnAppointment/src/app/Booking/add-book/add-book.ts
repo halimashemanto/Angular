@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { BookService } from '../sevice/book.service';
+import { BookService } from '../../service/book.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -34,7 +34,7 @@ export class AddBook implements OnInit {
     this.bookService.saveBook(books).subscribe({
       next:(res)=>{
         this.formGroup.reset();
-        this.router.navigate(['/addBook']);
+        this.router.navigate(['/viewBook']);
 
       },
       error:(error)=>{
