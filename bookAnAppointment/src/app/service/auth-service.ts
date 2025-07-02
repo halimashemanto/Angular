@@ -16,7 +16,7 @@ export class AuthService {
   public currentUser$: Observable<Usermodel | null>;
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
         @Inject(PLATFORM_ID) private platformId: object) {
 
     const storedUser = this.isBrowser() ? JSON.parse(localStorage.getItem('currentUser') || 'null') : null;
