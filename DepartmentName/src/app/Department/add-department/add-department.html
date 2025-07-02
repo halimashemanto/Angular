@@ -17,7 +17,7 @@
                 <div class="invalid-feedback">Please select a doctor.</div>
                 <label for="location" class="form-label">Doctor:</label>
                 <select id="location" formControlName="name" class="form-select" required>
-                    <option *ngFor="let doctor of doctors" [ngValue]="doctors.name">{{doctors.name}}</option>
+                    <option *ngFor="let doctor of doctors" [ngValue]="doctor.name">{{doctor.name}}</option>
                 </select>
 
             </div>
