@@ -20,13 +20,21 @@
       "id": "289b",
       "name": "mannat",
       "email": "man@gmail.com",
-      "phone": "01721464789",
+      "phone": "017956189",
+      "date": "2-2-2025",
+      "slot": "Evening"
+    },
+      {
+      "id": "289b",
+      "name": "muladi",
+      "email": "man@gmail.com",
+      "phone": "014841456",
       "date": "2-2-2025",
       "slot": "Evening"
     }
   ],
   "userModel" : [
-    
+
 
 
 

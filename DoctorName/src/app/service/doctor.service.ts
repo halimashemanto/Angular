@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { DoctorName } from '../../model/doctorName';
+import { DoctorName } from '../model/doctorName';
 
 
 @Injectable({
@@ -33,6 +33,11 @@ export class DoctorService {
 
       return this.http.get(this.baseUrl+'/'+id);
 
+  }
+  
+  updateDoctorName(id: string, doctorName:DoctorName): Observable<any>{
+
+    return this.http.put(this.baseUrl+'/'+id, doctorName);
   }
 
 
