@@ -23,8 +23,8 @@ export class Registration {
 
       name:['',Validators.required],
       email:['',[Validators.required,Validators.email]],
-      password:['',Validators.required],
-      photo:['',Validators.required]
+      password:['',Validators.required]
+      
             
     })
   }
@@ -34,6 +34,7 @@ export class Registration {
       
       const user: Usermodel = {
         ...this.regForm.value,
+        photo: 'assdfdffsd',
         role: 'user'
       };
 
