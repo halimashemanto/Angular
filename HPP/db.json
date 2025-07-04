@@ -1,0 +1,89 @@
+{
+  "doctorName": [
+    {
+      "id": "1",
+      "name": "Dr. M S Alam (Utsha)",
+      "specialist": "Medicine",
+      "hospital": "Dhaka Medical College & Hospital"
+    },
+    {
+      "id": "2",
+      "name": "Prof. Dr. A. K. Ahmedullah",
+      "specialist": "Medicine & Rheumatology Specialist",
+      "hospital": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+      "id": "3",
+      "name": "Dr. Khondokar Mahabub Uz Zaman",
+      "specialist": "Medicine",
+      "hospital": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+      "id": "4",
+      "name": "Dr. Chaity Barua",
+      "specialist": "Child Specialist",
+      "hospital": "Bangabandhu Sheikh Mujib Medical University Hospital"
+    },
+    {
+      "id": "5",
+      "name": "Prof. Dr. Md. Abid Hossain Mollah",
+      "specialist": "Pediatrics",
+      "hospital": "Birdem General Hospital & Ibrahim Medical College"
+    },
+    {
+      "id": "6",
+      "name": "Dr. Kanij Fatema",
+      "specialist": "Autism Specialist",
+      "hospital": "Institute of Pediatric Neurodisorder & Autism (IPNA), BSMMU"
+    },
+    {
+      "id": "7",
+      "name": "Dr. M S Alam (Utsha)",
+      "specialist": "Medicine",
+      "hospital": "Dhaka Medical College & Hospital"
+    },
+    {
+      "id": "8",
+      "name": "Dr. M S Alam (Utsha)",
+      "specialist": "Medicine",
+      "hospital": "Dhaka Medical College & Hospital"
+    },
+    {
+      "id": "9",
+      "name": "Dr. M S Alam (Utsha)",
+      "specialist": "Medicine",
+      "hospital": "Dhaka Medical College & Hospital"
+    },
+    {
+      "id": "10",
+      "name": "Dr. M S Alam (Utsha)",
+      "specialist": "Medicine",
+      "hospital": "Dhaka Medical College & Hospital"
+    },
+    {
+      "id": "11",
+      "name": "Dr. M S Alam (Utsha)",
+      "specialist": "Medicine",
+      "hospital": "Dhaka Medical College & Hospital"
+    },
+    {
+      "id": "13",
+      "name": "Dr. M S Alam (Utsha)",
+      "specialist": "Medicine",
+      "hospital": "Dhaka Medical College & Hospital"
+    },
+    {
+      "id": "1486",
+      "name": "shawon",
+      "email": "",
+      "contactNo": ""
+    }
+  ],
+
+"user":[
+
+
+
+]
+
+}

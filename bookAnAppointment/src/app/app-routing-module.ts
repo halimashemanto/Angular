@@ -5,6 +5,7 @@ import { AddBook } from './Booking/add-book/add-book';
 import { ViewBook } from './Booking/view-book/view-book';
 import { UpdateBook } from './Booking/update-book/update-book';
 import { Registration } from './auth/registration/registration';
+import { Login } from './auth/login/login';
 
 const routes: Routes = [
   { path: '', component: Home },
@@ -12,7 +13,7 @@ const routes: Routes = [
   { path: 'viewBook', component: ViewBook },
   { path: 'updateBook/:id', component: UpdateBook },
   { path: 'reg', component: Registration },
- 
+  { path: 'log', component: Login  }
 
 ];
 
