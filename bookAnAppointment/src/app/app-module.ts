@@ -16,6 +16,8 @@ import { AboutHospital } from './about hospital/about-hospital/about-hospital';
 import { AboutChairman } from './about hospital/about-chairman/about-chairman';
 import { AboutManagingdirector } from './about hospital/about-managingdirector/about-managingdirector';
 import { Contact } from './contact/contact';
+import { ServiceFeatures } from './service-features/service-features';
+import { HealthCheckUp } from './health-check-up/health-check-up';
 
 
 
@@ -33,7 +35,9 @@ import { Contact } from './contact/contact';
     AboutHospital,
     AboutChairman,
     AboutManagingdirector,
-    Contact
+    Contact,
+    ServiceFeatures,
+    HealthCheckUp
    
    
   ],

@@ -11,6 +11,8 @@ import { AboutChairman } from './about hospital/about-chairman/about-chairman';
 import { AboutManagingdirector } from './about hospital/about-managingdirector/about-managingdirector';
 
 import { Contact } from './contact/contact';
+import { ServiceFeatures } from './service-features/service-features';
+import { HealthCheckUp } from './health-check-up/health-check-up';
 
 const routes: Routes = [
   { path: '', component: Home },
@@ -24,6 +26,8 @@ const routes: Routes = [
   { path: 'aboutC', component: AboutChairman  },
   { path: 'aboutMD', component: AboutManagingdirector  },
   { path: 'contact', component: Contact  },
+  { path: 'service', component: ServiceFeatures  },
+  { path: 'health', component: HealthCheckUp  },
 
 ];
 
