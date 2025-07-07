@@ -3,7 +3,6 @@ import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { Usermodel } from '../model/userModel.model';
 import { BehaviorSubject, catchError, map, Observable } from 'rxjs';
 import { AuthResponse } from '../model/authResponse';
-import { error } from 'console';
 import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
@@ -11,7 +10,7 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class AuthService {
 
-  private baseUrl: string = "http://localhost:3000/bookModel";
+  private baseUrl: string = "http://localhost:3000/userModel";
   private currentUserSubject: BehaviorSubject<Usermodel | null>;
   public currentUser$: Observable<Usermodel | null>;
 
@@ -64,11 +63,11 @@ export class AuthService {
             return { token, user } as AuthResponse;
           }
           else {
-            throw  error('Invalid Passwod');
+            throw  console.error('Invalid Passwod');
           }
         }
         else {
-          throw error('Login error', error);
+          throw console.error('Login error');
         }
 
       }),

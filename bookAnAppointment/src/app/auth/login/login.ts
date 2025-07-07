@@ -10,11 +10,16 @@ import { Router } from '@angular/router';
   styleUrl: './login.css'
 })
 export class Login {
+  loginForm!: FormGroup;
+   errorMessage: string = '';
 
+<<<<<<< Updated upstream
 
    loginForm!: FormGroup;
    errorMessage: string = '';
 
+=======
+>>>>>>> Stashed changes
   constructor(
     private authService: AuthService, 
     private router: Router,
@@ -44,6 +49,7 @@ onSubmit(): void {
 
       const role = this.authService.getUserRole();
       console.log('User role:', role);
+<<<<<<< Updated upstream
 
       if (role === 'Admin') {
         this.router.navigate(['/userprofile']);
@@ -52,6 +58,16 @@ onSubmit(): void {
       } else {
         this.errorMessage = 'Unknown user role.';
       }
+=======
+ this.router.navigate(['/userprofile']);
+      // if (role === 'user') {
+      //   this.router.navigate(['/userprofile']);
+      // } else if (role === 'admin') {
+      //   this.router.navigate(['/adminprofile']);
+      // } else {
+      //   this.errorMessage = 'Unknown user role.';
+      // }
+>>>>>>> Stashed changes
 
       this.loginForm.reset();
     },
@@ -61,7 +77,10 @@ onSubmit(): void {
     }
   });
 }
+<<<<<<< Updated upstream
 
 
 
+=======
+>>>>>>> Stashed changes
 }

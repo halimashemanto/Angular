@@ -24,19 +24,44 @@
       "date": "2-2-2025",
       "slot": "Evening"
     },
-      {
+    {
       "id": "289b",
       "name": "muladi",
       "email": "man@gmail.com",
       "phone": "014841456",
       "date": "2-2-2025",
       "slot": "Evening"
+    },
+    {
+      "id": "0791",
+      "name": "Suprova Shemanto",
+      "email": "dgdsfgdfgh@gmail.com",
+      "phone": "01628195945",
+      "date": "1-8-9",
+      "slot": "Morning"
     }
   ],
-  "userModel" : [
-
-
-
-
+  "userModel": [
+    {
+      "id": "f5ec",
+      "name": "asdf",
+      "email": "asdf",
+      "password": "sadf",
+      "role": "user"
+    },
+    {
+      "id": "b778",
+      "name": "sadfasdfasdf",
+      "email": "safsdaf",
+      "password": "safasdfsda",
+      "role": "user"
+    },
+    {
+      "id": "d020",
+      "name": "Suprova",
+      "email": "suprova@gmail.com",
+      "password": "12345",
+      "role": "user"
+    }
   ]
 }

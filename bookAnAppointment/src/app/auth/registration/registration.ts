@@ -12,40 +12,37 @@ import { Usermodel } from '../../model/userModel.model';
 })
 export class Registration {
   regForm!: FormGroup;
+  user!: Usermodel;
 
   constructor(
-            private authService: AuthService,
-            private router: Router,
-            private formBuilder: FormBuilder
-  ){
+    private authService: AuthService,
+    private router: Router,
+    private formBuilder: FormBuilder
+  ) {
 
     this.regForm = formBuilder.group({
-
-      name:['',Validators.required],
-      email:['',[Validators.required,Validators.email]],
-      password:['',Validators.required]
-      
-            
+      name: ['', Validators.required],
+      email: ['', Validators.required],
+      password: ['', Validators.required]
     })
   }
 
-    onSubmit(): void {
+  onSubmit(): void {
     if (this.regForm.valid) {
-      
+
       const user: Usermodel = {
         ...this.regForm.value,
-        photo: 'assdfdffsd',
         role: 'user'
       };
 
       this.authService.registration(user).subscribe({
         next: (res) => {
-          console.log('User registered successfully:', res);
+          console.log(res);
           this.authService.storeToken(res.token);
-          this.router.navigate(['/home']); 
+          this.router.navigate(['/login']);
         },
         error: (err) => {
-          console.error('Error registering user:', err);
+          console.log(err);
         }
       });
     }
