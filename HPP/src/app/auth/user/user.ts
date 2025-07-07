@@ -23,28 +23,10 @@ export class User implements OnInit{
   ) { }
 
   ngOnInit(): void {
-   this.loadUserProfile();
+   
   }
 
-  loadUserProfile(): void {
-    const sub = this.userSer.getUserProfile().subscribe({
-      next: (res) => {
-        console.log(res);
-        if (res) {
-          this.user = res;
-        }
-      },
-      error: (err) => {
-        console.error('Error loading user profile:', err);
-      }
-    });
 
-    this.subscription.add(sub);
-  }
-
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
-  }
 
 }
 

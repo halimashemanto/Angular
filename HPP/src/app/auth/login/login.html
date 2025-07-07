@@ -9,13 +9,13 @@
         <form  [formGroup]="loginForm">
           <!-- Email input -->
           <div data-mdb-input-init class="form-outline mb-4">
-            <input type="email" id="form1Example13" class="form-control form-control-lg" />
+            <input type="email" id="form1Example13" class="form-control form-control-lg" formControlName="email" required="required" />
             <label class="form-label" for="form1Example13">Email address</label>
           </div>
 
           <!-- Password input -->
-          <div data-mdb-input-init class="form-outline mb-4">
-            <input type="password" id="form1Example23" class="form-control form-control-lg" />
+          <div data-mdb-input-init class="form-outline mb-4" >
+            <input type="password" id="form1Example23" class="form-control form-control-lg" formControlName="password" required="required"/>
             <label class="form-label" for="form1Example23">Password</label>
           </div>
 

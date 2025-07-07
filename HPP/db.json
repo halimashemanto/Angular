@@ -79,11 +79,49 @@
       "contactNo": ""
     }
   ],
-
-"user":[
-
-
-
-]
-
+  "user": [
+    {
+      "id": "1486",
+      "name": "shawon",
+      "email": "shawon@gmauil.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "8ecc",
+      "name": "",
+      "email": "",
+      "password": "",
+      "role": "user"
+    },
+    {
+      "id": "bf36",
+      "name": "Suprova",
+      "email": "123456",
+      "password": "",
+      "role": "user"
+    },
+    {
+      "id": "0673",
+      "name": "shawon",
+      "email": "sawon@gmail.com",
+      "password": "1234567",
+      "role": "user"
+    },
+    {
+      "id": "bec6",
+      "name": "kamruz",
+      "email": "kamruz@gmail.com",
+      "password": "123456",
+      "role": "user"
+    }
+  ],
+  "ReceptionistModel": [
+    {
+      "id": "9cb8",
+      "name": "Suprova Shemanto",
+      "email": "suprova@gmail.com",
+      "contactNo": ""
+    }
+  ]
 }

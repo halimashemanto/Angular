@@ -23,15 +23,14 @@ export class Registration {
 
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required],
-      photo: ['', Validators.required],
+      password: ['', Validators.required]
 
     })
 
   }
 
   onSubmit(): void {
-    if (this.regForm.valid) {
+    
 
       const user: Usermodel = {
         ...this.regForm.value,
@@ -48,10 +47,7 @@ export class Registration {
           console.error('Error registering user:', err);
         }
       });
-    }
-    else {
-      alert("Complte mandatory Field");
-    }
+    
   }
 
 

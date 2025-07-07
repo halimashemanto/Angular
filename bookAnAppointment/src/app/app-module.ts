@@ -15,6 +15,8 @@ import { UserProfile } from './auth/user-profile/user-profile';
 import { AboutHospital } from './about hospital/about-hospital/about-hospital';
 import { AboutChairman } from './about hospital/about-chairman/about-chairman';
 import { AboutManagingdirector } from './about hospital/about-managingdirector/about-managingdirector';
+import { Contact } from './contact/contact';
+
 
 
 
@@ -30,7 +32,9 @@ import { AboutManagingdirector } from './about hospital/about-managingdirector/a
     UserProfile,
     AboutHospital,
     AboutChairman,
-    AboutManagingdirector
+    AboutManagingdirector,
+    Contact
+   
    
   ],
   imports: [
