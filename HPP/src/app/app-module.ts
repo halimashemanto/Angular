@@ -21,6 +21,7 @@ import { ViewReceptionist } from './reciptionsist/view-receptionist/view-recepti
 import { DepartmentName } from './testing/department-name/department-name';
 import { DoctorName } from './testing/doctor-name/doctor-name';
 import { BookingName } from './testing/booking-name/booking-name';
+import { ViewDoctor } from './testing/view-doctor/view-doctor';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { BookingName } from './testing/booking-name/booking-name';
     ViewReceptionist,
     DepartmentName,
     DoctorName,
-    BookingName
+    BookingName,
+    ViewDoctor
   ],
   imports: [
     BrowserModule,

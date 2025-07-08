@@ -154,8 +154,67 @@
     {
       "id": "4a1c",
       "dname": "neourology"
+    },
+    {
+      "id": "5b34",
+      "dname": "urology"
+    },
+    {
+      "id": "458a",
+      "dname": "apple"
+    },
+    {
+      "id": "ce46",
+      "dname": "applefghghcfg"
+    },
+    {
+      "id": "d278",
+      "dname": "dhfgfhf"
     }
   ],
-  "doctorModel": [],
+  "doctorModel": [
+    {
+      "id": "c489",
+      "name": "dhfgfhf",
+      "departmentModel": [
+        "5b34"
+      ]
+    },
+    {
+      "id": "4937",
+      "name": "Suprova Shemanto",
+      "departmentModel": [
+        "ce46"
+      ]
+    },
+    {
+      "id": "bc9d",
+      "name": "dhfgfhf",
+      "departmentModel": [
+        "d278"
+      ]
+    },
+    {
+      "id": "4e06",
+      "name": "apple",
+      "departmentModel": [
+        "458a"
+      ]
+    },
+    {
+      "id": "bd6f",
+      "name": "mahbuba nargis",
+      "departmentModel": [
+        "5b34"
+      ]
+    },
+    {
+      "id": "4380",
+      "name": "apple",
+      "departmentModel": [
+        "ce46"
+      ]
+    }
+  ],
   "bookingModel": []
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DrpartmentService } from '../../service/drpartment-service';
 import { DepartmentModel } from '../../model/departmentModel';
@@ -17,7 +17,8 @@ export class DepartmentName implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private departmentService: DrpartmentService ){
+    private departmentService: DrpartmentService ,
+   private cdr:ChangeDetectorRef){
   
     this.depForm = this.formBuilder.group({
       id: [''],
@@ -30,7 +31,7 @@ export class DepartmentName implements OnInit {
   }
 
   loadDepartment() {
-    this.departmentService.getAll().subscribe(data => {
+    this.departmentService.getAllDepartment().subscribe(data => {
       this.departmentModel= data;
     });
   }
@@ -39,17 +40,18 @@ export class DepartmentName implements OnInit {
   if (this.depForm.invalid) return;
 
   if (this.editing) {
-    this.departmentService.update(this.depForm.value).subscribe(() => {
+    this.departmentService.updateDepartment(this.depForm.value).subscribe(() => {
       alert('Updated successfully!');
       this.loadDepartment();
       this.cancelEdit();
     });
   } else {
     const { dname } = this.depForm.value; 
-    this.departmentService.add({ dname }).subscribe(() => {
+    this.departmentService.addDepartment({ dname }).subscribe(() => {
       alert('Added successfully!');
       this.loadDepartment();
       this.depForm.reset();
+       this.cdr.reattach();
       this.editing = false;
     });
   }
@@ -65,7 +67,7 @@ export class DepartmentName implements OnInit {
 
   deleteDepartment(id: string ) {
     if (confirm('Are you sure?')) {
-      this.departmentService.delete(id).subscribe(() => {
+      this.departmentService.deleteDepartment(id).subscribe(() => {
         alert('Deleted!');
         this.loadDepartment();
       });

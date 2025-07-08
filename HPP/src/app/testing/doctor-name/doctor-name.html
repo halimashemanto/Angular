@@ -1,1 +1,33 @@
-<p>doctor-name works!</p>
+
+<div class="container mt-5">
+  <h2 class="mb-4">Add Doctor</h2>
+
+  <form [formGroup]="doctorForm" (ngSubmit)="onSubmit()" class="row g-3">
+    <div class="col-md-6">
+      <label for="name" class="form-label">Doctor Name</label>
+
+      <input  id="name"  formControlName="name"   class="form-control"  /> 
+    </div>
+
+    <div class="col-md-6">
+      <label for="departmentModel" class="form-label">Select Department</label>
+
+      <select  id="departmentModel" formControlName="departmentModel" class="form-select"  multiple size="5"  >
+
+        <option *ngFor="let d of departmentModel"  [value]="d.id" > {{ d.dname }}</option>
+
+      </select>
+
+      <small class="text-muted">Hold Ctrl (Windows) or Cmd (Mac) to select multiple.</small>
+      
+    </div>
+
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-primary"  [disabled]="doctorForm.invalid" > 
+         {{ editing ? 'Update' : 'Add' }}
+      </button>
+        
+   
+    </div>
+  </form>
+</div>

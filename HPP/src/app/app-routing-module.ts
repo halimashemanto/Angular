@@ -13,6 +13,7 @@ import { ViewReceptionist } from './reciptionsist/view-receptionist/view-recepti
 import { DepartmentName } from './testing/department-name/department-name';
 import { DoctorName } from './testing/doctor-name/doctor-name';
 import { BookingName } from './testing/booking-name/booking-name';
+import { ViewDoctor } from './testing/view-doctor/view-doctor';
 
 const routes: Routes = [
   {path:'',component:Home},
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path:'dep',component:DepartmentName},
   {path:'doc',component:DoctorName},
   {path:'book',component:BookingName},
+  {path:'v',component:ViewDoctor},
 ];
 
 @NgModule({
