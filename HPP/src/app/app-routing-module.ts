@@ -10,6 +10,9 @@ import { Login } from './auth/login/login';
 import { User } from './auth/user/user';
 import { AddReceptionist } from './reciptionsist/add-receptionist/add-receptionist';
 import { ViewReceptionist } from './reciptionsist/view-receptionist/view-receptionist';
+import { DepartmentName } from './testing/department-name/department-name';
+import { DoctorName } from './testing/doctor-name/doctor-name';
+import { BookingName } from './testing/booking-name/booking-name';
 
 const routes: Routes = [
   {path:'',component:Home},
@@ -22,6 +25,9 @@ const routes: Routes = [
   {path:'user',component:User},
   {path:'rec',component:AddReceptionist},
   {path:'viewRec',component:ViewReceptionist},
+  {path:'dep',component:DepartmentName},
+  {path:'doc',component:DoctorName},
+  {path:'book',component:BookingName},
 ];
 
 @NgModule({

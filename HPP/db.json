@@ -118,10 +118,44 @@
   ],
   "ReceptionistModel": [
     {
-      "id": "9cb8",
-      "name": "Suprova Shemanto",
-      "email": "suprova@gmail.com",
-      "contactNo": ""
+      "id": "a2a8",
+      "name": "innaya",
+      "email": "inu@gmail.com",
+      "contactNo": "",
+      "address": "lalbagh",
+      "gender": "female",
+      "photo": "inubinnu",
+      "employeeId": "2345",
+      "position": "reciptionist",
+      "department": "Reception",
+      "workHours": "5",
+      "role": ""
+    },
+    {
+      "id": "4eaa",
+      "name": "Arish",
+      "email": "arish@gmail.com",
+      "phone": "01999999999",
+      "address": "Gulshan",
+      "gender": "Male",
+      "photo": "arish",
+      "employeeId": "4567",
+      "position": "Cleaner",
+      "department": "Cleaning",
+      "workHours": "6",
+      "role": ""
     }
-  ]
+  ],
+  "departmentModel": [
+    {
+      "id": "0807",
+      "dname": "cardiology"
+    },
+    {
+      "id": "4a1c",
+      "dname": "neourology"
+    }
+  ],
+  "doctorModel": [],
+  "bookingModel": []
 }

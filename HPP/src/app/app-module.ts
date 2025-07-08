@@ -18,6 +18,9 @@ import { Logout } from './auth/logout/logout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdateReceptionist } from './reciptionsist/update-receptionist/update-receptionist';
 import { ViewReceptionist } from './reciptionsist/view-receptionist/view-receptionist';
+import { DepartmentName } from './testing/department-name/department-name';
+import { DoctorName } from './testing/doctor-name/doctor-name';
+import { BookingName } from './testing/booking-name/booking-name';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { ViewReceptionist } from './reciptionsist/view-receptionist/view-recepti
     User,
     Logout,
     UpdateReceptionist,
-    ViewReceptionist
+    ViewReceptionist,
+    DepartmentName,
+    DoctorName,
+    BookingName
   ],
   imports: [
     BrowserModule,

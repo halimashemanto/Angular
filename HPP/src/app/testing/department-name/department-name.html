@@ -1,0 +1,39 @@
+<div class="container mt-5">
+  <h2 class="mb-4">DEPARTMENT</h2>
+
+  <form [formGroup]="depForm" (ngSubmit)="onSubmit()" class="row g-3">
+    <div class="col-md-6">
+      <label for="name" class="form-label">Department Name</label>
+      <input id="name"  class="form-control" formControlName="dname" />
+    </div>
+
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-success me-2" [disabled]="depForm.invalid">
+        {{ editing ? 'Update' : 'Add' }}
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="cancelEdit()" *ngIf="editing">Cancel</button>
+    </div>
+  </form>
+
+  <hr class="my-4" />
+
+  <table class="table table-bordered table-striped">
+    <thead class="table-info">
+      <tr>
+        <th>ID</th>
+        <th> Department Name</th>
+        <th style="width: 150px;">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of departmentModel">
+        <td>{{ d.id }}</td>
+        <td>{{ d.dname }}</td>
+        <td>
+          <button class="btn btn-sm btn-warning me-2" (click)="editDepartment(d)">Edit</button>
+          <button class="btn btn-sm btn-danger" >Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

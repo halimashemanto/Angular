@@ -25,18 +25,27 @@ export class AddReceptionist implements OnInit {
 
       name: [''],
       email: [''],
-      contactNo: ['']
+      phone: [''],
+      address: [''],
+      gender: [''],
+      photo: [''],
+      employeeId: [''],
+      position: [''],
+      department: [''],
+      workHours: [''],
+      role:['']
 
     });
 
   }
-
+  
   addReciptionist(): void {
 
     const reciptionist = { ...this.reciptionistGroup.value };
     this.reciptionistService.saveReciptionistName(reciptionist).subscribe({
 
       next: (res) => {
+  
         console.log("Saved Reciptionist name", res);
         this.reciptionistGroup.reset();
         this.router.navigate(['/viewRec']);
