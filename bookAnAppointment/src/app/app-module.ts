@@ -17,7 +17,17 @@ import { AboutChairman } from './about hospital/about-chairman/about-chairman';
 import { AboutManagingdirector } from './about hospital/about-managingdirector/about-managingdirector';
 import { Contact } from './contact/contact';
 import { ServiceFeatures } from './service-features/service-features';
-import { HealthCheckUp } from './health-check-up/health-check-up';
+import { HealthCheckUp } from './about hospital/health-check-up/health-check-up';
+import { Admin } from './adminwork/admin/admin';
+
+import { Navbar } from './templet/navbar/navbar';
+import { Nurse } from './NurseComponent/nurse/nurse';
+import { UpdateNurse } from './NurseComponent/update-nurse/update-nurse';
+import { AddNurse } from './NurseComponent/add-nurse/add-nurse';
+import { AddPatient } from './patient/add-patient/add-patient';
+import { ViewPatient } from './patient/view-patient/view-patient';
+import { ListOfPatient } from './patient/list-of-patient/list-of-patient';
+import { UpdatePatient } from './patient/update-patient/update-patient';
 
 
 
@@ -37,7 +47,18 @@ import { HealthCheckUp } from './health-check-up/health-check-up';
     AboutManagingdirector,
     Contact,
     ServiceFeatures,
-    HealthCheckUp
+    HealthCheckUp,
+    Admin,
+    
+    Navbar,
+          Nurse,
+          UpdateNurse,
+          AddNurse,
+          AddPatient,
+          ViewPatient,
+          ListOfPatient,
+          UpdatePatient
+   
    
    
   ],

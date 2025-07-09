@@ -12,7 +12,14 @@ import { AboutManagingdirector } from './about hospital/about-managingdirector/a
 
 import { Contact } from './contact/contact';
 import { ServiceFeatures } from './service-features/service-features';
-import { HealthCheckUp } from './health-check-up/health-check-up';
+import { HealthCheckUp } from './about hospital/health-check-up/health-check-up';
+import { Nurse } from './NurseComponent/nurse/nurse';
+import { UpdateNurse } from './NurseComponent/update-nurse/update-nurse';
+import { AddNurse } from './NurseComponent/add-nurse/add-nurse';
+import { AddPatient } from './patient/add-patient/add-patient';
+import { ViewPatient } from './patient/view-patient/view-patient';
+import { UpdatePatient } from './patient/update-patient/update-patient';
+import { ListOfPatient } from './patient/list-of-patient/list-of-patient';
 
 const routes: Routes = [
   { path: '', component: Home },
@@ -28,6 +35,13 @@ const routes: Routes = [
   { path: 'contact', component: Contact  },
   { path: 'service', component: ServiceFeatures  },
   { path: 'health', component: HealthCheckUp  },
+  { path: 'an', component: AddNurse  },
+  { path: 'n', component: Nurse  },
+  { path: 'un', component: UpdateNurse  },
+  { path: 'addpatient', component: AddPatient  },
+  { path: 'viewpatient', component: ViewPatient  },
+  { path: 'updatepatient/:id', component: UpdatePatient  },
+  { path: 'patientlist', component: ListOfPatient },
 
 ];
 

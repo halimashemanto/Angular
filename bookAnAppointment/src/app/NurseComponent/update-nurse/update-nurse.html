@@ -1,0 +1,59 @@
+<div class="container" *ngIf="nm">
+    <div class="row">
+        <div class="col-sm-5 col-5">
+            <h4 class="page-title">Edit Profile</h4>
+        </div>
+        <div class="col-sm-7 col-7 text-right m-b-20">
+            <a href="nurseprofile" class="btn btn-primary btn-rounded float-end text-white m-1">
+                <i class="fa fa-arrow-left"></i>
+                <span> Back</span>
+            </a>
+        </div>
+    </div>
+
+    <form >
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input id="name" [(ngModel)]="nm.name" type="text" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="specialization">Specialization:</label>
+            <input id="specialization" [(ngModel)]="nm.specialization" type="text" name="specialization" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input id="phone" [(ngModel)]="nm.phone" type="text" name="phone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input id="email" [(ngModel)]="nm.email" type="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="bod">Date of Birth:</label>
+            <input id="bod" [(ngModel)]="nm.bod" type="date" name="bod">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input id="address" [(ngModel)]="nm.address" type="text" name="address">
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <input id="gender" [(ngModel)]="nm.gender" type="text" name="gender">
+        </div>
+
+        <div class="form-group">
+            <label for="photo">Photo:</label>
+            <input id="photo" [(ngModel)]="nm.photo" type="text" name="photo">
+        </div>
+
+      
+
+        <button class="submit-button" type="submit">Save Changes</button>
+    </form>
+</div>

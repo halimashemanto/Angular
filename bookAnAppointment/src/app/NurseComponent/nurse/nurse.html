@@ -1,0 +1,45 @@
+
+<div class="" style="background-color: rgb(199, 247, 231);">
+    <h1 class="my-2 text-center" style="background-color:  rgb(234, 244, 176);">List Of User's</h1>
+    <table class="table table-striped ">
+        <thead>
+            <tr>
+                
+                <th>Name</th>
+                <th>E-mail</th>
+                <th>Contact Number</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Photo</th>
+                <th>Specialization</th>
+                <th>Date of Birth</th>
+                <th>Action</th>
+            </tr>
+
+
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let u of nurse">
+                <td>{{u.id}}</td>
+                <td>{{u.name}}</td>
+                <td>{{u.email}}</td>
+                <td>{{u.contactNo}}</td>
+                <td>{{u.gender}}</td>
+                <td>{{u.gender}}</td>
+                <td>{{u.gender}}</td>
+                <td>
+                     <button class="btn btn-warning m-1 p-1">Edit</button>
+                    <button class="btn btn-danger m-1 p-1" (click)="deleteUser(u.id)">Delete</button>
+
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+

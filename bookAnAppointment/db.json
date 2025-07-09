@@ -38,6 +38,14 @@
       "email": "dgdsfgdfgh@gmail.com",
       "phone": "01628195945",
       "date": "1-8-9",
+      "slot": "Evening"
+    },
+    {
+      "id": "314d",
+      "name": "fdvs",
+      "email": "svs",
+      "phone": "sdvds",
+      "date": "sv",
       "slot": "Morning"
     }
   ],
@@ -62,6 +70,143 @@
       "email": "suprova@gmail.com",
       "password": "12345",
       "role": "user"
+    },
+    {
+      "id": "d38e",
+      "name": "abcd",
+      "email": "abc@gmail.com",
+      "password": "12345678",
+      "role": "user"
+    },
+    {
+      "id": "ae73",
+      "name": "abcd",
+      "email": "abc@gmail.com",
+      "password": "12345678",
+      "role": "user"
+    },
+    {
+      "id": "ce29",
+      "name": "abcd",
+      "email": "abc@gmail.com",
+      "password": "12345678",
+      "role": "user"
+    },
+    {
+      "id": "cbfb",
+      "name": "abcd",
+      "email": "abc@gmail.com",
+      "password": "12345678",
+      "role": "user"
+    },
+    {
+      "id": "6693",
+      "name": "sdfds",
+      "email": "simki@gmail.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "ccff",
+      "name": "sdfds",
+      "email": "simki@gmail.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "2e7f",
+      "name": "sdfds",
+      "email": "simki@gmail.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "9c94",
+      "name": "sdfds",
+      "email": "simki@gmail.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "d469",
+      "name": "sdfds",
+      "email": "simki@gmail.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "9aeb",
+      "name": "sdfds",
+      "email": "simki@gmail.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "1f93",
+      "name": "sdfds",
+      "email": "simki@gmail.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "6704",
+      "name": "sdfds",
+      "email": "simki@gmail.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "127e",
+      "name": "sdfds",
+      "email": "simki@gmail.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "40d3",
+      "name": "sdfds",
+      "email": "simki@gmail.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "fd0d",
+      "name": "sdfds",
+      "email": "simki@gmail.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "26cf",
+      "name": "sdfds",
+      "email": "simki@gmail.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "26df",
+      "name": "sdfds",
+      "email": "simki@gmail.com",
+      "password": "123456",
+      "role": "user"
     }
+  ],
+  "nurseModel": [
+    {
+      "id": "4858",
+      "name": "Suprova Shemanto",
+      "specialization": "oijlk;k",
+      "phone": "01628195945",
+      "email": "va@gmail.com",
+      "bod": "osk",
+      "address": "iljk",
+      "gender": "lksjlkmlklksz",
+      "photo": "poikj"
+    }
+  ],
+  
+  "patientDocModel": [
+
+    
   ]
 }

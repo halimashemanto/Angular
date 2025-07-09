@@ -1,4 +1,4 @@
-<div class=" my-3">
+<div class=" container">
     <div class="bg-info text-center">
 
         <h1 class="jumborton" style="background-color: rgb(179, 238, 248);">Edit an Appoinment </h1>
@@ -7,8 +7,8 @@
     <form *ngIf="book.id" (ngSubmit)="updateBook()">
         <div class="row">
             <div class="col-md-6">
-                <label for="exampleInputEmail1" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="book.name">
+                <label for="exampleInputEmail1" >Name</label>
+                <input type="text" class="form-control" class="form-label" id="name" name="name" [(ngModel)]="book.name">
             </div>
 
             <div class="col-md-6">
