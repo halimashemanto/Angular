@@ -1,6 +1,6 @@
 
 <div class="" style="background-color: rgb(199, 247, 231);">
-    <h1 class="my-2 text-center" style="background-color:  rgb(234, 244, 176);">List Of User's</h1>
+    <h1 class="my-2 text-center" style="background-color:  rgb(234, 244, 176);">List Of Nurse</h1>
     <table class="table table-striped ">
         <thead>
             <tr>
@@ -13,6 +13,7 @@
                 <th>Photo</th>
                 <th>Specialization</th>
                 <th>Date of Birth</th>
+                
                 <th>Action</th>
             </tr>
 
@@ -20,17 +21,19 @@
         </thead>
 
         <tbody>
-            <tr *ngFor="let u of nurse">
-                <td>{{u.id}}</td>
-                <td>{{u.name}}</td>
-                <td>{{u.email}}</td>
-                <td>{{u.contactNo}}</td>
-                <td>{{u.gender}}</td>
-                <td>{{u.gender}}</td>
-                <td>{{u.gender}}</td>
+            <tr *ngFor="let n of nurse">
+                <td>{{n.id}}</td>
+                <td>{{n.name}}</td>
+                <td>{{n.email}}</td>
+                <td>{{n.contactNo}}</td>
+                <td>{{n.gender}}</td>
+                <td>{{n.address}}</td>
+                <td>{{n.Photo}}</td>
+                <td>{{n.Specialization}}</td>
+                <td>{{n.bod}}</td>
                 <td>
                      <button class="btn btn-warning m-1 p-1">Edit</button>
-                    <button class="btn btn-danger m-1 p-1" (click)="deleteUser(u.id)">Delete</button>
+                    <button class="btn btn-danger m-1 p-1" (click)="deleteNurse(n.id)">Delete</button>
 
 
                 </td>

@@ -1,11 +1,11 @@
-export class Doctormodel {
-  id: string;
-  name: string;
-  dname: string[];
+import { DepartmentModel } from "./departmentModel";
 
-  constructor(id: string, name: string, dname: string[] = []) {
-    this.id = id;
-    this.name = name;
-    this.dname = dname;
-  }
+
+export class Doctormodel {
+  id!: string;
+  name!: string;
+
+  departmentModel!: DepartmentModel;
+
+
 }

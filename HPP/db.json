@@ -114,6 +114,13 @@
       "email": "kamruz@gmail.com",
       "password": "123456",
       "role": "user"
+    },
+    {
+      "id": "e0cc",
+      "name": "Suprova",
+      "email": "reeeeeeeeeeeeeeeee@fgdfhb",
+      "password": "123456768",
+      "role": "user"
     }
   ],
   "ReceptionistModel": [
@@ -174,53 +181,20 @@
   ],
   "doctorModel": [
     {
-      "id": "c489",
-      "name": "dhfgfhf",
-      "departmentModel": [
-        "5b34"
-      ]
+      "id": "fb3df6f4-3d61-423d-b131-98519ad36757",
+      "name": "Dr Imran Mia",
+      "departmentModel": {
+        "id": "0807",
+        "dname": "cardiology"
+      }
     },
     {
-      "id": "4937",
-      "name": "Suprova Shemanto",
-      "departmentModel": [
-        "ce46"
-      ]
-    },
-    {
-      "id": "bc9d",
-      "name": "dhfgfhf",
-      "departmentModel": [
-        "d278"
-      ]
-    },
-    {
-      "id": "4e06",
-      "name": "apple",
-      "departmentModel": [
-        "458a"
-      ]
-    },
-    {
-      "id": "bd6f",
-      "name": "mahbuba nargis",
-      "departmentModel": [
-        "5b34"
-      ]
-    },
-    {
-      "id": "4380",
-      "name": "apple",
-      "departmentModel": [
-        "ce46"
-      ]
-    },
-    {
-      "id": "72bd",
-      "name": "iij",
-      "departmentModel": [
-        "5b34"
-      ]
+      "id": "f1a3cdbe-315e-4da1-9859-ec1f6b86a978",
+      "name": "Atik ",
+      "departmentModel": {
+        "id": "458a",
+        "dname": "apple"
+      }
     }
   ],
   "bookingModel": []

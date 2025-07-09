@@ -10,26 +10,28 @@ import { Router } from '@angular/router';
   styleUrl: './nurse.css'
 })
 export class Nurse  implements OnInit {
- nurse :any;
+
+  nurse :any;
 
 constructor(
   private nurseService : NurseService,
   private router: Router,
   private cdr: ChangeDetectorRef){}
 
-  ngOnInit(): void {
-    this.loadAllNuser();
+ngOnInit(): void {
+    this.loadAllNurse();
   }
-loadAllNuser(){
 
-  this.nurse = this.nurseService.getNurse();
+loadAllNurse(){
+
+  this.nurse = this.nurseService.getAllNurse();
 }
-deleteUser(id:string):void{
+
+deleteNurse(id:string):void{
   this.nurseService.deleteNurse(id).subscribe({
 
     next:(res)=>{
-      this.loadAllNuser();
-      this.router.navigate(['/n'])
+      this.loadAllNurse();
       this.cdr.reattach();
 
     },
@@ -41,6 +43,23 @@ console.log(error);
   });
 
 }
+ getNurseById(id: string):void{
+    this.nurseService.getNurseById(id).subscribe({
+      next : (res) =>{
+  
+        this.router.navigate(['/un',id]);
+      },
+
+      error: (err) =>{
+
+        console.log(err);
+      }
+
+    });
+
+  }
+
+
+
 
 }
-

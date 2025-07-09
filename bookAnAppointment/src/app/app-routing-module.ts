@@ -19,29 +19,46 @@ import { AddNurse } from './NurseComponent/add-nurse/add-nurse';
 import { AddPatient } from './patient/add-patient/add-patient';
 import { ViewPatient } from './patient/view-patient/view-patient';
 import { UpdatePatient } from './patient/update-patient/update-patient';
-import { ListOfPatient } from './patient/list-of-patient/list-of-patient';
+import { Doctor } from './dropdown/doctor/doctor';
+import { DepartmentName } from './dropdown/department-name/department-name';
+
 
 const routes: Routes = [
   { path: '', component: Home },
   { path: 'home ', component: Home },
+
+  // book an appoinment
   { path: 'addBook', component: AddBook },
   { path: 'viewBook', component: ViewBook },
   { path: 'updateBook/:id', component: UpdateBook },
+
+  // auth
   { path: 'reg', component: Registration },
   { path: 'log', component: Login  },
+
+  // about hospital
   { path: 'aboutUs', component: AboutHospital  },
   { path: 'aboutC', component: AboutChairman  },
   { path: 'aboutMD', component: AboutManagingdirector  },
-  { path: 'contact', component: Contact  },
   { path: 'service', component: ServiceFeatures  },
   { path: 'health', component: HealthCheckUp  },
+  { path: 'contact', component: Contact  },
+
+  // nurse
   { path: 'an', component: AddNurse  },
   { path: 'n', component: Nurse  },
   { path: 'un', component: UpdateNurse  },
+
+  // patient
   { path: 'addpatient', component: AddPatient  },
   { path: 'viewpatient', component: ViewPatient  },
   { path: 'updatepatient/:id', component: UpdatePatient  },
-  { path: 'patientlist', component: ListOfPatient },
+  
+  // doctor/department
+  { path: 'doc', component:Doctor  },
+  { path: 'dep', component:DepartmentName },
+  
+ 
 
 ];
 

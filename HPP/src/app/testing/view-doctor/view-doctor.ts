@@ -10,10 +10,10 @@ import { DrpartmentService } from '../../service/drpartment-service';
   templateUrl: './view-doctor.html',
   styleUrl: './view-doctor.css'
 })
-export class ViewDoctor implements OnInit{
+export class ViewDoctor implements OnInit {
 
-   doctor: Doctormodel[] = [];
-  departmentModel!: DepartmentModel[];
+  doctor: Doctormodel[] = [];
+  departmentModel: DepartmentModel[] = [];
 
   constructor(
     private doctorService: DoctorService,
@@ -25,29 +25,30 @@ export class ViewDoctor implements OnInit{
   }
 
   loadData() {
-    this.departmentService.getAllDepartment().subscribe(departmentService => {
-      this.departmentModel = departmentService;
-      this.doctorService.getAllDoctor().subscribe(doctor => {
-        this.doctor = doctor;
-      });
+
+    this.doctorService.getAllDoctor().subscribe({
+      next: (res) => {
+
+        this.doctor = res;
+      },
+
+      error: (err) => {
+        console.log(err);
+
+      }
+
     });
-  }
 
-  getDepartment(ids: string[]): string {
-    const names = this.departmentModel
-      .filter(doc => ids.includes(doc.id!))
-      .map(doc => doc.dname);
-    return names.join(', ');
   }
-
 
   deleteDoctor(id: string) {
     if (confirm('Are you sure?')) {
       this.doctorService.deleteDoctor(id).subscribe(() => {
-        alert('District deleted!');
+        alert('Doctor deleted!');
         this.loadData();
       });
     }
   }
+
 
 }

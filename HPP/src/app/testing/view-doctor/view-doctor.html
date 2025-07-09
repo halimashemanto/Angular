@@ -15,7 +15,7 @@
       <tr *ngFor="let d of doctor">
         <td>{{ d.id }}</td>
         <td>{{ d.name }}</td>
-        <td>{{ getDepartment(d.dname) }}</td>
+        <td>{{ d.departmentModel.dname }}</td>
         <td>
  
           <button class="btn btn-sm btn-warning me-2">Edit</button>

@@ -1,33 +1,45 @@
+<div class="container py-4">
+  <h2 class="mb-4">{{ editing ? 'Edit Doctor' : 'Add Doctor' }}</h2>
 
-<div class="container mt-5">
-  <h2 class="mb-4">Add Doctor</h2>
-
-  <form [formGroup]="doctorForm" (ngSubmit)="onSubmit()" class="row g-3">
-    <div class="col-md-6">
-      <label for="name" class="form-label">Doctor Name</label>
-
-      <input  id="name"  formControlName="name"   class="form-control"  /> 
+  <form [formGroup]="doctorForm" (ngSubmit)="onSubmit()" class="mb-4">
+    <div class="mb-3">
+      <label class="form-label">Name:</label>
+      <input type="text" formControlName="name" class="form-control" placeholder="Enter doctor name" required />
     </div>
 
-    <div class="col-md-6">
-      <label for="departmentModel" class="form-label">Select Department</label>
-
-      <select  id="departmentModel" formControlName="departmentModel" class="form-select"  multiple size="5"  >
-
-        <option *ngFor="let d of departmentModel"  [value]="d.id" > {{ d.dname }}</option>
-
+    <div class="mb-3">
+      <label class="form-label">Department:</label>
+      <select formControlName="departmentId" class="form-select" required>
+        <option value="" disabled>Select department</option>
+        <option *ngFor="let dep of departmentModel" [value]="dep.id">
+          {{ dep.dname }}
+        </option>
       </select>
-
-      <small class="text-muted">Hold Ctrl (Windows) or Cmd (Mac) to select multiple.</small>
-      
     </div>
 
-    <div class="col-md-12">
-      <button type="submit" class="btn btn-primary"  [disabled]="doctorForm.invalid" > 
-         {{ editing ? 'Update' : 'Add' }}
-      </button>
-        
-   
-    </div>
+    <button type="submit" class="btn btn-primary me-2" [disabled]="doctorForm.invalid">
+      {{ editing ? 'Update' : 'Add' }}
+    </button>
+    <button type="button" class="btn btn-secondary" *ngIf="editing" (click)="cancelEdit()">
+      Cancel
+    </button>
   </form>
+
+  <h2 class="mb-3">Doctors List</h2>
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let doc of doctors">
+      <div>
+        <strong>{{ doc.name }}</strong> -
+        <span class="text-muted">{{ doc.departmentModel?.dname }}</span>
+      </div>
+      <div>
+        <button class="btn btn-sm btn-warning me-2" (click)="editDoctor(doc)">
+          Edit
+        </button>
+        <button class="btn btn-sm btn-danger" (click)="deleteDoctor(doc.id)">
+          Delete
+        </button>
+      </div>
+    </li>
+  </ul>
 </div>

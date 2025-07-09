@@ -6,7 +6,7 @@
       "email": "shawonsajgufvasduhfysdaf@gmail.com",
       "phone": "0198723498",
       "date": "01-4-2",
-      "slot": "Evening"
+      "slot": "Morning"
     },
     {
       "id": "02",
@@ -41,12 +41,12 @@
       "slot": "Evening"
     },
     {
-      "id": "314d",
-      "name": "fdvs",
-      "email": "svs",
-      "phone": "sdvds",
-      "date": "sv",
-      "slot": "Morning"
+      "id": "4298",
+      "name": "qwertyu",
+      "email": "qwwertyuj@stj.ci",
+      "phone": "1245799",
+      "date": "153633.",
+      "slot": "Evening"
     }
   ],
   "userModel": [
@@ -189,6 +189,90 @@
       "email": "simki@gmail.com",
       "password": "123456",
       "role": "user"
+    },
+    {
+      "id": "31be",
+      "name": "Suprova",
+      "email": "ssss@gmail.com",
+      "password": "123456789",
+      "role": "user"
+    },
+    {
+      "id": "d074",
+      "name": "Suprova",
+      "email": "ssss@gmail.com",
+      "password": "123456789",
+      "role": "user"
+    },
+    {
+      "id": "7adb",
+      "name": "Suprova",
+      "email": "ssss@gmail.com",
+      "password": "123456789",
+      "role": "user"
+    },
+    {
+      "id": "1828",
+      "name": "Suprova",
+      "email": "ssss@gmail.com",
+      "password": "123456789",
+      "role": "user"
+    },
+    {
+      "id": "26f6",
+      "name": "Suprova",
+      "email": "ssss@gmail.com",
+      "password": "123456789",
+      "role": "user"
+    },
+    {
+      "id": "2896",
+      "name": "Suprova",
+      "email": "ssss@gmail.com",
+      "password": "123456789",
+      "role": "user"
+    },
+    {
+      "id": "7112",
+      "name": "Suprova",
+      "email": "ssss@gmail.com",
+      "password": "123456789",
+      "role": "user"
+    },
+    {
+      "id": "0124",
+      "name": "Suprova",
+      "email": "ssss@gmail.com",
+      "password": "123456789",
+      "role": "user"
+    },
+    {
+      "id": "2130",
+      "name": "Suprova",
+      "email": "ssss@gmail.com",
+      "password": "123456789",
+      "role": "user"
+    },
+    {
+      "id": "fb72",
+      "name": "Suprova",
+      "email": "ssss@gmail.com",
+      "password": "123456789",
+      "role": "user"
+    },
+    {
+      "id": "7de5",
+      "name": "Suprova",
+      "email": "ssss@gmail.com",
+      "password": "123456789",
+      "role": "user"
+    },
+    {
+      "id": "0e0e",
+      "name": "Suprova",
+      "email": "ssss@gmail.com",
+      "password": "123456789",
+      "role": "user"
     }
   ],
   "nurseModel": [
@@ -202,11 +286,124 @@
       "address": "iljk",
       "gender": "lksjlkmlklksz",
       "photo": "poikj"
+    },
+    {
+      "id": "b783",
+      "name": "Suprova Shemanto",
+      "specialization": "gtrre",
+      "phone": "01628195945",
+      "email": "grdg",
+      "bod": "etg",
+      "address": "retg",
+      "gender": "bxgd",
+      "photo": "drgd",
+      "role": []
+    },
+    {
+      "id": "9582",
+      "name": "innaya",
+      "specialization": "surgery",
+      "phone": "123654789",
+      "email": "inu@gmail.com",
+      "bod": "26 feb 2023",
+      "address": "dhaka",
+      "gender": "female",
+      "photo": "inu",
+      "role": []
+    },
+    {
+      "id": "1349",
+      "name": "asdfgh",
+      "specialization": "asdgh",
+      "phone": "asfdf",
+      "email": "asdsgy",
+      "bod": "asdffg",
+      "address": "ASFG",
+      "gender": "asdffgh",
+      "photo": "assf",
+      "role": []
     }
   ],
-  
-  "patientDocModel": [
-
+  "doctorModel": [
+    {
+      "id": "d4d3",
+      "name": "Dr. Sormila"
+    },
+    {
+      "id": "e442",
+      "name": "Dr. Umme Salma"
+    },
+    {
+      "id": "0e3e",
+      "name": "Dr. Abdus Shakur Khan"
+    },
+    {
+      "id": "1a6e",
+      "name": "Dr. Reza Mahmul"
+    },
+    {
+      "id": "2a15",
+      "name": "Dr. Ayub Ali Chowdury"
+    },
+    {
+      "id": "db9d",
+      "name": "Dr. Ahad Khan"
+    },
+    {
+      "id": "43bb",
+      "name": "Dr. Emran Hossain"
+    },
+    {
+      "id": "1d74",
+      "name": "Dr. Atik Islam"
+    },
+    {
+      "id": "9134",
+      "name": "Dr. Sathe Khanom"
+    },
+    {
+      "id": "8884",
+      "name": "Dr. Istiaq Junayed"
+    },
+    {
+      "id": "196d",
+      "name": "Dr. Imran Mia"
+    },
+    {
+      "id": "33f7",
+      "name": "Dr. Abdullah Al Masud"
+    },
+    {
+      "id": "3b89",
+      "name": "Dr. Parvej Hossain"
+    },
+    {
+      "id": "0507",
+      "name": "Dr. Mahbuba Nargis"
+    },
+    {
+      "id": "4573",
+      "name": "Dr. Rohmatullah"
+    },
+    {
+      "id": "8b50",
+      "name": "Dr. Sadiar"
+    },
+    {
+      "id": "5405",
+      "name": "Dr. Rahim Khan"
+    },
+    {
+      "id": "f1fe",
+      "name": "Dr. Rakib Hossain"
+    },
+    {
+      "id": "f4f4",
+      "name": "Dr. Eiasin Prodhan"
+    }
+  ],
+  "departmentmodel": [
     
-  ]
+  ],
+  "patientDocModel": []
 }

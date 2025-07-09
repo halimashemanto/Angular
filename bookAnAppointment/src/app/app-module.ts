@@ -26,8 +26,11 @@ import { UpdateNurse } from './NurseComponent/update-nurse/update-nurse';
 import { AddNurse } from './NurseComponent/add-nurse/add-nurse';
 import { AddPatient } from './patient/add-patient/add-patient';
 import { ViewPatient } from './patient/view-patient/view-patient';
-import { ListOfPatient } from './patient/list-of-patient/list-of-patient';
+
 import { UpdatePatient } from './patient/update-patient/update-patient';
+import { DepartmentName } from './dropdown/department-name/department-name';
+import { Doctor } from './dropdown/doctor/doctor';
+import { ViewDepartment } from './dropdown/view-department/view-department';
 
 
 
@@ -56,8 +59,10 @@ import { UpdatePatient } from './patient/update-patient/update-patient';
           AddNurse,
           AddPatient,
           ViewPatient,
-          ListOfPatient,
-          UpdatePatient
+          UpdatePatient,
+          DepartmentName,
+          Doctor,
+          ViewDepartment
    
    
    

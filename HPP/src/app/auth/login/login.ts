@@ -45,9 +45,9 @@ onSubmit(): void {
       console.log('User role:', role);
 
       if (role === 'Admin') {
-        this.router.navigate(['/userprofile']);
+        this.router.navigate(['/rec']);
       } else if (role === 'User') {
-        this.router.navigate(['/userprofile']);
+        this.router.navigate(['/home']);
       } else {
         this.errorMessage = 'Unknown user role.';
       }

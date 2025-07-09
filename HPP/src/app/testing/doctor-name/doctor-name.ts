@@ -5,6 +5,7 @@ import { DoctorService } from '../../service/doctor-service';
 import { DrpartmentService } from '../../service/drpartment-service';
 import { Doctormodel } from '../../model/doctorModel';
 import { Router } from '@angular/router';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-doctor-name',
@@ -13,9 +14,12 @@ import { Router } from '@angular/router';
   styleUrl: './doctor-name.css'
 })
 export class DoctorName implements OnInit {
+
   doctorForm: FormGroup;
   departmentModel: DepartmentModel[] = [];
-   editing: boolean = false;
+  doctors: Doctormodel[] = [];
+  editing: boolean = false;
+  editingDoctorId: string | null = null;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -24,53 +28,80 @@ export class DoctorName implements OnInit {
     private router: Router
   ) {
     this.doctorForm = this.formBuilder.group({
+      id: [''],
       name: ['', Validators.required],
-      departmentModel: [[], Validators.required]
+      departmentId: ['', Validators.required]
     });
   }
 
   ngOnInit() {
-    this.loadDepartment();
+    this.loadDepartments();
+    this.loadDoctors();
   }
 
-  loadDepartment() {
+  loadDepartments() {
     this.departmentService.getAllDepartment().subscribe(data => {
       this.departmentModel = data;
+    });
+  }
+
+  loadDoctors() {
+    this.doctorService.getAllDoctor().subscribe(data => {
+      this.doctors = data;
     });
   }
 
   onSubmit() {
     if (this.doctorForm.invalid) return;
 
-    const doc: Doctormodel = this.doctorForm.value;
+    const formValue = this.doctorForm.value;
 
-    this.doctorService.addDoctor(doc).subscribe(() => {
-      alert('Doctor added successfully!');
-      this.doctorForm.reset();
-      this.router.navigate(['/v']);
-    });
+    const doctor: Doctormodel = {
+       id: this.editingDoctorId || uuidv4(),
+      name: formValue.name,
+      departmentModel: this.departmentModel.find(dep => dep.id === formValue.departmentId)!
+    };
+
+    if (this.editing) {
+      this.doctorService.updateDoctor(doctor).subscribe(() => {
+        alert('Doctor updated!');
+        this.loadDoctors();
+        this.cancelEdit();
+      });
+    } else {
+      this.doctorService.addDoctor(doctor).subscribe(() => {
+        alert('Doctor added!');
+        this.loadDoctors();
+        this.doctorForm.reset();
+      });
+    }
   }
 
-   editDepartment(dep: DepartmentModel) {
+  editDoctor(doctor: Doctormodel) {
     this.editing = true;
+    this.editingDoctorId = doctor.id;
+
     this.doctorForm.patchValue({
-      id: dep.id,
-      name: dep.dname
+      name: doctor.name,
+      departmentId: doctor.departmentModel.id
     });
   }
 
-  deleteDepartment(id: string ) {
-    if (confirm('Are you sure?')) {
-      this.departmentService.deleteDepartment(id).subscribe(() => {
-        alert('Deleted!');
-        this.loadDepartment();
+  deleteDoctor(id: string) {
+    if (confirm('Are you sure you want to delete this doctor?')) {
+      this.doctorService.deleteDoctor(id).subscribe(() => {
+        alert('Doctor deleted!');
+        this.loadDoctors();
       });
     }
   }
 
   cancelEdit() {
     this.editing = false;
+    this.editingDoctorId = null;
     this.doctorForm.reset();
   }
+
+
 }
 

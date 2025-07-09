@@ -1,0 +1,27 @@
+<div class="container mt-5" style="background-color: rgb(170, 214, 250);">
+  <h2 style="background-color: rgb(250, 170, 217);">Add Department</h2>
+
+  <form [formGroup]="depForm" (ngSubmit)="onSubmit()" class="row g-3">
+    <div class="col-md-6">
+      <label for="name" class="form-label">Department Name</label>
+      <input id="name" formControlName="name" class="form-control" placeholder="Enter Department Name" /> <br>
+         
+    </div>
+
+    <div class="col-md-6">
+      <label for="doctorModel" class="form-label">Select Doctor Name</label>
+      <select id="doctorModel" formControlName="doctorModel" class="form-select" multiple size="10">
+        <option *ngFor="let doc of doctorModel" [value]="doc.id">
+          {{ doc.name }}
+        </option>
+      </select>
+      <small class="text-muted">Hold Ctrl (Windows) or Cmd (Mac) to select multiple.</small>
+    
+    </div>
+    <div class="col-md-2">
+      <button type="submit" class="btn btn-primary" >Add </button>
+    </div>
+
+   
+  </form>
+</div>
