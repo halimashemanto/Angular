@@ -15,25 +15,25 @@ import { UserProfile } from './auth/user-profile/user-profile';
 import { AboutHospital } from './about hospital/about-hospital/about-hospital';
 import { AboutChairman } from './about hospital/about-chairman/about-chairman';
 import { AboutManagingdirector } from './about hospital/about-managingdirector/about-managingdirector';
-import { Contact } from './contact/contact';
+import { Contact } from './about hospital/contact/contact';
 import { ServiceFeatures } from './service-features/service-features';
 import { HealthCheckUp } from './about hospital/health-check-up/health-check-up';
 import { Admin } from './adminwork/admin/admin';
-
 import { Navbar } from './templet/navbar/navbar';
 import { Nurse } from './NurseComponent/nurse/nurse';
 import { UpdateNurse } from './NurseComponent/update-nurse/update-nurse';
 import { AddNurse } from './NurseComponent/add-nurse/add-nurse';
 import { AddPatient } from './patient/add-patient/add-patient';
 import { ViewPatient } from './patient/view-patient/view-patient';
-
 import { UpdatePatient } from './patient/update-patient/update-patient';
 import { DepartmentName } from './dropdown/department-name/department-name';
-import { Doctor } from './dropdown/doctor/doctor';
-import { ViewDepartment } from './dropdown/view-department/view-department';
 import { Addreciptionist } from './Reciptionist/addreciptionist/addreciptionist';
 import { Viewreciptionist } from './Reciptionist/viewreciptionist/viewreciptionist';
 import { Updatereciptionist } from './Reciptionist/updatereciptionist/updatereciptionist';
+import { AddDoctorComponent } from './dropdown/add-doctor-component/add-doctor-component';
+import { ViewDoctorComponent } from './dropdown/view-doctor-component/view-doctor-component';
+import { UpdateDoctorComponent } from './dropdown/update-doctor-component/update-doctor-component';
+import { Equipment } from './about hospital/equipment/equipment';
 
 
 
@@ -63,12 +63,14 @@ import { Updatereciptionist } from './Reciptionist/updatereciptionist/updatereci
           AddPatient,
           ViewPatient,
           UpdatePatient,
-          DepartmentName,
-          Doctor,
-          ViewDepartment,
+          DepartmentName,                 
           Addreciptionist,
           Viewreciptionist,
-          Updatereciptionist
+          Updatereciptionist,
+          AddDoctorComponent,
+          ViewDoctorComponent,
+          UpdateDoctorComponent,
+          Equipment
    
    
    

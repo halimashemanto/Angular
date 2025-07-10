@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { DoctorModel } from './model/doctorModel';
+import { Doctor } from './model/doctorModel';
+
 
 
 @Injectable({
@@ -9,24 +10,31 @@ import { DoctorModel } from './model/doctorModel';
 })
 export class DoctorService {
   
-  private apiUrl = 'http://localhost:3000/doctorModel';
+  private apiUrl = 'http://localhost:3000/doctors';
 
   constructor(private http: HttpClient) {}
 
-  getAllDoctorName(): Observable<DoctorModel[]> {
-    return this.http.get<DoctorModel[]>(this.apiUrl);
+  getAllDoctorName(): Observable<Doctor[]> {
+    return this.http.get<Doctor[]>(this.apiUrl);
   }
 
-  addDoctorName(dm: DoctorModel): Observable<DoctorModel> {
-    return this.http.post<DoctorModel>(this.apiUrl, dm);
+  addDoctorName(dm: Doctor): Observable<Doctor> {
+    return this.http.post<Doctor>(this.apiUrl, dm);
   }
 
-  updateDoctorName(dm: DoctorModel): Observable<DoctorModel> {
-    return this.http.put<DoctorModel>(`${this.apiUrl}/${dm.id}`, dm);
+  updateDoctorName(dm: Doctor): Observable<Doctor> {
+    return this.http.put<Doctor>(`${this.apiUrl}/${dm.id}`, dm);
   }
 
   deleteDoctorName(id: string ): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
+
+
+  getDoctorById(id: string): Observable<Doctor> {
+  return this.http.get<Doctor>(`${this.apiUrl}/${id}`);
+}
+
+
   
 }

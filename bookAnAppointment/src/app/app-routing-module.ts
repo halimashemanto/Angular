@@ -10,7 +10,7 @@ import { AboutHospital } from './about hospital/about-hospital/about-hospital';
 import { AboutChairman } from './about hospital/about-chairman/about-chairman';
 import { AboutManagingdirector } from './about hospital/about-managingdirector/about-managingdirector';
 
-import { Contact } from './contact/contact';
+import { Contact } from './about hospital/contact/contact';
 import { ServiceFeatures } from './service-features/service-features';
 import { HealthCheckUp } from './about hospital/health-check-up/health-check-up';
 import { Nurse } from './NurseComponent/nurse/nurse';
@@ -19,11 +19,15 @@ import { AddNurse } from './NurseComponent/add-nurse/add-nurse';
 import { AddPatient } from './patient/add-patient/add-patient';
 import { ViewPatient } from './patient/view-patient/view-patient';
 import { UpdatePatient } from './patient/update-patient/update-patient';
-import { Doctor } from './dropdown/doctor/doctor';
+
 import { DepartmentName } from './dropdown/department-name/department-name';
 import { Addreciptionist } from './Reciptionist/addreciptionist/addreciptionist';
 import { Viewreciptionist } from './Reciptionist/viewreciptionist/viewreciptionist';
 import { Updatereciptionist } from './Reciptionist/updatereciptionist/updatereciptionist';
+import { AddDoctorComponent } from './dropdown/add-doctor-component/add-doctor-component';
+import { ViewDoctorComponent } from './dropdown/view-doctor-component/view-doctor-component';
+import { UpdateDoctorComponent } from './dropdown/update-doctor-component/update-doctor-component';
+import { Equipment } from './about hospital/equipment/equipment';
 
 
 const routes: Routes = [
@@ -46,6 +50,7 @@ const routes: Routes = [
   { path: 'service', component: ServiceFeatures  },
   { path: 'health', component: HealthCheckUp  },
   { path: 'contact', component: Contact  },
+  { path: 'eq', component: Equipment  },
 
   // nurse
   { path: 'an', component: AddNurse  },
@@ -53,13 +58,17 @@ const routes: Routes = [
   { path: 'un', component: UpdateNurse  },
 
   // patient
-  { path: 'addpatient', component: AddPatient  },
-  { path: 'viewpatient', component: ViewPatient  },
-  { path: 'updatepatient/:id', component: UpdatePatient  },
+  { path: 'addp', component: AddPatient  },
+  { path: 'viewp', component: ViewPatient  },
+  { path: 'up/:id', component: UpdatePatient  },
   
   // doctor/department
-  { path: 'doc', component:Doctor  },
+
   { path: 'dep', component:DepartmentName },
+  { path: 'editDepartment', component:DepartmentName },
+  { path: 'adddoc', component:AddDoctorComponent },
+  { path: 'viewdoc', component:ViewDoctorComponent },
+  { path: 'edit-doctor/:id', component:UpdateDoctorComponent },
 
   //reciptionsist
   { path: 'rec', component:Addreciptionist  },

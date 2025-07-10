@@ -39,27 +39,5 @@ export class AddPatient implements OnInit {
 
   }
   
-  addReciptionist(): void {
-
-    const patient = { ...this.pGroup.value };
-    this.patientService.s(reciptionist).subscribe({
-
-      next: (res) => {
-  
-        console.log("Saved Reciptionist name", res);
-        this.reciptionistGroup.reset();
-        this.router.navigate(['/viewrec']);
-
-      },
-
-      error: (error) => {
-        console.log(error);
-      }
-
-    })
-
-    
-
-
-  }
+ 
 }

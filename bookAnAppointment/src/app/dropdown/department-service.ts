@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { DepartmentModel } from './model/departmentModel';
+import { Department } from './model/departmentModel';
+
 
 @Injectable({
   providedIn: 'root'
@@ -9,20 +10,20 @@ import { DepartmentModel } from './model/departmentModel';
 export class DepartmentService {
   
   
-  private apiUrl = 'http://localhost:3000/departmentmodel';
+  private apiUrl = 'http://localhost:3000/departments';
 
   constructor(private http: HttpClient) { }
 
-  getAllDepartment(): Observable<DepartmentModel[]> {
-    return this.http.get<DepartmentModel[]>(this.apiUrl);
+  getAllDepartment(): Observable<Department[]> {
+    return this.http.get<Department[]>(this.apiUrl);
   }
 
-  addDepartment(dep: DepartmentModel): Observable<DepartmentModel> {
-    return this.http.post<DepartmentModel>(this.apiUrl, dep);
+  addDepartment(dep: Department): Observable<Department> {
+    return this.http.post<Department>(this.apiUrl, dep);
   }
 
-  updateDepartment(dep: DepartmentModel): Observable<DepartmentModel> {
-    return this.http.put<DepartmentModel>(`${this.apiUrl}/${dep.id}`, dep);
+  updateDepartment(dep: Department): Observable<Department> {
+    return this.http.put<Department>(`${this.apiUrl}/${dep.id}`, dep);
   }
 
   deleteDepartment(id: string): Observable<void> {

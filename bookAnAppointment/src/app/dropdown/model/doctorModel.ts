@@ -1,10 +1,12 @@
 
-export class DoctorModel {
+
+
+export interface Doctor {
   id?: string;
   name: string;
-
-  constructor(id: string, name: string) {
-    this.id = id;
-    this.name = name;
-  }
+  designation:string;
+  degree:string;
+  photo: string;
+  schedule:string;
+  departmentId: string;
 }
