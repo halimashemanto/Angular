@@ -21,6 +21,9 @@ import { ViewPatient } from './patient/view-patient/view-patient';
 import { UpdatePatient } from './patient/update-patient/update-patient';
 import { Doctor } from './dropdown/doctor/doctor';
 import { DepartmentName } from './dropdown/department-name/department-name';
+import { Addreciptionist } from './Reciptionist/addreciptionist/addreciptionist';
+import { Viewreciptionist } from './Reciptionist/viewreciptionist/viewreciptionist';
+import { Updatereciptionist } from './Reciptionist/updatereciptionist/updatereciptionist';
 
 
 const routes: Routes = [
@@ -57,7 +60,11 @@ const routes: Routes = [
   // doctor/department
   { path: 'doc', component:Doctor  },
   { path: 'dep', component:DepartmentName },
-  
+
+  //reciptionsist
+  { path: 'rec', component:Addreciptionist  },
+  { path: 'viewrec', component:Viewreciptionist },
+  { path: 'uprec', component:Updatereciptionist  },
  
 
 ];

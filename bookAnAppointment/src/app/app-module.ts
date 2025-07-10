@@ -31,6 +31,9 @@ import { UpdatePatient } from './patient/update-patient/update-patient';
 import { DepartmentName } from './dropdown/department-name/department-name';
 import { Doctor } from './dropdown/doctor/doctor';
 import { ViewDepartment } from './dropdown/view-department/view-department';
+import { Addreciptionist } from './Reciptionist/addreciptionist/addreciptionist';
+import { Viewreciptionist } from './Reciptionist/viewreciptionist/viewreciptionist';
+import { Updatereciptionist } from './Reciptionist/updatereciptionist/updatereciptionist';
 
 
 
@@ -62,7 +65,10 @@ import { ViewDepartment } from './dropdown/view-department/view-department';
           UpdatePatient,
           DepartmentName,
           Doctor,
-          ViewDepartment
+          ViewDepartment,
+          Addreciptionist,
+          Viewreciptionist,
+          Updatereciptionist
    
    
    

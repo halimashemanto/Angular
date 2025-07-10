@@ -1,0 +1,87 @@
+<div class=" container">
+    <div class="bg-info text-center">
+
+        <h1 class="jumborton" style="background-color: rgb(179, 238, 248);">Update Reciptionist Information</h1>
+    </div>
+
+    <form *ngIf="profile.id" (ngSubmit)="updateReciptionist()">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="text" class="form-control" class="form-label" id="name" name="name"
+                    [(ngModel)]="profile.name">
+            </div>
+
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">E-mail</label>
+                <input type="text" class="form-control" id="email" name="email" [(ngModel)]="profile.email">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Contact Number</label>
+                <input type="text" class="form-control" id="name" name="phone" [(ngModel)]="profile.phone">
+            </div>
+
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Address</label>
+                <input type="text" class="form-control" id="name" name="date" [(ngModel)]="profile.address">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Gender</label>
+                <input type="text" class="form-control" id="name" name="phone" [(ngModel)]="profile.gender">
+            </div>
+
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Photo</label>
+                <input type="text" class="form-control" id="name" name="date" [(ngModel)]="profile.photo">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Employee Id</label>
+                <input type="text" class="form-control" id="name" name="phone" [(ngModel)]="profile.employeeId">
+            </div>
+
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Position</label>
+                <input type="text" class="form-control" id="name" name="date" [(ngModel)]="profile.position">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Department</label>
+                <input type="text" class="form-control" id="name" name="phone" [(ngModel)]="profile.department">
+            </div>
+
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Working Hours</label>
+                <input type="text" class="form-control" id="name" name="date" [(ngModel)]="profile.workHours">
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row mt-3 text-center">
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-success text-center" (click)="updateReciptionist()">Save</button>
+
+            </div>
+
+            <div class="col-md-6">
+                <button type="reset" class="btn btn-danger text-center">Reset</button>
+
+            </div>
+        </div>
+    </form>
+
+
+</div>

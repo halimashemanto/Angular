@@ -1,27 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { PatientDocModel } from '../model/patientDocModel';
-import { Patientdocservice } from '../patientdocservice';
-import { Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ReciptionistService } from '../reciptionist-service';
 
 @Component({
-  selector: 'app-add-patient',
+  selector: 'app-addreciptionist',
   standalone: false,
-  templateUrl: './add-patient.html',
-  styleUrl: './add-patient.css'
+  templateUrl: './addreciptionist.html',
+  styleUrl: './addreciptionist.css'
 })
-export class AddPatient implements OnInit {
+export class Addreciptionist implements OnInit {
 
 
-  pGroup !: FormGroup;
+  reciptionistGroup !: FormGroup;
 
-  constructor(private patientService: Patientdocservice,
+  constructor(private reciptionistService: ReciptionistService,
     private formBuilder: FormBuilder,
     private router: Router) { }
 
 
   ngOnInit(): void {
-    this.pGroup = this.formBuilder.group({
+    this.reciptionistGroup = this.formBuilder.group({
 
       name: [''],
       email: [''],
@@ -41,8 +40,8 @@ export class AddPatient implements OnInit {
   
   addReciptionist(): void {
 
-    const patient = { ...this.pGroup.value };
-    this.patientService.s(reciptionist).subscribe({
+    const reciptionist = { ...this.reciptionistGroup.value };
+    this.reciptionistService.saveReciptionistName(reciptionist).subscribe({
 
       next: (res) => {
   

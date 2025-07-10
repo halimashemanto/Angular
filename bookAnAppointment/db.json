@@ -322,6 +322,18 @@
       "gender": "asdffgh",
       "photo": "assf",
       "role": []
+    },
+    {
+      "id": "ed4f",
+      "name": "Suhaib",
+      "specialization": "surgery",
+      "phone": "018754567890",
+      "email": "va@gmail.com",
+      "bod": "09-9-10",
+      "address": "lalbagh,dhaka",
+      "gender": "male",
+      "photo": "suhaib",
+      "role": []
     }
   ],
   "doctorModel": [
@@ -402,8 +414,36 @@
       "name": "Dr. Eiasin Prodhan"
     }
   ],
-  "departmentmodel": [
-    
-  ],
-  "patientDocModel": []
+  "departmentmodel": [],
+  "patientDocModel": [],
+  "reciptionistDocModel": [
+    {
+      "id": "9547",
+      "name": "Mehwish Rahman Innaya",
+      "email": "innaya@gmail.com",
+      "phone": "01234567890",
+      "address": "Gulshan Dhaka",
+      "gender": "female",
+      "photo": "inu",
+      "employeeId": "1234",
+      "position": "Cashier",
+      "department": "Aurthopedic",
+      "workHours": "6",
+      "role": ""
+    },
+    {
+      "id": "cc49",
+      "name": "Sehzil Munjir Arish",
+      "email": "arish@gmail.com",
+      "phone": "016281234653",
+      "address": "Agargaon,dhaka",
+      "gender": "Male",
+      "photo": "arish",
+      "employeeId": "0987",
+      "position": "Report sender",
+      "department": "Reception",
+      "workHours": "8",
+      "role": ""
+    }
+  ]
 }

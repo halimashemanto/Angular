@@ -20,15 +20,11 @@ export class UpdateNurse implements OnInit {
      private route: ActivatedRoute,
      private cdr: ChangeDetectorRef) { }
  
- 
    ngOnInit(): void {
      this.id = this.route.snapshot.params['id'];
      this.loadNurseById();
-     
- 
+  
    }
- 
-   
  
    loadNurseById() {
  
@@ -50,8 +46,7 @@ export class UpdateNurse implements OnInit {
          this.router.navigate(['/n'])
  
        },
- 
- 
+       
        error: err => {
          console.error(err);
        }
