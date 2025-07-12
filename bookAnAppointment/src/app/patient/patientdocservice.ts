@@ -7,54 +7,28 @@ import { PatientDocModel } from './model/patientDocModel';
   providedIn: 'root'
 })
 export class Patientdocservice {
-  private apiUrl=""; 
+  private baseUrl="http://localhost:3000/patientDocModel"; 
 
   constructor(private http: HttpClient) { }
 
-  getPatients(): Observable<PatientDocModel[]> {
-
-
-    return this.http.get<PatientDocModel[]>(this.apiUrl).pipe(
-      tap(() => console.log('Fetched patients')),
-      catchError(this.handleError<PatientDocModel[]>('getPatients', []))
-    );
+     getAllPatient():Observable<any>{
+      return this.http.get(this.baseUrl);
+    }
+  
+    savePatient(patient:PatientDocModel):Observable<any>{
+      return this.http.post(this.baseUrl,patient);
+    }
+  
+    deletePatient(id:string):Observable<any>{
+      return this.http.delete(this.baseUrl +'/'+id);
+    }
+  
+    getPatientById(id:string):Observable<any>{
+      return this.http.get(this.baseUrl+'/'+id);
+    }
+    updatePatient(id: string, p: PatientDocModel): Observable<any>{
+  
+      return this.http.put(this.baseUrl+'/'+id, p);
+    }
   }
-
-  getPatient(id: string): Observable<PatientDocModel> {
-    const url = `${this.apiUrl}/${id}`;
-    return this.http.get<PatientDocModel>(url).pipe(
-      tap(() => console.log(`Fetched patient id=${id}`)),
-      catchError(this.handleError<PatientDocModel>(`getPatient id=${id}`))
-    );
-  }
-
-  addPatient(patient: PatientDocModel): Observable<PatientDocModel> {
-    return this.http.post<PatientDocModel>(this.apiUrl, patient).pipe(
-      tap((newPatient: PatientDocModel) => console.log(`Added patient w/ id=${newPatient.id}`)),
-      catchError(this.handleError<PatientDocModel>('addPatient'))
-    );
-  }
-
-  updatePatient(patient: PatientDocModel): Observable<any> {
-    return this.http.put(this.apiUrl + '/' + patient.id, patient).pipe(
-      tap(() => console.log(`Updated patient id=${patient.id}`)),
-      catchError(this.handleError<any>('updatePatient'))
-    );
-  }
-
-  deletePatient(id: number): Observable<PatientDocModel> {
-    const url = `${this.apiUrl}/${id}`;
-    return this.http.delete<PatientDocModel>(url).pipe(
-      tap(() => console.log(`Deleted patient id=${id}`)),
-      catchError(this.handleError<PatientDocModel>('deletePatient'))
-    );
-  }
-
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      console.error(error);
-      console.log(`${operation} failed: ${error.message}`);
-      return of(result as T);
-    };
-  }
-}
+  

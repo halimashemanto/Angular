@@ -1,53 +1,50 @@
-
-
-<div class="page-wrapper">
-    <div class="content mt-5">
-      <div class="row">
-        <div class="col-sm-4 col-3">
-          <h4 class="page-title">Patient</h4>
-        </div>
-        <div class="col-sm-8 col-9 text-right m-b-20">
-          <a routerLink="/addpatient" class="btn btn-primary btn-rounded float-end text-white m-1">
-            <i class="fa fa-plus"></i>
-            <span>Add Patient</span>
-          </a>
-        </div>
-      </div>
-  
-      <div class="patient-details">
-        <table class="table table-bordered">
-          <thead>
+<div class="" style="background-color: rgb(199, 247, 231);">
+    <h1 class="my-2 text-center" style="background-color:  rgb(234, 244, 176);">Patient List</h1>
+    <table class="table table-striped ">
+        <thead>
             <tr>
-              <th>Name</th>
-              <th>Age</th>
-              <th>Gender</th>
-              <th>Date of Birth</th>
-              <th>Contact</th>
-              <th>Address</th>
-              <th>Medical History</th>
-              <th>Reason</th>
-              <th>Status</th>
-              <th>Actions</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Contact Number</th>
+                <th>Date</th>
+                <th>Gender</th>
+                <th>address</th>
+                <th>reason</th>
+                <th>status</th>
+                <th>department</th>
+                <th>doctorName</th>
+                <th>Action</th>
             </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let patient of patients">
-              <td>{{ patient.name }}</td>
-              <td>{{ patient.age }}</td>
-              <td>{{ patient.gender }}</td>
-              <td>{{ patient.dateOfBirth | date }}</td>
-              <td>{{ patient.contact }}</td>
-              <td>{{ patient.address }}</td>
-              <td>{{ patient.medicalHistory }}</td>
-              <td>{{ patient.reason }}</td>
-              <td>{{ patient.status }}</td>
-              <td>
-                <a [routerLink]="['/updatepatient', patient.id]" class="btn btn-primary m-1">Edit</a>
-              </td>
+
+
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let b of patients | async">
+                <td>{{b.id}}</td>
+                <td>{{b.name}}</td>
+                <td>{{b.age}}</td>
+                <td>{{b.contact}}</td>
+                <td>{{b.date}}</td>
+                <td>{{b.gender}}</td>
+                <td>{{b.address}}</td>
+                <td>{{b.reason}}</td>
+                <td>{{b.status}}</td>
+                <td>{{b.department}}</td>
+                <td>{{b.doctorName}}</td>
+                <td>
+                     <button class="btn btn-warning m-1 p-1" (click)="getPatientById(b.id)">Edit</button>
+                    <button class="btn btn-danger m-1 p-1" (click)="deletePatient(b.id)">Delete</button>
+
+
+                </td>
+
             </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-  
+
+        </tbody>
+
+    </table>
+
+</div>
+

@@ -506,21 +506,50 @@
       "departmentId": "2eeb"
     }
   ],
-  "patientDocModel": [],
   "reciptionistDocModel": [
     {
-      "id": "9547",
-      "name": "Mehwish Rahman Innaya",
-      "email": "innaya@gmail.com",
+      "id": "d8d0",
+      "name": "Azmain Inqiad Arabi",
+      "email": "arabi@gmail.com",
       "phone": "01234567890",
       "address": "Gulshan Dhaka",
-      "gender": "female",
-      "photo": "inu",
+      "gender": "Male",
+      "photo": "arabi",
       "employeeId": "1234",
-      "position": "Cashier",
-      "department": "Aurthopedic",
-      "workHours": "6",
+      "position": "MD",
+      "department": "Aurthority",
+      "workHours": "5",
       "role": ""
+    }
+  ],
+  "patientDocModel": [
+    {
+      "id": "c853",
+      "date": "1-8-9",
+      "name": "Suprova Shemanto",
+      "age": "25",
+      "gender": "female",
+      "contact": "01628",
+      "address": "Agargaon,dhaka",
+      "medicalHistory": "fever for last 5 days",
+      "reason": "fever",
+      "status": "normal",
+      "department": "medecine",
+      "doctorName": "Kamruzzaman"
+    },
+    {
+      "id": "95f2",
+      "date": "9 july 2025",
+      "name": "Sathee",
+      "age": "26",
+      "gender": "female",
+      "contact": "01987654321",
+      "address": "Hazaribagh",
+      "medicalHistory": "nai",
+      "reason": "Gas Problem",
+      "status": "critical",
+      "department": "Gastrology",
+      "doctorName": "Sathee"
     }
   ]
 }

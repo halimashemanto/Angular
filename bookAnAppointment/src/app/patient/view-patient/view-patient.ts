@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { PatientDocModel } from '../model/patientDocModel';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Patientdocservice } from '../patientdocservice';
@@ -10,27 +10,57 @@ import { Patientdocservice } from '../patientdocservice';
   styleUrl: './view-patient.css'
 })
 export class ViewPatient implements OnInit {
-  patients: PatientDocModel[] = [];
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private patientService: Patientdocservice
-  ) {}
+  patients :any;
 
-  ngOnInit(): void {
-    this.loadPatients();
+constructor(
+  private patientService : Patientdocservice,
+  private router: Router,
+  private cdr: ChangeDetectorRef){}
+
+ngOnInit(): void {
+    this.loadAllPatient();
   }
 
-  loadPatients(): void {
-    this.patientService.getPatients().subscribe({
-      next: res => {
-        this.patients = res;
+loadAllPatient(){
+
+  this.patients = this.patientService.getAllPatient();
+}
+
+deletePatient(id:string):void{
+  this.patientService.deletePatient(id).subscribe({
+
+    next:(res)=>{
+      this.loadAllPatient();
+      this.cdr.reattach();
+
+    },
+    error:(error)=>{
+console.log(error);
+
+    }
+
+  });
+
+}
+
+ getPatientById(id: string):void{
+    this.patientService.getPatientById(id).subscribe({
+      next : (res) =>{
+  
+        this.router.navigate(['/up',id]);
       },
-      error: error=>{
-        alert('Could not fetch patients')
+
+      error: (err) =>{
+
+        console.log(err);
       }
+
     });
+
   }
+
+
+
 
 }

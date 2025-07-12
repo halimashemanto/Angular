@@ -23,20 +23,37 @@ export class AddPatient implements OnInit {
   ngOnInit(): void {
     this.pGroup = this.formBuilder.group({
 
+      date:[''],
       name: [''],
-      email: [''],
-      phone: [''],
-      address: [''],
+      age: [''],
       gender: [''],
-      photo: [''],
-      employeeId: [''],
-      position: [''],
+      contact: [''],
+      address: [''],
+      medicalHistory: [''],
+      reason: [''],
+      status: [''],
       department: [''],
-      workHours: [''],
-      role:['']
+      doctorName: [''],
+     
 
     });
 
+  }
+
+   addPatient(): void {
+    const n = { ...this.pGroup.value };
+    this.patientService.savePatient(n).subscribe({
+      next: (res) => {
+        this.pGroup.reset();
+        this.router.navigate(['/viewp']);
+
+      },
+      error: (error) => {
+
+        console.log(error);
+      }
+
+    });
   }
   
  

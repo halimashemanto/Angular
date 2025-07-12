@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { PatientDocModel } from '../model/patientDocModel';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Patientdocservice } from '../patientdocservice';
@@ -10,39 +10,51 @@ import { Patientdocservice } from '../patientdocservice';
   styleUrl: './update-patient.css'
 })
 export class UpdatePatient implements OnInit {
-  patient: PatientDocModel | undefined;
+
+  id: string = '';
+  patient: PatientDocModel = new PatientDocModel();
 
   constructor(
-    private route: ActivatedRoute,
+    private patientService: Patientdocservice,
     private router: Router,
-    private patientService: Patientdocservice
-  ) { }
+    private route: ActivatedRoute,
+    private cdr: ChangeDetectorRef) { }
+
 
   ngOnInit(): void {
-    this.getPatient();
+    this.id = this.route.snapshot.params['id'];
+    this.loadPatientById();
+     console.log(this.patient);
+
   }
 
-  getPatient(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.patientService.getPatient(id).subscribe({
-        next: response => {
-          this.patient = response;
-        },
-        error: error => {
-          console.error('Error retrieving patient', error);
-        }
-      })
-    } else {
-      alert('Could not find id')
-    }
+  loadPatientById() {
+
+    this.patientService.getPatientById(this.id).subscribe({
+      next: (res) => {
+        this.patient = res;
+        this.cdr.markForCheck();
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    });
   }
 
   updatePatient(): void {
-    if (this.patient) {
-      this.patientService.updatePatient(this.patient).subscribe(() => {
-        this.router.navigate(['viewpatient']);
-      })
-    }
+    this.patientService.updatePatient(this.id,this.patient).subscribe({
+
+      next: () => {
+        this.router.navigate(['/viewp'])
+
+      },
+
+
+      error: err => {
+        console.error(err);
+      }
+    });
   }
+
+
 }

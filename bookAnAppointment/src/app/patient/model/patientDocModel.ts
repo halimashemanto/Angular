@@ -1,12 +1,16 @@
 export class PatientDocModel {
-  id!: number;
+  
+  id!: string;
+  date!: string
   name!: string;
-  age!: number;
+  age!: string;
   gender!: string;
-  dateOfBirth!: string; 
   contact!: string;
   address!: string;
   medicalHistory!: string;
   reason!: string;
   status!: string;
+  department!: string;
+  doctorName!: string;
+
 }

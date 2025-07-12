@@ -9,20 +9,20 @@ import { Router } from '@angular/router';
   templateUrl: './add-nurse.html',
   styleUrl: './add-nurse.css'
 })
-export class AddNurse implements OnInit{
-  
+export class AddNurse implements OnInit {
+
   nurseForm !: FormGroup;
-  
+
 
   constructor(
     private formbuilder: FormBuilder,
     private nurseService: NurseService,
-      private router: Router){}
-    
-  
+    private router: Router) { }
+
+
 
   ngOnInit() {
-this.nurseForm = this.formbuilder.group({
+    this.nurseForm = this.formbuilder.group({
       name: ['', Validators.required],
       specialization: [[], Validators.required],
       phone: [[], Validators.required],
@@ -31,22 +31,22 @@ this.nurseForm = this.formbuilder.group({
       address: [[], Validators.required],
       gender: [[], Validators.required],
       photo: [[], Validators.required],
-      role:[[],Validators.required]
+      role: [[], Validators.required]
     });
   }
 
-  
- 
 
-  addNurse():void{
-    const n = {...this.nurseForm.value};
+
+
+  addNurse(): void {
+    const n = { ...this.nurseForm.value };
     this.nurseService.saveNurse(n).subscribe({
-      next:(res)=>{
+      next: (res) => {
         this.nurseForm.reset();
         this.router.navigate(['/n']);
 
       },
-      error:(error)=>{
+      error: (error) => {
 
         console.log(error);
       }
