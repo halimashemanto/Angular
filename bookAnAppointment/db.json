@@ -459,22 +459,68 @@
       "departmentId": "2eeb"
     }
   ],
+  "patientDocModel": [],
   "reciptionistDocModel": [
     {
-      "id": "d8d0",
-      "name": "Azmain Inqiad Arabi",
-      "email": "arabi@gmail.com",
+      "id": "9547",
+      "name": "Mehwish Rahman Innaya",
+      "email": "innaya@gmail.com",
       "phone": "01234567890",
       "address": "Gulshan Dhaka",
-      "gender": "Male",
-      "photo": "arabi",
+      "gender": "female",
+      "photo": "inu",
       "employeeId": "1234",
-      "position": "MD",
-      "department": "Aurthority",
-      "workHours": "5",
+      "position": "Cashier",
+      "department": "Aurthopedic",
+      "workHours": "6",
       "role": ""
     }
+  ],
+  "billModel": [],
+  "prescriptionModel": [
+    {
+      "id": "63ec",
+      "date": "2025-07-24",
+      "note": "fever",
+      "advice": "CBC",
+      "name": "Suprova Shemanto",
+      "age": "25",
+      "phone": "01628195945",
+      "gender": "Female",
+      "address": "Agargaon,dhaka"
+    },
+    {
+      "id": "b4ed",
+      "date": "2025-07-26",
+      "note": "Foot pain",
+      "advice": "x-ray",
+      "name": "Munjir Arish ",
+      "age": "20",
+      "phone": "0369852147",
+      "gender": "Male",
+      "address": "Dhaka"
+    },
+    {
+      "id": "0346",
+      "date": "2025-08-09",
+      "note": "fever",
+      "advice": "CBC",
+      "name": "Sathee Khanom",
+      "age": "26",
+      "phone": "369852147",
+      "gender": "Female",
+      "address": "Hazaribagh"
+    },
+    {
+      "id": "ff21",
+      "date": "",
+      "note": "",
+      "advice": "",
+      "name": "",
+      "age": "",
+      "phone": "",
+      "gender": "",
+      "address": ""
+    }
   ]
-
-  
 }
