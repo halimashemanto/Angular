@@ -1,10 +1,17 @@
 <div class=" container my-3" style="background-color:  rgba(153, 194, 243, 0.217);">
     <div class=" text-center">
 
-        <h1 class="jumborton" style="background-color: rgb(250, 206, 224);">Add Receptionist </h1>
+        <h1 class="jumborton" style="background-color: rgb(250, 206, 224);">Add Patient </h1>
     </div>
 
     <form [formGroup]="pGroup" method="post">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="photo">Date </label>
+                <input id="photo"  class="form-control" type="text" name="date" formControlName="date">
+            </div> <br>
+        </div>
+
         <div class="row">
             <div class="col-md-6">
                 <label for="exampleInputEmail1" class="form-label">Name:</label>
@@ -12,21 +19,21 @@
             </div> <br>
 
             <div class="col-md-6">
-                <label for="phone" class="form-label" >Phone:</label>
-                <input type="text"  class="form-control" name="phone" id="phone"  formControlName="phone" required>
+                <label for="phone" class="form-label" >Age:</label>
+                <input type="text"  class="form-control" name="age" id="age"  formControlName="age" required>
             </div> <br>
         </div> <br>
 
 
         <div class="row">
             <div class="col-md-6">
-                <label for="email" class="form-label">Email:</label>
-                <input id="email"  class="form-control" type="email" name="email" formControlName="email" required>
+                <label for="email" class="form-label">Gender:</label>
+                <input id="email"  class="form-control" type="text" name="gender" formControlName="gender" required>
             </div> <br>
 
             <div class="col-md-6">
-                <label for="workHours" class="form-label">Work Hours:</label>
-                <input id="workHours"  class="form-control" type="text" name="workHours" formControlName="workHours">
+                <label for="workHours" class="form-label">Contact Number:</label>
+                <input id="workHours"  class="form-control" type="text" name="contact" formControlName="contact">
 
 
             </div> <br>
@@ -40,8 +47,8 @@
             </div> <br>
 
             <div class="col-md-6">
-                <label for="gender">Gender:</label>
-                <input id="gender"  class="form-control" type="text" name="gender" formControlName="gender">
+                <label for="gender">Medical History:</label>
+                <input id="gender"  class="form-control" type="text" name="medicalHistory" formControlName="medicalHistory">
             </div> <br>
 
         </div> <br>
@@ -49,13 +56,13 @@
 
         <div class="row">
             <div class="col-md-6">
-                <label for="photo">Photo</label>
-                <input id="photo"  class="form-control" type="text" name="photo" formControlName="photo">
+                <label for="photo">Reason</label>
+                <input id="photo"  class="form-control" type="text" name="reason" formControlName="reason">
             </div> <br>
 
             <div class="col-md-6">
-                <label for="employeeId">Employee ID:</label>
-                <input id="employeeId"  class="form-control" type="text" name="employeeId" formControlName="employeeId">
+                <label for="employeeId">Status:</label>
+                <input id="employeeId"  class="form-control" type="text" name="status" formControlName="status">
             </div> <br>
 
         </div> <br>
@@ -64,13 +71,13 @@
         <div class="row">
             <div class="col-md-6">
 
-                <label for="position">Position:</label>
-                <input id="position"  class="form-control" type="text" name="position" formControlName="position">
+                <label for="position">Department:</label>
+                <input id="position"  class="form-control" type="text" name="department" formControlName="department">
             </div> <br>
 
             <div class="col-md-6">
-                <label for="department">Department:</label>
-                <input id="department"  class="form-control" type="text" name="department" formControlName="department">
+                <label for="department">Doctor Name:</label>
+                <input id="department"  class="form-control" type="text" name="doctorName" formControlName="doctorName">
             </div> <br>
 
         </div> <br>
@@ -78,7 +85,7 @@
 
         <div class="row mt-3 text-center">
             <div class="col-md-6">
-                <button type="submit" class="btn btn-success text-center" >Save</button>
+                <button type="submit" class="btn btn-success text-center" (click)="addPatient()">Save</button>
 
             </div> <br>
 

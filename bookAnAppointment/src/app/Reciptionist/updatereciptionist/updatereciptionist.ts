@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
   styleUrl: './updatereciptionist.css'
 })
 export class Updatereciptionist implements OnInit {
+
+  
   profile!: ReceptionistModel;
 
   constructor(private reciptionistService: ReciptionistService,
