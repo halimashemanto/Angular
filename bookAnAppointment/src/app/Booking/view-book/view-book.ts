@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { BookService } from '../../service/book.service';
 import { Router } from '@angular/router';
+import { BookService } from '../../service/book.service';
 
 @Component({
   selector: 'app-view-book',

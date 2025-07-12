@@ -305,63 +305,16 @@
   ],
   "nurseModel": [
     {
-      "id": "4858",
-      "name": "Suprova Shemanto",
-      "specialization": "oijlk;k",
-      "phone": "01628195945",
-      "email": "va@gmail.com",
-      "bod": "osk",
-      "address": "iljk",
-      "gender": "lksjlkmlklksz",
-      "photo": "poikj"
-    },
-    {
-      "id": "b783",
-      "name": "Suprova Shemanto",
-      "specialization": "gtrre",
-      "phone": "01628195945",
-      "email": "grdg",
-      "bod": "etg",
-      "address": "retg",
-      "gender": "bxgd",
-      "photo": "drgd",
-      "role": []
-    },
-    {
-      "id": "9582",
-      "name": "innaya",
-      "specialization": "surgery",
-      "phone": "123654789",
-      "email": "inu@gmail.com",
-      "bod": "26 feb 2023",
+      "id": "f18a",
+      "name": "Sehzil Munjir Arish",
+      "specialization": "Surgery",
+      "phone": "0147852369",
+      "email": "arish@gmail.com",
+      "bod": "9-8-24",
       "address": "dhaka",
-      "gender": "female",
-      "photo": "inu",
-      "role": []
-    },
-    {
-      "id": "1349",
-      "name": "asdfgh",
-      "specialization": "asdgh",
-      "phone": "asfdf",
-      "email": "asdsgy",
-      "bod": "asdffg",
-      "address": "ASFG",
-      "gender": "asdffgh",
-      "photo": "assf",
-      "role": []
-    },
-    {
-      "id": "ed4f",
-      "name": "Suhaib",
-      "specialization": "surgery",
-      "phone": "018754567890",
-      "email": "va@gmail.com",
-      "bod": "09-9-10",
-      "address": "lalbagh,dhaka",
       "gender": "male",
-      "photo": "suhaib",
-      "role": []
+      "photo": "arish",
+      "role": "nurse"
     }
   ],
   "departments": [
@@ -521,6 +474,53 @@
       "department": "Aurthopedic",
       "workHours": "6",
       "role": ""
+    }
+  ],
+  "billModel": [],
+  "prescriptionModel": [
+    {
+      "id": "63ec",
+      "date": "2025-07-24",
+      "note": "fever",
+      "advice": "CBC",
+      "name": "Suprova Shemanto",
+      "age": "25",
+      "phone": "01628195945",
+      "gender": "Female",
+      "address": "Agargaon,dhaka"
+    },
+    {
+      "id": "b4ed",
+      "date": "2025-07-26",
+      "note": "Foot pain",
+      "advice": "x-ray",
+      "name": "Munjir Arish ",
+      "age": "20",
+      "phone": "0369852147",
+      "gender": "Male",
+      "address": "Dhaka"
+    },
+    {
+      "id": "0346",
+      "date": "2025-08-09",
+      "note": "fever",
+      "advice": "CBC",
+      "name": "Sathee Khanom",
+      "age": "26",
+      "phone": "369852147",
+      "gender": "Female",
+      "address": "Hazaribagh"
+    },
+    {
+      "id": "ff21",
+      "date": "",
+      "note": "",
+      "advice": "",
+      "name": "",
+      "age": "",
+      "phone": "",
+      "gender": "",
+      "address": ""
     }
   ]
 }

@@ -9,54 +9,38 @@ import { Router } from '@angular/router';
   templateUrl: './nurse.html',
   styleUrl: './nurse.css'
 })
-export class Nurse  implements OnInit {
+export class Nurse implements OnInit {
 
-  nurse :any;
+  nurse: any;
 
-constructor(
-  private nurseService : NurseService,
-  private router: Router,
-  private cdr: ChangeDetectorRef){}
+  constructor(
+    private nurseService: NurseService,
+    private router: Router,
+    private cdr: ChangeDetectorRef) { }
 
-ngOnInit(): void {
+  ngOnInit(): void {
     this.loadAllNurse();
   }
 
-loadAllNurse(){
+  loadAllNurse() {
 
-  this.nurse = this.nurseService.getAllNurse();
-}
+    this.nurse = this.nurseService.getAllNurse();
+  }
 
-deleteNurse(id:string):void{
-  this.nurseService.deleteNurse(id).subscribe({
-
-    next:(res)=>{
-      this.loadAllNurse();
-      this.cdr.reattach();
-
-    },
-    error:(error)=>{
-console.log(error);
-
-    }
-
-  });
-
-}
- getNurseById(id: string):void{
-    this.nurseService.getNurseById(id).subscribe({
-      next : (res) =>{
-  
-        this.router.navigate(['/un',id]);
+  deleteNurse(id: string): void {
+    this.nurseService.deleteNurse(id).subscribe({
+      next: (res) => {
+        this.loadAllNurse();
+        this.cdr.reattach();
       },
-
-      error: (err) =>{
-
-        console.log(err);
+      error: (error) => {
+        console.log(error);
       }
-
     });
 
+  }
+  getNurseById(id: string): void {
+    this.router.navigate(['/un', id]);
   }
 
 

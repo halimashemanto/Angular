@@ -4,7 +4,7 @@
     <table class="table table-striped ">
         <thead>
             <tr>
-                
+                <th>Id</th>
                 <th>Name</th>
                 <th>E-mail</th>
                 <th>Contact Number</th>
@@ -21,18 +21,18 @@
         </thead>
 
         <tbody>
-            <tr *ngFor="let n of nurse">
+            <tr *ngFor="let n of nurse | async">
                 <td>{{n.id}}</td>
                 <td>{{n.name}}</td>
                 <td>{{n.email}}</td>
-                <td>{{n.contactNo}}</td>
+                <td>{{n.phone}}</td>
                 <td>{{n.gender}}</td>
                 <td>{{n.address}}</td>
-                <td>{{n.Photo}}</td>
-                <td>{{n.Specialization}}</td>
+                <td>{{n.photo}}</td>
+                <td>{{n.specialization}}</td>
                 <td>{{n.bod}}</td>
                 <td>
-                     <button class="btn btn-warning m-1 p-1">Edit</button>
+                     <button class="btn btn-warning m-1 p-1" (click)="getNurseById(n.id)">Edit</button>
                     <button class="btn btn-danger m-1 p-1" (click)="deleteNurse(n.id)">Delete</button>
 
 

@@ -28,6 +28,11 @@ import { AddDoctorComponent } from './dropdown/add-doctor-component/add-doctor-c
 import { ViewDoctorComponent } from './dropdown/view-doctor-component/view-doctor-component';
 import { UpdateDoctorComponent } from './dropdown/update-doctor-component/update-doctor-component';
 import { Equipment } from './about hospital/equipment/equipment';
+import { AddBill } from './BillingProcss/add-bill/add-bill';
+import { AddPrescription } from './Prescription/add-prescription/add-prescription';
+import { ViewPrescription } from './Prescription/view-prescription/view-prescription';
+import { ViewBill } from './BillingProcss/view-bill/view-bill';
+import { UpdatePrescription } from './Prescription/update-prescription/update-prescription';
 
 
 const routes: Routes = [
@@ -55,7 +60,7 @@ const routes: Routes = [
   // nurse
   { path: 'an', component: AddNurse  },
   { path: 'n', component: Nurse  },
-  { path: 'un', component: UpdateNurse  },
+  { path: 'un/:id', component: UpdateNurse  },
 
   // patient
   { path: 'addp', component: AddPatient  },
@@ -74,6 +79,15 @@ const routes: Routes = [
   { path: 'rec', component:Addreciptionist  },
   { path: 'viewrec', component:Viewreciptionist },
   { path: 'uprec', component:Updatereciptionist  },
+
+  // Invoice
+  { path: 'addbill', component:AddBill  },
+  { path: 'viewbill', component:ViewBill  },
+ 
+   // Prescription
+  { path: 'addprescription', component:AddPrescription  },
+  { path: 'viewprescription', component:ViewPrescription  },
+  { path: 'upprescription/:id', component:UpdatePrescription  },
  
 
 ];

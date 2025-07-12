@@ -1,8 +1,7 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { BookModel } from '../../model/bookModel.model';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core'
 import { BookService } from '../../service/book.service';
-
 import { ActivatedRoute, Router } from '@angular/router';
+import { BookModel } from '../model/bookModel.model';
 
 @Component({
   selector: 'app-update-book',

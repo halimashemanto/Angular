@@ -6,7 +6,7 @@ export class BookModel {
     name!: string;
     email!: string;
     phone!: number;
-    date!: string;
+    date!: Date;
     slot!:string;
 
 

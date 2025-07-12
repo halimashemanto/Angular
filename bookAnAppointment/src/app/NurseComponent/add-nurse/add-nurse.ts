@@ -31,7 +31,7 @@ this.nurseForm = this.formbuilder.group({
       address: [[], Validators.required],
       gender: [[], Validators.required],
       photo: [[], Validators.required],
-      role:[[],Validators.required]
+      
     });
   }
 
@@ -39,7 +39,9 @@ this.nurseForm = this.formbuilder.group({
  
 
   addNurse():void{
-    const n = {...this.nurseForm.value};
+    const n = {...this.nurseForm.value,
+      role: 'nurse'
+    };
     this.nurseService.saveNurse(n).subscribe({
       next:(res)=>{
         this.nurseForm.reset();

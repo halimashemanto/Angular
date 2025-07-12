@@ -34,6 +34,12 @@ import { AddDoctorComponent } from './dropdown/add-doctor-component/add-doctor-c
 import { ViewDoctorComponent } from './dropdown/view-doctor-component/view-doctor-component';
 import { UpdateDoctorComponent } from './dropdown/update-doctor-component/update-doctor-component';
 import { Equipment } from './about hospital/equipment/equipment';
+import { UpdateBill } from './BillingProcss/update-bill/update-bill';
+import { AddBill } from './BillingProcss/add-bill/add-bill';
+import { ViewBill } from './BillingProcss/view-bill/view-bill';
+import { AddPrescription } from './Prescription/add-prescription/add-prescription';
+import { ViewPrescription } from './Prescription/view-prescription/view-prescription';
+import { UpdatePrescription } from './Prescription/update-prescription/update-prescription';
 
 
 
@@ -70,7 +76,13 @@ import { Equipment } from './about hospital/equipment/equipment';
           AddDoctorComponent,
           ViewDoctorComponent,
           UpdateDoctorComponent,
-          Equipment
+          Equipment,
+          UpdateBill,
+          AddBill,
+          ViewBill,
+          AddPrescription,
+          ViewPrescription,
+          UpdatePrescription
    
    
    

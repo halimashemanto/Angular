@@ -4,11 +4,11 @@
         <h1 class="jumborton" style="background-color: rgb(179, 238, 248);">Edit Nurse Profile </h1>
     </div>
 
-    <form *ngIf="nurse.id" (ngSubmit)="updateNurse()">
+    <form *ngIf="nurse" (ngSubmit)="updateNurse()">
         <div class="row">
             <div class="col-md-6">
                 <label for="exampleInputEmail1" >Name</label>
-                <input type="text" class="form-control" class="form-label" id="name" name="name" [(ngModel)]="nurse.name">
+                <input type="text" class="form-control" class="form-control" id="name" name="name" [(ngModel)]="nurse.name">
             </div>
 
             <div class="col-md-6">

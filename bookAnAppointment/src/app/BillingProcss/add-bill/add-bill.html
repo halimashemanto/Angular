@@ -1,0 +1,167 @@
+<div class=" my-3 container">
+    <div class="bg-info text-center">
+
+        <h1 class="jumborton" style="background-color: rgb(245, 180, 180);">Create Invoice </h1>
+    </div>
+
+    <form method="post">
+        <!-- Patient Information -->
+        <div class="row">
+
+            <div class="col-md-4">
+                <label for="exampleInputEmail1" class="form-label">Date</label>
+                <input type="date" class="form-control" id="name" formControlName="date">
+            </div>
+           
+        </div>
+
+
+        <div class="row">
+             <div class="col-md-4">
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" formControlName="name" required>
+            </div>
+
+            <div class="col-md-4">
+                <label for="exampleInputEmail1" class="form-label">Age</label>
+                <input type="number" class="form-control" id="age" formControlName="age">
+            </div>
+            <div class="col-md-4">
+                <label for="exampleInputEmail1" class="form-label">Contact Number</label>
+                <input type="text" class="form-control" id="name" formControlName="phone">
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Refd By</label>
+                <input type="text" class="form-control" id="name" formControlName="refdBy">
+            </div>
+
+            <div class="col-md-4">
+                <label for="status">Gender:</label>
+
+                <select id="grnder" class="form-control" id="due" formControlName="gender">
+                    
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+        </div>
+
+
+ <form method="post">
+        <!-- tile of amount -->
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">serialNo</label>
+                <input type="number" class="form-control" id="name" formControlName="serialNo">
+            </div>
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Name Of Test</label>
+                <input type="text" class="form-control" id="testName" formControlName="testName" required>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <label for="exampleInputEmail1" class="form-label">Quantity</label>
+                <input type="number" class="form-control" id="quantity" formControlName="quantity">
+            </div>
+            <div class="col-md-4">
+                <label for="exampleInputEmail1" class="form-label">Amount</label>
+                <input type="number" class="form-control" id="amount" formControlName="amount">
+            </div>
+            <div class="col-md-4">
+                <label for="exampleInputEmail1" class="form-label">Discount%</label>
+                <input type="number" class="form-control" id="discount" formControlName="discount">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Delivery Date</label>
+                <input type="date" class="form-control" id="deliveryDate" formControlName="deliveryDate">
+            </div>
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Delivery Time</label>
+                <input type="number" class="form-control" id="deliveryTime" formControlName="deliveryTime">
+            </div>
+        </div>
+</form>
+
+
+         <form method="post">
+        <!-- Calculation part -->
+
+        <div class="row">
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">totalAmount</label>
+                <input type="number" class="form-control" id="totalAmount" formControlName="totalAmount">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">totalDiscount</label>
+                <input type="number" class="form-control" id="totalDiscount" formControlName="totalDiscount">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">payable</label>
+                <input type="number" class="form-control" id="payable" formControlName="payable">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Received </label>
+                <input type="number" class="form-control" id="received" formControlName="received">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Due</label>
+                <input type="number" class="form-control" id="due" formControlName="due">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">status</label>
+                <select id="status" class="form-control" id="due" formControlName="status">
+                    <option value="Paid">Paid</option>
+                    <option value="Pending">Pending</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Prepared By</label>
+                <input type="text" class="form-control" id="preparedBy" formControlName="preparedBy">
+            </div>
+        </div>
+</form>
+
+<!-- button -->
+
+        <div class="row mt-3 text-center">
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-success text-center">Print</button>
+
+            </div>
+
+            <div class="col-md-6">
+                <button type="reset" class="btn btn-danger text-center">Reset</button>
+
+            </div>
+        </div>
+    </form>
+
+
+</div>
