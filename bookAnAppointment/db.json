@@ -385,6 +385,10 @@
     {
       "id": "bd68",
       "name": "Rheumatology"
+    },
+    {
+      "id": "aa05",
+      "name": "asdfg"
     }
   ],
   "doctors": [
@@ -567,6 +571,76 @@
       "testDate": "2025-07-05",
       "createDate": "2025-07-05",
       "deliveryDate": "2025-07-05"
+    }
+  ],
+  "ScheduleSlot": [
+    {
+      "id": "7785",
+      "doctorId": "d005",
+      "date": "2025-07-15",
+      "startTime": "19:00",
+      "endTime": "22:40",
+      "isBooked": true
+    },
+    {
+      "id": "a7ce",
+      "doctorId": "a5ea",
+      "date": "2025-07-10",
+      "startTime": "10:45",
+      "endTime": "14:30",
+      "isBooked": true
+    },
+    {
+      "id": "a277",
+      "doctorId": "ead5",
+      "date": "2025-07-26",
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "isBooked": false
+    },
+    {
+      "id": "1285",
+      "doctorId": "f31b",
+      "date": "2025-07-30",
+      "startTime": "15:01",
+      "endTime": "21:50",
+      "isBooked": false
+    },
+    {
+      "id": "8842",
+      "doctorId": "8b45",
+      "date": "2025-07-23",
+      "startTime": "20:00",
+      "endTime": "23:59",
+      "isBooked": false
+    },
+    {
+      "id": "2f96",
+      "doctorId": "3b73",
+      "date": "2025-07-31",
+      "startTime": "09:00",
+      "endTime": "14:00",
+      "isBooked": false
+    }
+  ],
+  "appointments": [
+    {
+      "id": "25f5",
+      "departmentId": "a1f9",
+      "doctorId": "d005",
+      "scheduleSlotId": "7785",
+      "patientName": "Halima Akter",
+      "patientContact": "fdsgsdggfd",
+      "reason": "Fever"
+    },                                     
+    {
+      "id": "923c",
+      "departmentId": "a1f9",
+      "doctorId": "a5ea",
+      "scheduleSlotId": "a7ce",
+      "patientName": "Atik Islam",
+      "patientContact": "0147852369",
+      "reason": "pain"
     }
   ]
 }

@@ -35,6 +35,10 @@ export class DoctorService {
   return this.http.get<Doctor>(`${this.apiUrl}/${id}`);
 }
 
+getDoctorsByDepartment(departmentId: string): Observable<Doctor[]> {
+  return this.http.get<Doctor[]>(`${this.apiUrl}?departmentId=${departmentId}`);
+}
+
 
   
 }

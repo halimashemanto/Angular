@@ -36,6 +36,8 @@ import { UpdatePrescription } from './Prescription/update-prescription/update-pr
 import { AddReport } from './Report/add-report/add-report';
 import { ViewReport } from './Report/view-report/view-report';
 import { UpdateReport } from './Report/update-report/update-report';
+import { AddScheduleSlotComponent } from './Appoinment/add-schedule-slot-component/add-schedule-slot-component';
+import { AddAppointmentComponent } from './Appoinment/add-appointment-component/add-appointment-component';
 
 
 const routes: Routes = [
@@ -96,6 +98,8 @@ const routes: Routes = [
   { path: 'addreport', component:AddReport  },
   { path: 'viewreport', component:ViewReport  },
   { path: 'upreport/:id', component:UpdateReport  },
+  { path: 'addslot', component:AddScheduleSlotComponent  },
+  { path: 'addapp', component:AddAppointmentComponent  },
  
 
 ];
