@@ -42,11 +42,19 @@
     },
     {
       "id": "4298",
-      "name": "qwertyu",
-      "email": "qwwertyuj@stj.ci",
-      "phone": "45467",
-      "date": "153633.",
-      "slot": "Evening"
+      "name": "Azwad Sumon",
+      "email": "azwad@gmail.com",
+      "phone": "019292939495",
+      "date": "2025-07-23",
+      "slot": "Morning"
+    },
+    {
+      "id": "2e77",
+      "name": "Lubna",
+      "email": "lubna@gmail.com",
+      "phone": "01234509875",
+      "date": "2025-07-16",
+      "slot": "Morning"
     }
   ],
   "userModel": [
@@ -310,10 +318,22 @@
       "specialization": "Surgery",
       "phone": "0147852369",
       "email": "arish@gmail.com",
-      "bod": "9-8-24",
+      "bod": "2023-07-28",
       "address": "dhaka",
       "gender": "male",
       "photo": "arish",
+      "role": "nurse"
+    },
+    {
+      "id": "3226",
+      "name": "Safwan Suhaib",
+      "specialization": "surgery",
+      "phone": "0123456789",
+      "email": "safu@gmail.com",
+      "bod": "2008-08-12",
+      "address": "Matuail,Dhaka",
+      "gender": "male",
+      "photo": "safwan",
       "role": "nurse"
     }
   ],
@@ -512,15 +532,41 @@
       "address": "Hazaribagh"
     },
     {
-      "id": "ff21",
-      "date": "",
-      "note": "",
-      "advice": "",
-      "name": "",
-      "age": "",
-      "phone": "",
-      "gender": "",
-      "address": ""
+      "id": "4f35",
+      "date": "2025-07-26",
+      "note": "Kidney point increase",
+      "advice": "CBC, ",
+      "name": "Rumpa Kamal",
+      "age": "45",
+      "phone": "098765432123",
+      "gender": "Female",
+      "address": "Azimpur"
+    }
+  ],
+  "reportModel": [
+    {
+      "id": "845d",
+      "doctorName": "",
+      "reportResult": "",
+      "description": "",
+      "sampleId": "",
+      "interpretation": "",
+      "patientName": "",
+      "testDate": "2025-07-02",
+      "createDate": "2025-07-09",
+      "deliveryDate": "2025-07-10"
+    },
+    {
+      "id": "48c2",
+      "doctorName": "Dr.Sayman",
+      "reportResult": "Positive",
+      "description": "mai kese kaho",
+      "sampleId": "",
+      "interpretation": "kuch bhi muje pata nehi",
+      "patientName": "Lunbna Kamal",
+      "testDate": "2025-07-05",
+      "createDate": "2025-07-05",
+      "deliveryDate": "2025-07-05"
     }
   ]
 }

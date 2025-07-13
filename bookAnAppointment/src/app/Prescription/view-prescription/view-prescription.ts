@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './view-prescription.html',
   styleUrl: './view-prescription.css'
 })
-export class ViewPrescription implements OnInit {
+export class ViewPrescription  implements OnInit {
 
   prescription: any;
 

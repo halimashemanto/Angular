@@ -20,15 +20,5 @@ export class BillService {
      return this.http.post(this.baseUrl,bill);
    }
  
-   deleteBill(id:string):Observable<any>{
-     return this.http.delete(this.baseUrl +'/'+id);
-   }
  
-   getBillById(id:string):Observable<any>{
-     return this.http.get(this.baseUrl+'/'+id);
-   }
-   updateBook(id: string, bill: BillModel): Observable<any>{
- 
-     return this.http.put(this.baseUrl+'/'+id, bill);
-   }
  }

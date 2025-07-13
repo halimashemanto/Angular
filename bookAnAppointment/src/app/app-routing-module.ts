@@ -33,6 +33,9 @@ import { AddPrescription } from './Prescription/add-prescription/add-prescriptio
 import { ViewPrescription } from './Prescription/view-prescription/view-prescription';
 import { ViewBill } from './BillingProcss/view-bill/view-bill';
 import { UpdatePrescription } from './Prescription/update-prescription/update-prescription';
+import { AddReport } from './Report/add-report/add-report';
+import { ViewReport } from './Report/view-report/view-report';
+import { UpdateReport } from './Report/update-report/update-report';
 
 
 const routes: Routes = [
@@ -67,7 +70,7 @@ const routes: Routes = [
   { path: 'viewp', component: ViewPatient  },
   { path: 'up/:id', component: UpdatePatient  },
   
-  // doctor/department
+  // Doctor/Department
 
   { path: 'dep', component:DepartmentName },
   { path: 'editDepartment', component:DepartmentName },
@@ -75,7 +78,7 @@ const routes: Routes = [
   { path: 'viewdoc', component:ViewDoctorComponent },
   { path: 'edit-doctor/:id', component:UpdateDoctorComponent },
 
-  //reciptionsist
+  //Reciptionsist
   { path: 'rec', component:Addreciptionist  },
   { path: 'viewrec', component:Viewreciptionist },
   { path: 'uprec', component:Updatereciptionist  },
@@ -88,6 +91,11 @@ const routes: Routes = [
   { path: 'addprescription', component:AddPrescription  },
   { path: 'viewprescription', component:ViewPrescription  },
   { path: 'upprescription/:id', component:UpdatePrescription  },
+ 
+     // Report
+  { path: 'addreport', component:AddReport  },
+  { path: 'viewreport', component:ViewReport  },
+  { path: 'upreport/:id', component:UpdateReport  },
  
 
 ];

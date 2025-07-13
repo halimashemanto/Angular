@@ -40,6 +40,9 @@ import { ViewBill } from './BillingProcss/view-bill/view-bill';
 import { AddPrescription } from './Prescription/add-prescription/add-prescription';
 import { ViewPrescription } from './Prescription/view-prescription/view-prescription';
 import { UpdatePrescription } from './Prescription/update-prescription/update-prescription';
+import { AddReport } from './Report/add-report/add-report';
+import { ViewReport } from './Report/view-report/view-report';
+import { UpdateReport } from './Report/update-report/update-report';
 
 
 
@@ -82,7 +85,10 @@ import { UpdatePrescription } from './Prescription/update-prescription/update-pr
           ViewBill,
           AddPrescription,
           ViewPrescription,
-          UpdatePrescription
+          UpdatePrescription,
+          AddReport,
+          ViewReport,
+          UpdateReport
    
    
    

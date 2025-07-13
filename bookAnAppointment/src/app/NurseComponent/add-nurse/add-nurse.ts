@@ -35,9 +35,6 @@ this.nurseForm = this.formbuilder.group({
     });
   }
 
-  
- 
-
   addNurse():void{
     const n = {...this.nurseForm.value,
       role: 'nurse'

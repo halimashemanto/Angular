@@ -4,7 +4,7 @@ export class NurseModel {
     specialization!: string;
     phone!: string;
     email!: string;
-    bod!: string;
+    bod!: Date;
     address!: string;
     gender!: string;
     photo!: string;
