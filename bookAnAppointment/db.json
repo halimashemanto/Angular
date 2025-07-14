@@ -309,6 +309,76 @@
       "email": "atik@gmail.com",
       "password": "123456",
       "role": "user"
+    },
+    {
+      "id": "843d",
+      "name": "sufiya ",
+      "email": "su@gmail.com",
+      "password": "12131415",
+      "role": "user"
+    },
+    {
+      "id": "4c62",
+      "name": "sufiya ",
+      "email": "su@gmail.com",
+      "password": "12131415",
+      "role": "user"
+    },
+    {
+      "id": "1bd2",
+      "name": "sufiya ",
+      "email": "su@gmail.com",
+      "password": "12131415",
+      "role": "user"
+    },
+    {
+      "id": "d9e7",
+      "name": "sufiya ",
+      "email": "su@gmail.com",
+      "password": "12131415",
+      "role": "user"
+    },
+    {
+      "id": "91d7",
+      "name": "sufiya ",
+      "email": "su@gmail.com",
+      "password": "12131415",
+      "role": "user"
+    },
+    {
+      "id": "04e4",
+      "name": "sufiya ",
+      "email": "su@gmail.com",
+      "password": "12131415",
+      "role": "user"
+    },
+    {
+      "id": "990c",
+      "name": "sufiya ",
+      "email": "su@gmail.com",
+      "password": "12131415",
+      "role": "user"
+    },
+    {
+      "id": "3b04",
+      "name": "sufiya ",
+      "email": "su@gmail.com",
+      "password": "12131415",
+      "role": "user"
+    },
+    {
+      "id": "aa01",
+      "name": "sufiya ",
+      "email": "su@gmail.com",
+      "password": "12131415",
+      "role": "user"
+    },
+    {
+      "id": "ec73",
+      "name": "sufiya ",
+      "email": "su@gmail.com",
+      "password": "12131415",
+      "role": "user"
     }
   ],
   "nurseModel": [
@@ -387,8 +457,8 @@
       "name": "Rheumatology"
     },
     {
-      "id": "aa05",
-      "name": "asdfg"
+      "id": "a58f",
+      "name": "Optomalogy"
     }
   ],
   "doctors": [
@@ -632,7 +702,7 @@
       "patientName": "Halima Akter",
       "patientContact": "fdsgsdggfd",
       "reason": "Fever"
-    },                                     
+    },
     {
       "id": "923c",
       "departmentId": "a1f9",

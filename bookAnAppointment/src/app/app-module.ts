@@ -45,9 +45,13 @@ import { ViewReport } from './Report/view-report/view-report';
 import { UpdateReport } from './Report/update-report/update-report';
 import { AddScheduleSlotComponent } from './Appoinment/add-schedule-slot-component/add-schedule-slot-component';
 import { AddAppointmentComponent } from './Appoinment/add-appointment-component/add-appointment-component';
+<<<<<<< Updated upstream
 import { AddMedicine } from './Pharmacy/add-medicine/add-medicine';
 import { ViewMedicine } from './Pharmacy/view-medicine/view-medicine';
 import { UpdateMedicine } from './Pharmacy/update-medicine/update-medicine';
+=======
+import { Facility } from './facility/facility';
+>>>>>>> Stashed changes
 
 
 
@@ -96,9 +100,13 @@ import { UpdateMedicine } from './Pharmacy/update-medicine/update-medicine';
           UpdateReport,
           AddScheduleSlotComponent,
           AddAppointmentComponent,
+<<<<<<< Updated upstream
           AddMedicine,
           ViewMedicine,
           UpdateMedicine
+=======
+          Facility
+>>>>>>> Stashed changes
    
    
    

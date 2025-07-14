@@ -121,6 +121,20 @@
       "email": "reeeeeeeeeeeeeeeee@fgdfhb",
       "password": "123456768",
       "role": "user"
+    },
+    {
+      "id": "ce1e",
+      "name": "safuan",
+      "email": "saf@gmail.com",
+      "password": "098765",
+      "role": "user"
+    },
+    {
+      "id": "d772",
+      "name": "akter hossain",
+      "email": "akter@gmail.com",
+      "password": "1234567",
+      "role": "user"
     }
   ],
   "ReceptionistModel": [

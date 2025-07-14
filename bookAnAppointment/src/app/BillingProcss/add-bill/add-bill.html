@@ -4,7 +4,7 @@
         <h1 class="jumborton" style="background-color: rgb(245, 180, 180);">Create Invoice </h1>
     </div>
 
-    <form method="post">
+    <form  [formGroup] ="billform" >
         <!-- Patient Information -->
         <div class="row">
 
@@ -152,7 +152,7 @@
 
         <div class="row mt-3 text-center">
             <div class="col-md-6">
-                <button type="submit" class="btn btn-success text-center" >Print</button>
+                <button type="submit" class="btn btn-success text-center">Print</button>
 
             </div>
 

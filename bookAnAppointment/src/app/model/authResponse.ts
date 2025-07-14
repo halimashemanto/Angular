@@ -1,7 +1,8 @@
-import { Usermodel } from "./userModel.model";
+import { UserModel } from "./userModel.model";
+
 
 export interface AuthResponse {
     token:string;
-    user:Usermodel;
+    user:UserModel;
 
 }

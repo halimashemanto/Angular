@@ -38,6 +38,8 @@ import { ViewReport } from './Report/view-report/view-report';
 import { UpdateReport } from './Report/update-report/update-report';
 import { AddScheduleSlotComponent } from './Appoinment/add-schedule-slot-component/add-schedule-slot-component';
 import { AddAppointmentComponent } from './Appoinment/add-appointment-component/add-appointment-component';
+import { Facility } from './facility/facility';
+import { Navbar } from './templet/navbar/navbar';
 
 
 const routes: Routes = [
@@ -98,8 +100,15 @@ const routes: Routes = [
   { path: 'addreport', component:AddReport  },
   { path: 'viewreport', component:ViewReport  },
   { path: 'upreport/:id', component:UpdateReport  },
+  //appointment
   { path: 'addslot', component:AddScheduleSlotComponent  },
   { path: 'addapp', component:AddAppointmentComponent  },
+
+  // admin Templet
+  { path: 'f', component:Facility  },
+  { path: 'anavbar', component:Navbar  },
+  
+
  
 
 ];

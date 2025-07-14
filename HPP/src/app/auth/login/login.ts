@@ -44,13 +44,15 @@ onSubmit(): void {
       const role = this.authService.getUserRole();
       console.log('User role:', role);
 
-      if (role === 'Admin') {
-        this.router.navigate(['/rec']);
-      } else if (role === 'User') {
-        this.router.navigate(['/home']);
-      } else {
-        this.errorMessage = 'Unknown user role.';
-      }
+      // if (role === 'Admin') {
+      //   this.router.navigate(['/rec']);
+      // } else if (role === 'User') {
+      //   this.router.navigate(['/home']);
+      // } else {
+      //   this.errorMessage = 'Unknown user role.';
+      // }
+
+           this.router.navigate(['/home']);
 
       this.loginForm.reset();
     },
