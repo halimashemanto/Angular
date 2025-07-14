@@ -40,6 +40,8 @@ import { AddScheduleSlotComponent } from './Appoinment/add-schedule-slot-compone
 import { AddAppointmentComponent } from './Appoinment/add-appointment-component/add-appointment-component';
 import { Facility } from './facility/facility';
 import { Navbar } from './templet/navbar/navbar';
+import { Sidebar } from './templet/sidebar/sidebar';
+import { Footer } from './templet/footer/footer';
 
 
 const routes: Routes = [
@@ -107,6 +109,8 @@ const routes: Routes = [
   // admin Templet
   { path: 'f', component:Facility  },
   { path: 'anavbar', component:Navbar  },
+  { path: 'sideber', component:Sidebar  },
+  { path: 'footer', component:Footer  },
   
 
  
