@@ -11,7 +11,7 @@ import { AboutChairman } from './about hospital/about-chairman/about-chairman';
 import { AboutManagingdirector } from './about hospital/about-managingdirector/about-managingdirector';
 
 import { Contact } from './about hospital/contact/contact';
-import { ServiceFeatures } from './service-features/service-features';
+import { ServiceFeatures } from './about hospital/service-features/service-features';
 import { HealthCheckUp } from './about hospital/health-check-up/health-check-up';
 import { Nurse } from './NurseComponent/nurse/nurse';
 import { UpdateNurse } from './NurseComponent/update-nurse/update-nurse';

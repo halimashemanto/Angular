@@ -500,7 +500,7 @@
       "role": ""
     }
   ],
-  "billModel": [],
+  
   "prescriptionModel": [
     {
       "id": "63ec",
@@ -642,5 +642,9 @@
       "patientContact": "0147852369",
       "reason": "pain"
     }
+  ],
+
+  "totalBillModel": [
+    
   ]
 }

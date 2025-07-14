@@ -17,12 +17,12 @@ export class ViewBill  implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.loadAllBill();
+    // this.loadAllBill();
   }
 
-  loadAllBill() {
+  // loadAllBill() {
 
-    this.bill = this.billService.getAllBill();
-  }
+  //   this.bill = this.billService.getAllBill();
+  // }
 
 }

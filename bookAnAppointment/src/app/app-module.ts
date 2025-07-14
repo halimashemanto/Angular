@@ -16,7 +16,7 @@ import { AboutHospital } from './about hospital/about-hospital/about-hospital';
 import { AboutChairman } from './about hospital/about-chairman/about-chairman';
 import { AboutManagingdirector } from './about hospital/about-managingdirector/about-managingdirector';
 import { Contact } from './about hospital/contact/contact';
-import { ServiceFeatures } from './service-features/service-features';
+import { ServiceFeatures } from './about hospital/service-features/service-features';
 import { HealthCheckUp } from './about hospital/health-check-up/health-check-up';
 import { Admin } from './adminwork/admin/admin';
 import { Navbar } from './templet/navbar/navbar';
@@ -45,6 +45,9 @@ import { ViewReport } from './Report/view-report/view-report';
 import { UpdateReport } from './Report/update-report/update-report';
 import { AddScheduleSlotComponent } from './Appoinment/add-schedule-slot-component/add-schedule-slot-component';
 import { AddAppointmentComponent } from './Appoinment/add-appointment-component/add-appointment-component';
+import { AddMedicine } from './Pharmacy/add-medicine/add-medicine';
+import { ViewMedicine } from './Pharmacy/view-medicine/view-medicine';
+import { UpdateMedicine } from './Pharmacy/update-medicine/update-medicine';
 
 
 
@@ -92,7 +95,10 @@ import { AddAppointmentComponent } from './Appoinment/add-appointment-component/
           ViewReport,
           UpdateReport,
           AddScheduleSlotComponent,
-          AddAppointmentComponent
+          AddAppointmentComponent,
+          AddMedicine,
+          ViewMedicine,
+          UpdateMedicine
    
    
    
