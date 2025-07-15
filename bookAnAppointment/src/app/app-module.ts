@@ -51,6 +51,7 @@ import { ViewMedicine } from './Pharmacy/view-medicine/view-medicine';
 import { UpdateMedicine } from './Pharmacy/update-medicine/update-medicine';
 import { Sidebar } from './templet/sidebar/sidebar';
 import { Footer } from './templet/footer/footer';
+import { HealthCareOfBangladesh } from './health-care-of-bangladesh/health-care-of-bangladesh';
 
 
 
@@ -105,7 +106,8 @@ import { Footer } from './templet/footer/footer';
           ViewMedicine,
           UpdateMedicine,
           Sidebar,
-          Footer
+          Footer,
+          HealthCareOfBangladesh
 
    
    

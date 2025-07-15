@@ -42,6 +42,7 @@ import { Facility } from './facility/facility';
 import { Navbar } from './templet/navbar/navbar';
 import { Sidebar } from './templet/sidebar/sidebar';
 import { Footer } from './templet/footer/footer';
+import { HealthCareOfBangladesh } from './health-care-of-bangladesh/health-care-of-bangladesh';
 
 
 const routes: Routes = [
@@ -65,6 +66,7 @@ const routes: Routes = [
   { path: 'health', component: HealthCheckUp  },
   { path: 'contact', component: Contact  },
   { path: 'eq', component: Equipment  },
+  { path: 'hcb', component: HealthCareOfBangladesh  },
 
   // nurse
   { path: 'an', component: AddNurse  },
