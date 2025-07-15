@@ -379,6 +379,27 @@
       "email": "su@gmail.com",
       "password": "12131415",
       "role": "user"
+    },
+    {
+      "id": "16c7",
+      "name": "Suprova",
+      "email": "sup@gmail.com",
+      "password": "123457",
+      "role": "user"
+    },
+    {
+      "id": "6f09",
+      "name": "Suprova",
+      "email": "sup@gmail.com",
+      "password": "123457",
+      "role": "user"
+    },
+    {
+      "id": "dd05",
+      "name": "Suprova",
+      "email": "sup@gmail.com",
+      "password": "123457",
+      "role": "user"
     }
   ],
   "nurseModel": [
@@ -570,7 +591,6 @@
       "role": ""
     }
   ],
-  
   "prescriptionModel": [
     {
       "id": "63ec",
@@ -713,8 +733,5 @@
       "reason": "pain"
     }
   ],
-
-  "totalBillModel": [
-    
-  ]
+  "totalBillModel": []
 }
