@@ -4,7 +4,7 @@ import { PatientDocModel } from "../../patient/model/patientDocModel";
 export class TotalBillModel {
 
 
-    id?: string;
+    id!: string;
     patientId!: PatientDocModel;
     doctorId!: Doctor;
     invoiceDate!: Date;

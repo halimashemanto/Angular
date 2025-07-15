@@ -39,6 +39,7 @@ export class DepartmentName implements OnInit {
   }
 
   onSubmit() {
+    
     if (this.departmentForm.valid) {
       const department: Department = this.departmentForm.value;
 

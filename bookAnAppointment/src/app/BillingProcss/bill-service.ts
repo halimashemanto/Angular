@@ -22,7 +22,7 @@ export class BillService {
     return this.http.get<PatientDocModel[]>(this.apiUrl);
   }
 
-  saveBill(bill: BillModel): Observable<any> {
+  saveBill(bill: TotalBillModel): Observable<any> {
     return this.http.post(this.apiUrl, bill);
   }
 
@@ -30,8 +30,13 @@ export class BillService {
   //   return this.http.get<TotalBillModel>(`${this.apiUrl}/`);
   // }
 
-  createBill(bill: TotalBillModel): Observable<TotalBillModel> {
-    return this.http.post<TotalBillModel>(`${this.apiUrl}/create`, bill);
+  createBill(bill: TotalBillModel): Observable<any> {
+    return this.http.post<TotalBillModel>(this.apiUrl, bill);
   }
+
+ loadBill(bill:TotalBillModel): Observable<any> {
+    return this.http.get(this.apiUrl+'/'+bill);
+  }
+
 
 }
