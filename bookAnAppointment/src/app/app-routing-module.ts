@@ -43,6 +43,7 @@ import { Navbar } from './templet/navbar/navbar';
 import { Sidebar } from './templet/sidebar/sidebar';
 import { Footer } from './templet/footer/footer';
 import { HealthCareOfBangladesh } from './health-care-of-bangladesh/health-care-of-bangladesh';
+import { Admin } from './adminwork/admin/admin';
 
 
 const routes: Routes = [
@@ -104,13 +105,14 @@ const routes: Routes = [
   { path: 'addreport', component:AddReport  },
   { path: 'viewreport', component:ViewReport  },
   { path: 'upreport/:id', component:UpdateReport  },
+
   //appointment
   { path: 'addslot', component:AddScheduleSlotComponent  },
   { path: 'addapp', component:AddAppointmentComponent  },
 
   // admin Templet
   { path: 'f', component:Facility  },
-  { path: 'anavbar', component:Navbar  },
+  { path: 'admin', component:Admin  },
   { path: 'sideber', component:Sidebar  },
   { path: 'footer', component:Footer  },
   
