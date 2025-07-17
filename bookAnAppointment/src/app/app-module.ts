@@ -52,6 +52,9 @@ import { UpdateMedicine } from './Pharmacy/update-medicine/update-medicine';
 import { Sidebar } from './templet/sidebar/sidebar';
 import { Footer } from './templet/footer/footer';
 import { HealthCareOfBangladesh } from './health-care-of-bangladesh/health-care-of-bangladesh';
+import { AddTest } from './test/add-test/add-test';
+import { ViewTest } from './test/view-test/view-test';
+import { UpdateTest } from './test/update-test/update-test';
 
 
 
@@ -107,7 +110,10 @@ import { HealthCareOfBangladesh } from './health-care-of-bangladesh/health-care-
           UpdateMedicine,
           Sidebar,
           Footer,
-          HealthCareOfBangladesh
+          HealthCareOfBangladesh,
+          AddTest,
+          ViewTest,
+          UpdateTest
 
    
    

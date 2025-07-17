@@ -44,6 +44,7 @@ import { Sidebar } from './templet/sidebar/sidebar';
 import { Footer } from './templet/footer/footer';
 import { HealthCareOfBangladesh } from './health-care-of-bangladesh/health-care-of-bangladesh';
 import { Admin } from './adminwork/admin/admin';
+import { AddTest } from './test/add-test/add-test';
 
 
 const routes: Routes = [
@@ -114,6 +115,10 @@ const routes: Routes = [
   { path: 'f', component:Facility  },
   { path: 'admin', component:Admin  },
   { path: 'sideber', component:Sidebar  },
+  { path: 'footer', component:Footer  },
+  // test
+  { path: 'addtest', component:AddTest  },
+  { path: 'footer', component:Footer  },
   { path: 'footer', component:Footer  },
   
 

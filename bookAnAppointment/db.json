@@ -574,7 +574,22 @@
       "departmentId": "2eeb"
     }
   ],
-  "patientDocModel": [],
+  "patientDocModel": [
+    {
+      "id": "5b4b",
+      "date": "01-4-2",
+      "name": "Suprova Shemanto",
+      "age": "25",
+      "gender": "Female ",
+      "contact": "01628195945",
+      "address": "Agargaon,dhaka",
+      "medicalHistory": "",
+      "reason": "",
+      "status": "",
+      "department": "",
+      "doctorName": ""
+    }
+  ],
   "reciptionistDocModel": [
     {
       "id": "9547",
@@ -635,6 +650,17 @@
       "phone": "098765432123",
       "gender": "Female",
       "address": "Azimpur"
+    },
+    {
+      "id": "5bf8",
+      "date": "2025-07-18",
+      "note": "Foot pain",
+      "advice": "CBC",
+      "name": "Atik Islam",
+      "age": "25",
+      "phone": "0162819963258",
+      "gender": "Male",
+      "address": "Agargaon,dhaka"
     }
   ],
   "reportModel": [
@@ -678,7 +704,7 @@
       "date": "2025-07-10",
       "startTime": "10:45",
       "endTime": "14:30",
-      "isBooked": true
+      "isBooked": false
     },
     {
       "id": "a277",
@@ -711,6 +737,14 @@
       "startTime": "09:00",
       "endTime": "14:00",
       "isBooked": false
+    },
+    {
+      "id": "8cf4",
+      "doctorId": "d005",
+      "date": "2025-07-17",
+      "startTime": "18:04",
+      "endTime": "22:04",
+      "isBooked": false
     }
   ],
   "appointments": [
@@ -731,7 +765,133 @@
       "patientName": "Atik Islam",
       "patientContact": "0147852369",
       "reason": "pain"
+    },
+    {
+      "id": "eedb",
+      "departmentId": "a1f9",
+      "doctorId": "d005",
+      "scheduleSlotId": "7785",
+      "patientName": "sa",
+      "patientContact": "wda",
+      "reason": "aadd"
     }
   ],
-  "totalBillModel": []
+  "totalBillModel": [],
+  "testModel": [
+    {
+      "id": "50880c9a-e2f1-454c-bfee-3c93ed6c7b4b",
+      "testName": "CBC",
+      "testPrice": 400
+    },
+    {
+      "id": "313402f0-0873-4112-b04d-d1918d241ae3",
+      "testName": "MRI",
+      "testPrice": 6000
+    },
+    {
+      "id": "fbd0cec4-7704-46b6-9da0-38f34a55440e",
+      "testName": "CT Scan",
+      "testPrice": 10500
+    },
+    {
+      "id": "035c801e-4a4b-4a44-8f0c-b921a8facac8",
+      "testName": "X-Ray Cest",
+      "testPrice": 800
+    },
+    {
+      "id": "649fc363-4358-4810-874f-c0b23d0fdd3a",
+      "testName": "NSI",
+      "testPrice": 500
+    },
+    {
+      "id": "fb84ec16-9f9d-4571-b6e7-2be980a047f4",
+      "testName": "\tSGPT (ALT)",
+      "testPrice": 350
+    },
+    {
+      "id": "695fc709-ddb4-4e24-8c36-3fe05b198c82",
+      "testName": "\tAnti HAV - IgM",
+      "testPrice": 1200
+    },
+    {
+      "id": "5f4bbbfd-e46b-46f8-9f3e-c75c96cc4919",
+      "testName": "\tAlkaline phosphatase",
+      "testPrice": 400
+    },
+    {
+      "id": "74474949-52c8-42a9-a054-7590f94f3205",
+      "testName": "\tAnti- TPO Ab",
+      "testPrice": 1200
+    },
+    {
+      "id": "eae27204-78c3-4df4-9ca1-f4a44f76282f",
+      "testName": "\t2 hrs Postprandial Plasma glucose",
+      "testPrice": 1200
+    },
+    {
+      "id": "7d44f07e-5f6c-4b5c-87a9-1abcfe40db3e",
+      "testName": "Endoscopy",
+      "testPrice": 4500
+    },
+    {
+      "id": "587ba194-bfc8-4170-82fb-2837152411fb",
+      "testName": "\tCBC, ESR",
+      "testPrice": 600
+    },
+    {
+      "id": "64273b6a-27ba-47f2-aa7d-64aee3381a7e",
+      "testName": "Haemoglobin (Hb)",
+      "testPrice": 200
+    },
+    {
+      "id": "218590b9-992a-4438-a240-97d502b517c9",
+      "testName": "\tESR",
+      "testPrice": 200
+    },
+    {
+      "id": "a8403bce-64a4-4fe5-8a24-feace77917b7",
+      "testName": "\tTC, DC, Hb%, ESR",
+      "testPrice": 300
+    },
+    {
+      "id": "3cfe9360-3d3b-4d2e-a9c3-d8d1889d0762",
+      "testName": "\tHCT/PCV",
+      "testPrice": 250
+    },
+    {
+      "id": "fa84d34b-f8f3-4ebc-a373-57585a33f451",
+      "testName": "Circulating Eosinophil Count (CE Count)",
+      "testPrice": 300
+    },
+    {
+      "id": "831938e1-8381-433e-a6fe-219b21cc2003",
+      "testName": "Reticulocyte Count",
+      "testPrice": 300
+    },
+    {
+      "id": "3ea8cbdb-a47b-44e1-97b1-adadd9e838e7",
+      "testName": "Kidney Function Tests-KFT (Creat., Urea, BUN, Uric Acid, Calcium)",
+      "testPrice": 2000
+    },
+    {
+      "id": "bbc3862d-1ec9-48e7-be50-511801c2f328",
+      "testName": "LDH",
+      "testPrice": 1000
+    },
+    {
+      "id": "17bf9fd2-25fe-4138-883b-f790dbd1b84d",
+      "testName": "\tTotal Acid Phosphatase",
+      "testPrice": 800
+    },
+    {
+      "id": "6ff99d24-7fad-40fa-ad8f-88cfe3a1dfc1",
+      "testName": "\tLipid Profile (Cholesterol, HDL, LDL, TG, Chol/HDL Ratio)",
+      "testPrice": 1800
+    },
+    {
+      "id": "ec3ebb7b-366e-4eae-a00f-6c6f72456921",
+      "testName": "Serum Inorganic Phosphate (PO4)",
+      "testPrice": 700
+    }
+  ]
 }
