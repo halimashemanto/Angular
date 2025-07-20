@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Home } from './home/home';
-import { AddBook } from './Booking/add-book/add-book';
-import { ViewBook } from './Booking/view-book/view-book';
-import { UpdateBook } from './Booking/update-book/update-book';
 import { Registration } from './auth/registration/registration';
 import { Login } from './auth/login/login';
 import { AboutHospital } from './about hospital/about-hospital/about-hospital';
@@ -39,26 +36,41 @@ import { UpdateReport } from './Report/update-report/update-report';
 import { AddScheduleSlotComponent } from './Appoinment/add-schedule-slot-component/add-schedule-slot-component';
 import { AddAppointmentComponent } from './Appoinment/add-appointment-component/add-appointment-component';
 import { Facility } from './facility/facility';
-import { Navbar } from './templet/navbar/navbar';
-import { Sidebar } from './templet/sidebar/sidebar';
-import { Footer } from './templet/footer/footer';
 import { HealthCareOfBangladesh } from './health-care-of-bangladesh/health-care-of-bangladesh';
-import { Admin } from './adminwork/admin/admin';
+import { Admin } from './PANEL/admin/admin';
 import { AddTest } from './test/add-test/add-test';
+import { FindDoctorWithoutEditDelete } from './about hospital/find-doctor-without-edit-delete/find-doctor-without-edit-delete';
+import { DepartmentForShowing } from './about hospital/department-for-showing/department-for-showing';
+import { DoctorPanel } from './PANEL/doctor-panel/doctor-panel';
+import { NursePanel } from './PANEL/nurse-panel/nurse-panel';
+import { ReceptionistPanel } from './PANEL/receptionist-panel/receptionist-panel';
+import { Logout } from './auth/logout/logout';
+import { adminGuard } from './gurde/admin-guard';
+import { receptionistGurd } from './gurde/receptionist-guard';
+import { nurseGurd } from './gurde/nurse-guard';
+import { doctorGurd } from './gurde/doctor-guard';
+import { authGuard } from './gurde/auth-guard';
+import { bothGuard } from './gurde/both-guard';
+import { AddManufacture } from './manufacture/add-manufacture/add-manufacture';
+import { ViewManufacture } from './manufacture/view-manufacture/view-manufacture';
+import { UpdateManufacture } from './manufacture/update-manufacture/update-manufacture';
+import { AddMedicine } from './Pharmacy/add-medicine/add-medicine';
+import { ViewMedicine } from './Pharmacy/view-medicine/view-medicine';
+import { UpdateMedicine } from './Pharmacy/update-medicine/update-medicine';
 
 
 const routes: Routes = [
+
+    // { path: '**', redirectTo: '', pathMatch: 'full' },
+
+
   { path: '', component: Home },
   { path: 'home ', component: Home },
 
-  // book an appoinment
-  { path: 'addBook', component: AddBook },
-  { path: 'viewBook', component: ViewBook },
-  { path: 'updateBook/:id', component: UpdateBook },
-
   // auth
   { path: 'reg', component: Registration },
-  { path: 'log', component: Login  },
+  { path: 'login', component: Login  },
+  {path: 'logout', component:Logout},
 
   // about hospital
   { path: 'aboutUs', component: AboutHospital  },
@@ -69,61 +81,78 @@ const routes: Routes = [
   { path: 'contact', component: Contact  },
   { path: 'eq', component: Equipment  },
   { path: 'hcb', component: HealthCareOfBangladesh  },
+  { path: 'finddoctor', component: FindDoctorWithoutEditDelete  },
+  { path: 'department', component: DepartmentForShowing  },
 
   // nurse
-  { path: 'an', component: AddNurse  },
-  { path: 'n', component: Nurse  },
+  { path: 'an', component: AddNurse,  canActivate:[bothGuard]},  //nurse & admin bothgurde
+  { path: 'n', component: Nurse,  canActivate:[adminGuard]},
   { path: 'un/:id', component: UpdateNurse  },
 
   // patient
-  { path: 'addp', component: AddPatient  },
-  { path: 'viewp', component: ViewPatient  },
-  { path: 'up/:id', component: UpdatePatient  },
+  { path: 'addp', component: AddPatient, canActivate:[doctorGurd] },
+  { path: 'viewp', component: ViewPatient, canActivate:[authGuard] },
+  { path: 'up/:id', component: UpdatePatient, canActivate:[doctorGurd] },
   
   // Doctor/Department
 
-  { path: 'dep', component:DepartmentName },
-  { path: 'editDepartment', component:DepartmentName },
-  { path: 'adddoc', component:AddDoctorComponent },
-  { path: 'viewdoc', component:ViewDoctorComponent },
-  { path: 'edit-doctor/:id', component:UpdateDoctorComponent },
+  { path: 'dep', component:DepartmentName,  canActivate:[adminGuard]},
+  { path: 'editDepartment', component:DepartmentName, canActivate:[adminGuard]},
+  { path: 'adddoc', component:AddDoctorComponent, canActivate:[authGuard]},
+  { path: 'viewdoc', component:ViewDoctorComponent, canActivate:[adminGuard]},
+  { path: 'edit-doctor/:id', component:UpdateDoctorComponent, canActivate:[adminGuard]},
 
   //Reciptionsist
-  { path: 'rec', component:Addreciptionist  },
-  { path: 'viewrec', component:Viewreciptionist },
-  { path: 'uprec', component:Updatereciptionist  },
+  { path: 'rec', component:Addreciptionist, canActivate:[receptionistGurd] },
+  { path: 'viewrec', component:Viewreciptionist, canActivate:[adminGuard] },
+  { path: 'uprec', component:Updatereciptionist, canActivate:[adminGuard] },
 
   // Invoice
   { path: 'addbill', component:AddBill  },
   { path: 'viewbill', component:ViewBill  },
  
    // Prescription
-  { path: 'addprescription', component:AddPrescription  },
-  { path: 'viewprescription', component:ViewPrescription  },
-  { path: 'upprescription/:id', component:UpdatePrescription  },
+  { path: 'addprescription', component:AddPrescription,  canActivate:[doctorGurd]},
+  { path: 'viewprescription', component:ViewPrescription, canActivate:[doctorGurd] },
+  { path: 'upprescription/:id', component:UpdatePrescription, canActivate:[doctorGurd] },
  
      // Report
-  { path: 'addreport', component:AddReport  },
-  { path: 'viewreport', component:ViewReport  },
-  { path: 'upreport/:id', component:UpdateReport  },
+  { path: 'addreport', component:AddReport, canActivate:[doctorGurd] },
+  { path: 'viewreport', component:ViewReport, canActivate:[authGuard] },
+  { path: 'upreport/:id', component:UpdateReport, canActivate:[doctorGurd] },
 
   //appointment
-  { path: 'addslot', component:AddScheduleSlotComponent  },
-  { path: 'addapp', component:AddAppointmentComponent  },
+  { path: 'addslot', component:AddScheduleSlotComponent, canActivate:[receptionistGurd] },
+  { path: 'addapp', component:AddAppointmentComponent,  },
 
   // admin Templet
   { path: 'f', component:Facility  },
-  { path: 'admin', component:Admin  },
-  { path: 'sideber', component:Sidebar  },
-  { path: 'footer', component:Footer  },
+
+
   // test
   { path: 'addtest', component:AddTest  },
-  { path: 'footer', component:Footer  },
-  { path: 'footer', component:Footer  },
+ 
   
 
- 
+ //Panel for every section
+   { path: 'admin', component:Admin,  canActivate: [adminGuard] },
+ { path: 'doctorpanel', component:DoctorPanel, canActivate: [doctorGurd] },
+  { path: 'nursepanel', component:NursePanel,  canActivate: [nurseGurd]},
+  { path: 'recpanel', component:ReceptionistPanel,  canActivate: [receptionistGurd]},
 
+  //manufecture
+
+  {path:'addmenu', component:AddManufacture},
+  {path:'viewmenu', component:ViewManufacture},
+  {path:'uomenu/:id', component:UpdateManufacture},
+
+  //medicine
+  {path:'addmedi', component:AddMedicine},
+  {path:'viewmedi', component:ViewMedicine},
+  {path:'upmedi/:id', component:UpdateMedicine},
+
+
+  
 ];
 
 @NgModule({

@@ -1,11 +1,7 @@
 import { NgModule, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { ViewBook } from './Booking/view-book/view-book';
-import { AddBook } from './Booking/add-book/add-book';
-import { UpdateBook } from './Booking/update-book/update-book';
 import { Home } from './home/home';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
@@ -18,8 +14,7 @@ import { AboutManagingdirector } from './about hospital/about-managingdirector/a
 import { Contact } from './about hospital/contact/contact';
 import { ServiceFeatures } from './about hospital/service-features/service-features';
 import { HealthCheckUp } from './about hospital/health-check-up/health-check-up';
-import { Admin } from './adminwork/admin/admin';
-import { Navbar } from './templet/navbar/navbar';
+import { Admin } from './PANEL/admin/admin';
 import { Nurse } from './NurseComponent/nurse/nurse';
 import { UpdateNurse } from './NurseComponent/update-nurse/update-nurse';
 import { AddNurse } from './NurseComponent/add-nurse/add-nurse';
@@ -45,16 +40,22 @@ import { ViewReport } from './Report/view-report/view-report';
 import { UpdateReport } from './Report/update-report/update-report';
 import { AddScheduleSlotComponent } from './Appoinment/add-schedule-slot-component/add-schedule-slot-component';
 import { AddAppointmentComponent } from './Appoinment/add-appointment-component/add-appointment-component';
-
 import { AddMedicine } from './Pharmacy/add-medicine/add-medicine';
 import { ViewMedicine } from './Pharmacy/view-medicine/view-medicine';
 import { UpdateMedicine } from './Pharmacy/update-medicine/update-medicine';
-import { Sidebar } from './templet/sidebar/sidebar';
-import { Footer } from './templet/footer/footer';
 import { HealthCareOfBangladesh } from './health-care-of-bangladesh/health-care-of-bangladesh';
 import { AddTest } from './test/add-test/add-test';
 import { ViewTest } from './test/view-test/view-test';
 import { UpdateTest } from './test/update-test/update-test';
+import { FindDoctorWithoutEditDelete } from './about hospital/find-doctor-without-edit-delete/find-doctor-without-edit-delete';
+import { DepartmentForShowing } from './about hospital/department-for-showing/department-for-showing';
+import { DoctorPanel } from './PANEL/doctor-panel/doctor-panel';
+import { NursePanel } from './PANEL/nurse-panel/nurse-panel';
+import { ReceptionistPanel } from './PANEL/receptionist-panel/receptionist-panel';
+import { Logout } from './auth/logout/logout';
+import { AddManufacture } from './manufacture/add-manufacture/add-manufacture';
+import { ViewManufacture } from './manufacture/view-manufacture/view-manufacture';
+import { UpdateManufacture } from './manufacture/update-manufacture/update-manufacture';
 
 
 
@@ -63,9 +64,6 @@ import { UpdateTest } from './test/update-test/update-test';
 @NgModule({
   declarations: [
     App,
-    ViewBook,
-    AddBook,
-    UpdateBook,
     Home,
     Registration,
     Login,
@@ -77,47 +75,48 @@ import { UpdateTest } from './test/update-test/update-test';
     ServiceFeatures,
     HealthCheckUp,
     Admin,
-    
-    Navbar,
-          Nurse,
-          UpdateNurse,
-          AddNurse,
-          AddPatient,
-          ViewPatient,
-          UpdatePatient,
-          DepartmentName,                 
-          Addreciptionist,
-          Viewreciptionist,
-          Updatereciptionist,
-          AddDoctorComponent,
-          ViewDoctorComponent,
-          UpdateDoctorComponent,
-          Equipment,
-          UpdateBill,
-          AddBill,
-          ViewBill,
-          AddPrescription,
-          ViewPrescription,
-          UpdatePrescription,
-          AddReport,
-          ViewReport,
-          UpdateReport,
-          AddScheduleSlotComponent,
-          AddAppointmentComponent,
+    Nurse,
+    UpdateNurse,
+    AddNurse,
+    AddPatient,
+    ViewPatient,
+    UpdatePatient,
+    DepartmentName,
+    Addreciptionist,
+    Viewreciptionist,
+    Updatereciptionist,
+    AddDoctorComponent,
+    ViewDoctorComponent,
+    UpdateDoctorComponent,
+    Equipment,
+    UpdateBill,
+    AddBill,
+    ViewBill,
+    AddPrescription,
+    ViewPrescription,
+    UpdatePrescription,
+    AddReport,
+    ViewReport,
+    UpdateReport,
+    AddScheduleSlotComponent,
+    AddAppointmentComponent,
+    AddMedicine,
+    ViewMedicine,
+    UpdateMedicine,
+    HealthCareOfBangladesh,
+    AddTest,
+    ViewTest,
+    UpdateTest,
+    FindDoctorWithoutEditDelete,
+    DepartmentForShowing,
+    DoctorPanel,
+    NursePanel,
+    ReceptionistPanel,
+    Logout,
+    AddManufacture,
+    ViewManufacture,
+    UpdateManufacture
 
-          AddMedicine,
-          ViewMedicine,
-          UpdateMedicine,
-          Sidebar,
-          Footer,
-          HealthCareOfBangladesh,
-          AddTest,
-          ViewTest,
-          UpdateTest
-
-   
-   
-   
   ],
   imports: [
     BrowserModule,

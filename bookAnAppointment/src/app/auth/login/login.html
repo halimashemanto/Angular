@@ -28,21 +28,17 @@
             <a href="#!">Forgot password?</a>
           </div>
 
-          <!-- Submit button -->
-          <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" (click)="onSubmit()">Sign in</button>
-
-          <!-- <div class="divider d-flex align-items-center my-4">
-            <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
-          </div> -->
-
-          <!-- <a data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!"
-            role="button">
-            <i class="fab fa-facebook-f me-2"></i>Continue with Facebook
-          </a>
-          <a data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" style="background-color: #55acee" href="#!"
-            role="button">
-            <i class="fab fa-twitter me-2"></i>Continue with Twitter</a> -->
-
+                <!-- Submit button -->
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;"
+               (click)="onSubmit()">
+              Login
+            </button>
+            <p class="small fw-bold mt-2 pt-1 mb-0">
+              Don't have an account? <a href="reg" class="link-danger">Register</a>
+            </p>
+          </div>
         </form>
       </div>
     </div>

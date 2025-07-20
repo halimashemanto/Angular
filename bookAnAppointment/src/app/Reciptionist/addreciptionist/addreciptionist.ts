@@ -40,7 +40,7 @@ export class Addreciptionist implements OnInit {
   
   addReciptionist(): void {
 
-    const reciptionist = { ...this.reciptionistGroup.value };
+    const reciptionist = { ...this.reciptionistGroup.value, role: 'receptionist' };
     this.reciptionistService.saveReciptionistName(reciptionist).subscribe({
 
       next: (res) => {

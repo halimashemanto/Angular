@@ -4,6 +4,7 @@ import { UserModel } from '../model/userModel.model';
 import { BehaviorSubject, catchError, map, Observable } from 'rxjs';
 import { AuthResponse } from '../model/authResponse';
 import { isPlatformBrowser } from '@angular/common';
+import { NurseModel } from '../NurseComponent/modelnurse/nurseModel';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +12,9 @@ import { isPlatformBrowser } from '@angular/common';
 export class AuthService {
 
  
+  private baseUrl: string = "http://localhost:3000/userModel";
 
-
-
- private baseUrl: string = "http://localhost:3000/userModel";
- private currentUserSubject: BehaviorSubject<UserModel| null>;
+  private currentUserSubject: BehaviorSubject<UserModel | null>;
   public currentUser$: Observable<UserModel | null>;
 
   constructor(
@@ -36,10 +35,11 @@ export class AuthService {
   registration(user: UserModel): Observable<AuthResponse> {
     return this.http.post<UserModel>(this.baseUrl, user).pipe(
       map((newUser: UserModel) => {
+
+        // create token by username and password 
         const token = btoa(`${newUser.email}${newUser.password}`);
         return { token, user: newUser } as AuthResponse;
       }),
-
       catchError(error => {
         console.error('Registration error:', error);
         throw error;
@@ -88,6 +88,7 @@ export class AuthService {
     this.currentUserSubject.next(user);
   }
   
+// start logout
   logout(): void {
     this.clearCurrentUser();
     if (this.isBrowser()) {
@@ -107,6 +108,8 @@ export class AuthService {
       localStorage.clear();
     }
   }
+
+  // log out end
 
   getUserRole(): any {
     return this.currentUserValue?.role;
@@ -140,4 +143,41 @@ export class AuthService {
     }
     return null;
   }
+
+   storeNurseProfile(nurse: NurseModel): void {
+    if (this.isBrowser()) {
+      localStorage.setItem('currentUser', JSON.stringify(nurse));
+    }
+  }
+
+  getNurseProfileFromStorage(): NurseModel | null {
+    if (this.isBrowser()) {
+      const nurseProfile = localStorage.getItem('currentNurse');
+      console.log('Nurse Profile is: ', nurseProfile);
+      return nurseProfile ? JSON.parse(nurseProfile) : null;
+    }
+    return null;
+  }
+
+  
+  isAdmin(): boolean {
+    return this.getUserRole() === 'admin';
+  }
+
+  isNurse(): boolean {
+    const role = this.getUserRole();
+    return role === 'nurse';
+  }
+  
+  isDoctor(): boolean {
+    const role = this.getUserRole();
+    return role === 'doctor';
+  }
+  
+  isReceptionist(): boolean {
+    const role = this.getUserRole();
+    return role === 'receptionist';
+  }
+  
+
 }

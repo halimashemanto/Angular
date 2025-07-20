@@ -10,6 +10,7 @@ import {  Router } from '@angular/router';
   styleUrl: './login.css'
 })
 export class Login {
+ 
   loginForm!: FormGroup;
    errorMessage: string = '';
 
@@ -32,18 +33,17 @@ onSubmit(): void {
     return;
   }
 
-  const userDetails = this.loginForm.value;
+  const nurserDetails = this.loginForm.value;
 
-  this.authService.login(userDetails).subscribe({
+  this.authService.login(nurserDetails).subscribe({
     next: (res) => {
-      console.log('User logged in successfully:', res);
+      console.log('Nurse logged in successfully:', res);
       
       this.authService.storeToken(res.token);
-
-      const role = this.authService.getUserRole();
-      console.log('User role:', role);
-
       this.router.navigate(['/home']);
+
+      
+
       this.loginForm.reset();
     },
     error: (err) => {
@@ -52,7 +52,6 @@ onSubmit(): void {
     }
   });
 }
-
 
 
 }

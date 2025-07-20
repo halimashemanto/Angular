@@ -11,26 +11,28 @@ import { UserModel } from '../../model/userModel.model';
   styleUrl: './registration.css'
 })
 export class Registration {
-  regForm!: FormGroup;
+   regForm!: FormGroup;
 
   constructor(
     private authService: AuthService,
     private router: Router,
-    private formBuilder: FormBuilder) {
-
+    private formBuilder: FormBuilder
+  ) {
 
     this.regForm = this.formBuilder.group({
-
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
+      password: ['', Validators.required],
+      // photo: ['', Validators.required],
+
 
     })
 
   }
 
+
   onSubmit(): void {
-    
+    if (this.regForm.valid) {
 
       const user: UserModel = {
         ...this.regForm.value,
@@ -41,14 +43,19 @@ export class Registration {
         next: (res) => {
           console.log('User registered successfully:', res);
           this.authService.storeToken(res.token);
-          this.router.navigate(['/login']);
+          this.router.navigate(['/login']); // Navigate to a protected route after registration
         },
         error: (err) => {
           console.error('Error registering user:', err);
         }
       });
-    
+    }
+    else {
+      alert("Complte mandatory Field");
+    }
   }
+
+
 
 
 }

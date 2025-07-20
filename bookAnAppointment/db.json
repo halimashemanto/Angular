@@ -1,405 +1,32 @@
 {
-  "bookModel": [
-    {
-      "id": "01",
-      "name": "shawon",
-      "email": "shawonsajgufvasduhfysdaf@gmail.com",
-      "phone": "0198723498",
-      "date": "01-4-2",
-      "slot": "Morning"
-    },
-    {
-      "id": "02",
-      "name": "habib",
-      "email": "shawon@gmail.com",
-      "phone": "0198723498",
-      "date": "01-4-2",
-      "slot": "Evening"
-    },
-    {
-      "id": "289b",
-      "name": "mannat",
-      "email": "man@gmail.com",
-      "phone": "017956189",
-      "date": "2-2-2025",
-      "slot": "Evening"
-    },
-    {
-      "id": "289b",
-      "name": "muladi",
-      "email": "man@gmail.com",
-      "phone": "014841456",
-      "date": "2-2-2025",
-      "slot": "Evening"
-    },
-    {
-      "id": "0791",
-      "name": "Suprova Shemanto",
-      "email": "dgdsfgdfgh@gmail.com",
-      "phone": "01628195945",
-      "date": "1-8-9",
-      "slot": "Evening"
-    },
-    {
-      "id": "4298",
-      "name": "Azwad Sumon",
-      "email": "azwad@gmail.com",
-      "phone": "019292939495",
-      "date": "2025-07-23",
-      "slot": "Morning"
-    },
-    {
-      "id": "2e77",
-      "name": "Lubna",
-      "email": "lubna@gmail.com",
-      "phone": "01234509875",
-      "date": "2025-07-16",
-      "slot": "Morning"
-    }
-  ],
   "userModel": [
     {
-      "id": "f5ec",
-      "name": "asdf",
-      "email": "asdf",
-      "password": "sadf",
-      "role": "user"
+      "id": "c466",
+      "name": "Akter Hossain",
+      "email": "akter@gmail.com",
+      "password": "akter",
+      "role": "nurse"
     },
     {
-      "id": "b778",
-      "name": "sadfasdfasdf",
-      "email": "safsdaf",
-      "password": "safasdfsda",
-      "role": "user"
-    },
-    {
-      "id": "d020",
+      "id": "fda7",
       "name": "Suprova",
-      "email": "suprova@gmail.com",
+      "email": "sup@gmail.com",
+      "password": "suprova",
+      "role": "receptionist"
+    },
+    {
+      "id": "44bb",
+      "name": "shemanto",
+      "email": "na@gmail.com",
       "password": "12345",
-      "role": "user"
+      "role": "admin"
     },
     {
-      "id": "d38e",
-      "name": "abcd",
-      "email": "abc@gmail.com",
-      "password": "12345678",
-      "role": "user"
-    },
-    {
-      "id": "ae73",
-      "name": "abcd",
-      "email": "abc@gmail.com",
-      "password": "12345678",
-      "role": "user"
-    },
-    {
-      "id": "ce29",
-      "name": "abcd",
-      "email": "abc@gmail.com",
-      "password": "12345678",
-      "role": "user"
-    },
-    {
-      "id": "cbfb",
-      "name": "abcd",
-      "email": "abc@gmail.com",
-      "password": "12345678",
-      "role": "user"
-    },
-    {
-      "id": "6693",
-      "name": "sdfds",
-      "email": "simki@gmail.com",
-      "password": "123456",
-      "role": "user"
-    },
-    {
-      "id": "ccff",
-      "name": "sdfds",
-      "email": "simki@gmail.com",
-      "password": "123456",
-      "role": "user"
-    },
-    {
-      "id": "2e7f",
-      "name": "sdfds",
-      "email": "simki@gmail.com",
-      "password": "123456",
-      "role": "user"
-    },
-    {
-      "id": "9c94",
-      "name": "sdfds",
-      "email": "simki@gmail.com",
-      "password": "123456",
-      "role": "user"
-    },
-    {
-      "id": "d469",
-      "name": "sdfds",
-      "email": "simki@gmail.com",
-      "password": "123456",
-      "role": "user"
-    },
-    {
-      "id": "9aeb",
-      "name": "sdfds",
-      "email": "simki@gmail.com",
-      "password": "123456",
-      "role": "user"
-    },
-    {
-      "id": "1f93",
-      "name": "sdfds",
-      "email": "simki@gmail.com",
-      "password": "123456",
-      "role": "user"
-    },
-    {
-      "id": "6704",
-      "name": "sdfds",
-      "email": "simki@gmail.com",
-      "password": "123456",
-      "role": "user"
-    },
-    {
-      "id": "127e",
-      "name": "sdfds",
-      "email": "simki@gmail.com",
-      "password": "123456",
-      "role": "user"
-    },
-    {
-      "id": "40d3",
-      "name": "sdfds",
-      "email": "simki@gmail.com",
-      "password": "123456",
-      "role": "user"
-    },
-    {
-      "id": "fd0d",
-      "name": "sdfds",
-      "email": "simki@gmail.com",
-      "password": "123456",
-      "role": "user"
-    },
-    {
-      "id": "26cf",
-      "name": "sdfds",
-      "email": "simki@gmail.com",
-      "password": "123456",
-      "role": "user"
-    },
-    {
-      "id": "26df",
-      "name": "sdfds",
-      "email": "simki@gmail.com",
-      "password": "123456",
-      "role": "user"
-    },
-    {
-      "id": "31be",
-      "name": "Suprova",
-      "email": "ssss@gmail.com",
-      "password": "123456789",
-      "role": "user"
-    },
-    {
-      "id": "d074",
-      "name": "Suprova",
-      "email": "ssss@gmail.com",
-      "password": "123456789",
-      "role": "user"
-    },
-    {
-      "id": "7adb",
-      "name": "Suprova",
-      "email": "ssss@gmail.com",
-      "password": "123456789",
-      "role": "user"
-    },
-    {
-      "id": "1828",
-      "name": "Suprova",
-      "email": "ssss@gmail.com",
-      "password": "123456789",
-      "role": "user"
-    },
-    {
-      "id": "26f6",
-      "name": "Suprova",
-      "email": "ssss@gmail.com",
-      "password": "123456789",
-      "role": "user"
-    },
-    {
-      "id": "2896",
-      "name": "Suprova",
-      "email": "ssss@gmail.com",
-      "password": "123456789",
-      "role": "user"
-    },
-    {
-      "id": "7112",
-      "name": "Suprova",
-      "email": "ssss@gmail.com",
-      "password": "123456789",
-      "role": "user"
-    },
-    {
-      "id": "0124",
-      "name": "Suprova",
-      "email": "ssss@gmail.com",
-      "password": "123456789",
-      "role": "user"
-    },
-    {
-      "id": "2130",
-      "name": "Suprova",
-      "email": "ssss@gmail.com",
-      "password": "123456789",
-      "role": "user"
-    },
-    {
-      "id": "fb72",
-      "name": "Suprova",
-      "email": "ssss@gmail.com",
-      "password": "123456789",
-      "role": "user"
-    },
-    {
-      "id": "7de5",
-      "name": "Suprova",
-      "email": "ssss@gmail.com",
-      "password": "123456789",
-      "role": "user"
-    },
-    {
-      "id": "0e0e",
-      "name": "Suprova",
-      "email": "ssss@gmail.com",
-      "password": "123456789",
-      "role": "user"
-    },
-    {
-      "id": "7d98",
-      "name": "atik",
-      "email": "atik@gmail.com",
-      "password": "123456",
-      "role": "user"
-    },
-    {
-      "id": "c5ad",
-      "name": "atik",
-      "email": "atik@gmail.com",
-      "password": "123456",
-      "role": "user"
-    },
-    {
-      "id": "39ec",
-      "name": "atik",
-      "email": "atik@gmail.com",
-      "password": "123456",
-      "role": "user"
-    },
-    {
-      "id": "7d3b",
-      "name": "atik",
-      "email": "atik@gmail.com",
-      "password": "123456",
-      "role": "user"
-    },
-    {
-      "id": "843d",
-      "name": "sufiya ",
-      "email": "su@gmail.com",
-      "password": "12131415",
-      "role": "user"
-    },
-    {
-      "id": "4c62",
-      "name": "sufiya ",
-      "email": "su@gmail.com",
-      "password": "12131415",
-      "role": "user"
-    },
-    {
-      "id": "1bd2",
-      "name": "sufiya ",
-      "email": "su@gmail.com",
-      "password": "12131415",
-      "role": "user"
-    },
-    {
-      "id": "d9e7",
-      "name": "sufiya ",
-      "email": "su@gmail.com",
-      "password": "12131415",
-      "role": "user"
-    },
-    {
-      "id": "91d7",
-      "name": "sufiya ",
-      "email": "su@gmail.com",
-      "password": "12131415",
-      "role": "user"
-    },
-    {
-      "id": "04e4",
-      "name": "sufiya ",
-      "email": "su@gmail.com",
-      "password": "12131415",
-      "role": "user"
-    },
-    {
-      "id": "990c",
-      "name": "sufiya ",
-      "email": "su@gmail.com",
-      "password": "12131415",
-      "role": "user"
-    },
-    {
-      "id": "3b04",
-      "name": "sufiya ",
-      "email": "su@gmail.com",
-      "password": "12131415",
-      "role": "user"
-    },
-    {
-      "id": "aa01",
-      "name": "sufiya ",
-      "email": "su@gmail.com",
-      "password": "12131415",
-      "role": "user"
-    },
-    {
-      "id": "ec73",
-      "name": "sufiya ",
-      "email": "su@gmail.com",
-      "password": "12131415",
-      "role": "user"
-    },
-    {
-      "id": "16c7",
+      "id": "d367",
       "name": "Suprova",
       "email": "sup@gmail.com",
-      "password": "123457",
-      "role": "user"
-    },
-    {
-      "id": "6f09",
-      "name": "Suprova",
-      "email": "sup@gmail.com",
-      "password": "123457",
-      "role": "user"
-    },
-    {
-      "id": "dd05",
-      "name": "Suprova",
-      "email": "sup@gmail.com",
-      "password": "123457",
-      "role": "user"
+      "password": "090909",
+      "role": "doctor"
     }
   ],
   "nurseModel": [
@@ -584,9 +211,9 @@
       "contact": "01628195945",
       "address": "Agargaon,dhaka",
       "medicalHistory": "",
-      "reason": "",
+      "reason": "fever",
       "status": "",
-      "department": "",
+      "department": "medecine",
       "doctorName": ""
     }
   ],
@@ -720,7 +347,7 @@
       "date": "2025-07-30",
       "startTime": "15:01",
       "endTime": "21:50",
-      "isBooked": false
+      "isBooked": true
     },
     {
       "id": "8842",
@@ -744,7 +371,7 @@
       "date": "2025-07-17",
       "startTime": "18:04",
       "endTime": "22:04",
-      "isBooked": false
+      "isBooked": true
     }
   ],
   "appointments": [
@@ -774,6 +401,24 @@
       "patientName": "sa",
       "patientContact": "wda",
       "reason": "aadd"
+    },
+    {
+      "id": "8840",
+      "departmentId": "a1f9",
+      "doctorId": "d005",
+      "scheduleSlotId": "8cf4",
+      "patientName": "test",
+      "patientContact": "01777777777",
+      "reason": "lkmn"
+    },
+    {
+      "id": "4d69",
+      "departmentId": "04ea",
+      "doctorId": "f31b",
+      "scheduleSlotId": "1285",
+      "patientName": "monir",
+      "patientContact": "01785976184",
+      "reason": "Fever for 7 days"
     }
   ],
   "totalBillModel": [],
@@ -892,6 +537,30 @@
       "id": "ec3ebb7b-366e-4eae-a00f-6c6f72456921",
       "testName": "Serum Inorganic Phosphate (PO4)",
       "testPrice": 700
+    }
+  ],
+  "medicine": [],
+  "manufacture": [
+    {
+      "id": "2d89",
+      "manufacturerName": "PQR Pharmacy",
+      "address": "Gazipur",
+      "contactNumber": "098765432",
+      "email": "pqr@gmail.com"
+    },
+    {
+      "id": "425b",
+      "manufacturerName": "NPM ",
+      "address": "Agargaon,dhaka",
+      "contactNumber": "01609876543",
+      "email": "npm@gmail.com"
+    },
+    {
+      "id": "d081",
+      "manufacturerName": "sup",
+      "address": "lkjkl",
+      "contactNumber": "09876",
+      "email": "suprova@gmail.com"
     }
   ]
 }
