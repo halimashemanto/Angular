@@ -9,14 +9,14 @@
     },
     {
       "id": "fda7",
-      "name": "Suprova",
-      "email": "sup@gmail.com",
-      "password": "suprova",
+      "name": "Atikqul Islam",
+      "email": "atik@gmail.com",
+      "password": "atik",
       "role": "receptionist"
     },
     {
       "id": "44bb",
-      "name": "shemanto",
+      "name": "Suprova Shemanto",
       "email": "na@gmail.com",
       "password": "12345",
       "role": "admin"

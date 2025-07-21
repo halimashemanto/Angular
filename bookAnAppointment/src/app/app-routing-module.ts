@@ -35,7 +35,6 @@ import { ViewReport } from './Report/view-report/view-report';
 import { UpdateReport } from './Report/update-report/update-report';
 import { AddScheduleSlotComponent } from './Appoinment/add-schedule-slot-component/add-schedule-slot-component';
 import { AddAppointmentComponent } from './Appoinment/add-appointment-component/add-appointment-component';
-import { Facility } from './facility/facility';
 import { HealthCareOfBangladesh } from './health-care-of-bangladesh/health-care-of-bangladesh';
 import { Admin } from './PANEL/admin/admin';
 import { AddTest } from './test/add-test/add-test';
@@ -95,7 +94,7 @@ const routes: Routes = [
 
   // patient
   { path: 'addp', component: AddPatient, canActivate:[doctorGurd] },
-  { path: 'viewp', component: ViewPatient, canActivate:[authGuard] },
+  { path: 'viewp', component: ViewPatient, canActivate:[authGuard] }, //doctor & admin authgurde
   { path: 'up/:id', component: UpdatePatient, canActivate:[doctorGurd] },
   
   // Doctor/Department
@@ -114,6 +113,7 @@ const routes: Routes = [
   // Invoice
   { path: 'addbill', component:AddBill  },
   { path: 'viewbill', component:ViewBill  },
+   { path: 'addtest', component:AddTest  },
  
    // Prescription
   { path: 'addprescription', component:AddPrescription,  canActivate:[doctorGurd]},
@@ -129,15 +129,7 @@ const routes: Routes = [
   { path: 'addslot', component:AddScheduleSlotComponent, canActivate:[receptionistGurd] },
   { path: 'addapp', component:AddAppointmentComponent,  },
 
-  // admin Templet
-  { path: 'f', component:Facility  },
-
-
-  // test
-  { path: 'addtest', component:AddTest  },
- 
   
-
  //Panel for every section
    { path: 'admin', component:Admin,  canActivate: [adminGuard] },
  { path: 'doctorpanel', component:DoctorPanel, canActivate: [doctorGurd] },

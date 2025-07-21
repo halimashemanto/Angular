@@ -7,7 +7,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { Registration } from './auth/registration/registration';
 import { Login } from './auth/login/login';
-import { UserProfile } from './auth/user-profile/user-profile';
 import { AboutHospital } from './about hospital/about-hospital/about-hospital';
 import { AboutChairman } from './about hospital/about-chairman/about-chairman';
 import { AboutManagingdirector } from './about hospital/about-managingdirector/about-managingdirector';
@@ -71,7 +70,7 @@ import { DoctorProfile } from './profile/doctor-profile/doctor-profile';
     Home,
     Registration,
     Login,
-    UserProfile,
+    
     AboutHospital,
     AboutChairman,
     AboutManagingdirector,
