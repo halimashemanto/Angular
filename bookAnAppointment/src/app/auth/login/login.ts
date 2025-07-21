@@ -40,7 +40,27 @@ onSubmit(): void {
       console.log('Nurse logged in successfully:', res);
       
       this.authService.storeToken(res.token);
-      this.router.navigate(['/home']);
+      this.router.navigate(['']);
+
+
+       const role = this.authService.getUserRole();
+      console.log('User role:', role);
+
+      if (role === 'admin') {
+        this.router.navigate(['/admin']);
+      } else if (role === 'nurse') {
+        this.router.navigate(['/nursepanel']);
+      } 
+       else if (role === 'receptionist') {
+        this.router.navigate(['/recpanel']);
+      } 
+       else if (role === 'doctor') {
+        this.router.navigate(['/doctorpanel']);
+      } else {
+        this.errorMessage = 'Unknown user role.';
+      }
+
+      this.loginForm.reset();
 
       
 

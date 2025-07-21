@@ -27,6 +27,13 @@
       "email": "sup@gmail.com",
       "password": "090909",
       "role": "doctor"
+    },
+    {
+      "id": "d393",
+      "name": "imran",
+      "email": "imran@gmail.com",
+      "password": "123456",
+      "role": "user"
     }
   ],
   "nurseModel": [

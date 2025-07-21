@@ -56,6 +56,10 @@ import { Logout } from './auth/logout/logout';
 import { AddManufacture } from './manufacture/add-manufacture/add-manufacture';
 import { ViewManufacture } from './manufacture/view-manufacture/view-manufacture';
 import { UpdateManufacture } from './manufacture/update-manufacture/update-manufacture';
+import { NurseProfile } from './profile/nurse-profile/nurse-profile';
+import { AdminProfile } from './profile/admin-profile/admin-profile';
+import { ReceptionistProfile } from './profile/receptionist-profile/receptionist-profile';
+import { DoctorProfile } from './profile/doctor-profile/doctor-profile';
 
 
 
@@ -115,7 +119,11 @@ import { UpdateManufacture } from './manufacture/update-manufacture/update-manuf
     Logout,
     AddManufacture,
     ViewManufacture,
-    UpdateManufacture
+    UpdateManufacture,
+    NurseProfile,
+    AdminProfile,
+    ReceptionistProfile,
+    DoctorProfile
 
   ],
   imports: [

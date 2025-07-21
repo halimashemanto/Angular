@@ -57,6 +57,10 @@ import { UpdateManufacture } from './manufacture/update-manufacture/update-manuf
 import { AddMedicine } from './Pharmacy/add-medicine/add-medicine';
 import { ViewMedicine } from './Pharmacy/view-medicine/view-medicine';
 import { UpdateMedicine } from './Pharmacy/update-medicine/update-medicine';
+import { AdminProfile } from './profile/admin-profile/admin-profile';
+import { DoctorProfile } from './profile/doctor-profile/doctor-profile';
+import { NurseProfile } from './profile/nurse-profile/nurse-profile';
+import { ReceptionistProfile } from './profile/receptionist-profile/receptionist-profile';
 
 
 const routes: Routes = [
@@ -151,6 +155,12 @@ const routes: Routes = [
   {path:'viewmedi', component:ViewMedicine},
   {path:'upmedi/:id', component:UpdateMedicine},
 
+
+ //profile
+  {path:'adminprofile', component:AdminProfile},
+  {path:'doctorprofile', component:DoctorProfile},
+  {path:'nurseprofile', component:NurseProfile},
+  {path:'recprofile', component:ReceptionistProfile},
 
   
 ];
