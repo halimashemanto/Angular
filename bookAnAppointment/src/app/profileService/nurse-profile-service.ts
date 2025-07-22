@@ -11,7 +11,7 @@ import { NurseModel } from '../NurseComponent/modelnurse/nurseModel';
 export class NurseProfileService {
 
 
- private baseUrl = 'http://localhost:3000/userModel';
+ private baseUrl = 'http://localhost:3000/nurseModel';
 
   constructor(
     private http: HttpClient,
@@ -24,10 +24,10 @@ export class NurseProfileService {
 
   }
 
-  updateNurseProfile(user: NurseModel): Observable<UserModel> {
+  updateNurseProfile(user: NurseModel): Observable<NurseModel> {
 
     localStorage.setItem('nurseProfile', JSON.stringify(user));
-    return this.http.put<UserModel>(`${this.baseUrl}/${user.id}`, user);
+    return this.http.put<NurseModel>(`${this.baseUrl}/${user.id}`, user);
 
   }
 }

@@ -43,7 +43,7 @@ export class NurseService {
 
 
     updateUserProfile(nurse: NurseModel): Observable<NurseModel> {
-    localStorage.setItem('userProfile', JSON.stringify(nurse));
+    localStorage.setItem('nurseProfile', JSON.stringify(nurse));
     return this.http.put<NurseModel>(`${this.apiUrl}/${nurse.id}`, nurse);
   }
   }
