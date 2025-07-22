@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Doctor } from '../../dropdown/model/doctorModel';
-
-import { Router } from '@angular/router';
 import { BillService } from '../bill-service';
 import { PatientDocModel } from '../../patient/model/patientDocModel';
 import { DoctorService } from '../../dropdown/doctor-service';
 import { Patientdocservice } from '../../patient/patientdocservice';
-import { TotalBillModel } from '../model/totalBillModel';
+import { TestInvoice } from '../model/testInvoice';
+import { TestService } from '../../test/test-service';
+import { Test } from '../../test/model/testModel';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
+
+
 
 
 
@@ -20,181 +23,144 @@ import { TotalBillModel } from '../model/totalBillModel';
 export class AddBill implements OnInit {
 
 
-
-  bill: TotalBillModel[] = [];
-
-  invoiceDate!: '';
-  testName!: '';
-  quantity!: 1;
-  amount!: 0;
-  discount!: 0;
-  deliveryDate!: Date;
-  deliveryTime!: 0;
-  totalAmount!: 0;
-  totalDiscount!: number;
-  payable!: 0;
-  received!: 0;
-  due!: 0;
-  status!: false;
-  preparedBy!: ''
+  testSuggestions: Test[][] = []; // For each row's dropdown
 
 
 
-  doc: Doctor[] = [];
-  patient: PatientDocModel[] = [];
 
+   invoice: TestInvoice = {
+    patientId: {} as PatientDocModel,
+    doctorId: {} as Doctor,
+    invoiceDate: new Date(),
+    tests: [],
+    amount: 0,
+    discount: 0,
+    totalAmount: 0,
+    totalDiscount: 0,
+    payable: 0,
+    received: 0,
+    due: 0,
+    deliveryDate: new Date(),
+    deliveryTime: 0,
+    status: false,
+    preparedBy: ''
+  };
 
-  billForm!: FormGroup;
+  searchPhone = '';
+  doctors: Doctor[] = [];
+  patientStatus = '';
 
   constructor(
-    private billService: BillService,
     private doctorService: DoctorService,
     private patientService: Patientdocservice,
-    private router: Router,
-    private formBuilder: FormBuilder
-  ) { }
-
+    private invoiceService: BillService,
+    private testService: TestService
+  ) {}
 
   ngOnInit(): void {
-
-    this.billForm = this.formBuilder.group({
-
-      invoiceDate: ['', Validators.required],
-      testName: ['', Validators.required],
-      preparedBy: ['', Validators.required],
-      status: ['', Validators.required],
-      due: [''],
-      received: [''],
-      payable: [''],
-      totalDiscount: [''],
-      totalAmount: [''],
-      deliveryTime: [''],
-      deliveryDate: [''],
-      discount: [''],
-      amount: [''],
-      quantity: [''],
-      total: [''],
-      remarks: [''],
-
-      doc: this.formBuilder.group({
-        doctorId: ['', Validators.required]
-      }),
-
-      dep: this.formBuilder.group({
-        patientId: ['', Validators.required]
-      })
-    });
-
-
-
-    this.loadDoctor();
-    this.loadPatient();
+    this.loadDoctors();
   }
 
-  // ngOninit End Here
+  loadDoctors() {
+    this.doctorService.getAllDoctorName().subscribe(data => {
+      this.doctors = data;
+    });
+  }
 
-
-
-
-  loadPatient(): void {
-    this.patientService.getAllPatient().subscribe({
-      next: (patientId) => {
-        this.patient = patientId;
-      },
-      error: (err) => {
-        console.log(err);
+  findPatient() {
+    this.patientService.findByContact(this.searchPhone).subscribe(data => {
+      if (data.length > 0) {
+        this.invoice.patientId = data[0];
+        this.patientStatus = 'Existing patient loaded.';
+      } else {
+        this.invoice.patientId = {
+          id: '',
+          name: '',
+          age: '',
+          gender: '',
+          contact: this.searchPhone,
+          address: '',
+          date: '',
+          doctorName: '',
+          medicalHistory: '',
+          reason: '',
+          status: '',
+          department: ''
+        };
+        this.patientStatus = 'New patient. Please fill in details.';
       }
     });
   }
 
+  addTest() {
+    this.invoice.tests.push({ testName: '', testPrice: 0 });
+  }
 
+  removeTest(index: number) {
+    this.invoice.tests.splice(index, 1);
+    this.calculateTotal();
+  }
 
-  loadDoctor(): void {
-    this.doctorService.getAllDoctorName().subscribe({
-      next: (doctorId) => {
-        this.doc = doctorId;
-      },
-      error: (err) => {
-        console.log(err);
-      }
+  calculateTotal() {
+    this.invoice.amount = this.invoice.tests.reduce((sum, t) => sum + (t.testPrice || 0), 0);
+    this.invoice.totalDiscount = this.invoice.discount;
+    this.invoice.totalAmount = this.invoice.amount - this.invoice.discount;
+    this.invoice.payable = this.invoice.totalAmount;
+    this.invoice.due = this.invoice.payable - (this.invoice.received || 0);
+    this.invoice.status = this.invoice.due <= 0;
+  }
+
+  submitInvoice() {
+    this.invoiceService.saveBill(this.invoice).subscribe(() => {
+      alert('Invoice submitted successfully!');
+      this.printInvoice(); // Call after save
+      // Reset if needed
     });
   }
 
-
-
-
-
-
-  onSubmit(): void {
-    if (this.billForm.invalid) {
-      console.log('Form Invalid');
-
-    }
-
-    const bill: TotalBillModel = {
-      ...this.billForm.value
-
-    };
-
-    this.billService.saveBill(bill).subscribe({
-      next: (res) => {
-        console.log(res, 'Invoice Successfully Saved!');
-        this.loadDoctor();
-        this.loadPatient();
-        this.billForm.reset();
-        this.router.navigate(['/viewbill']);
-      },
-      error: (err) => {
-        console.log(err);
-      }
-    })
-
-  }
-
-
-
-
-  calculateInvoice(): void {
-    // Get values from the form
-    const quantity = this.billForm.get('quantity')?.value || 0;
-    const amount = this.billForm.get('amount')?.value || 0;
-    const discount = this.billForm.get('discount')?.value || 0;
-    const received = this.billForm.get('received')?.value || 0;
-
-    // 1. Calculate total amount
-    const totalAmount = quantity * amount;
-
-    // 2. Calculate total discount
-    const totalDiscount = totalAmount * (discount / 100);
-
-    // 3. Calculate payable
-    const payable = totalAmount - totalDiscount;
-
-    // 4. Calculate due
-    const due = payable - received;
-
-    // 5. Determine status (paid if due <= 0)
-    const status = due <= 0;
-
-    // Update form controls
-    this.billForm.patchValue({
-      totalAmount,
-      totalDiscount,
-      payable,
-      due,
-      status
+  onTestNameInput(value: string, index: number): void {
+  if (value.length >= 1) {
+    this.testService.searchTests(value).subscribe(data => {
+      this.testSuggestions[index] = data;
     });
-
-    console.log('Invoice calculated:', {
-      totalAmount,
-      totalDiscount,
-      payable,
-      due,
-      status
-    });
+  } else {
+    this.testSuggestions[index] = [];
   }
+}
+
+onSelectTest(test: Test, index: number): void {
+  this.invoice.tests[index].testName = test.testName;
+  this.invoice.tests[index].testPrice = test.testPrice;
+  this.testSuggestions[index] = [];
+  this.calculateTotal();
+}
 
 
+
+printInvoice() {
+  const element = document.getElementById('invoiceToPrint');
+  if (!element) return;
+
+  // Temporarily show the element
+  element.style.display = 'block';
+
+  setTimeout(() => {
+    html2canvas(element).then(canvas => {
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF('p', 'mm', 'a4');
+
+      const imgProps = (pdf as any).getImageProperties(imgData);
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+      pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+      pdf.save(`${this.invoice.patientId.name || 'invoice'}.pdf`);
+
+      // Hide again after saving
+      element.style.display = 'none';
+    });
+  }, 300); // Give it a short delay to render
+}
 
 
 }

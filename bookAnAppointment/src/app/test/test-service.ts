@@ -32,5 +32,9 @@ export class TestService {
     return this.http.delete<void>(`${this.baseUrl}/${id}`);
   }
 
+   searchTests(name: string): Observable<Test[]> {
+    return this.http.get<Test[]>(`${this.baseUrl}?testName_like=^${name}`);
+  }
+
 
 }

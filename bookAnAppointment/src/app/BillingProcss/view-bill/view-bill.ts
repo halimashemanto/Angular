@@ -3,7 +3,7 @@ import { BillService } from '../bill-service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Doctor } from '../../dropdown/model/doctorModel';
 import { PatientDocModel } from '../../patient/model/patientDocModel';
-import { TotalBillModel } from '../model/totalBillModel';
+import { TestInvoice } from '../model/testInvoice';
 
 @Component({
   selector: 'app-view-bill',
@@ -15,7 +15,7 @@ export class ViewBill implements OnInit {
 
 
   id!: string;
-  bill!: TotalBillModel;
+  bill!: TestInvoice;
 
   doc: Doctor[] = [];
   patient: PatientDocModel[] = [];

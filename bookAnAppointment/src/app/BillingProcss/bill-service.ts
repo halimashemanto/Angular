@@ -1,17 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { BillModel } from './model/billModel';
 import { Doctor } from '../dropdown/model/doctorModel';
 import { PatientDocModel } from '../patient/model/patientDocModel';
-import { TotalBillModel } from './model/totalBillModel';
+import { TestInvoice } from './model/testInvoice';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BillService {
 
-  apiUrl: string = "http://localhost:3000/totalBillModel";
+  apiUrl: string = "http://localhost:3000/testInvoice";
 
   constructor(private http: HttpClient) { }
 
@@ -22,7 +21,7 @@ export class BillService {
     return this.http.get<PatientDocModel[]>(this.apiUrl);
   }
 
-  saveBill(bill: TotalBillModel): Observable<any> {
+  saveBill(bill: TestInvoice): Observable<any> {
     return this.http.post(this.apiUrl, bill);
   }
 
@@ -30,11 +29,11 @@ export class BillService {
   //   return this.http.get<TotalBillModel>(`${this.apiUrl}/`);
   // }
 
-  createBill(bill: TotalBillModel): Observable<any> {
-    return this.http.post<TotalBillModel>(this.apiUrl, bill);
+  createBill(bill: TestInvoice): Observable<any> {
+    return this.http.post<TestInvoice>(this.apiUrl, bill);
   }
 
- loadBill(bill:TotalBillModel): Observable<any> {
+ loadBill(bill:TestInvoice): Observable<any> {
     return this.http.get(this.apiUrl+'/'+bill);
   }
 

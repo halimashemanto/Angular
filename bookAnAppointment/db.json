@@ -222,6 +222,20 @@
       "status": "",
       "department": "medecine",
       "doctorName": ""
+    },
+    {
+      "id": "5b4b",
+      "date": "01-6-2",
+      "name": "Atik Islam",
+      "age": "25",
+      "gender": "Male",
+      "contact": "0123456789",
+      "address": "Mohammadpur,dhaka",
+      "medicalHistory": "Headech,cold problem",
+      "reason": "fever",
+      "status": "",
+      "department": "medecine",
+      "doctorName": ""
     }
   ],
   "reciptionistDocModel": [
@@ -428,7 +442,6 @@
       "reason": "Fever for 7 days"
     }
   ],
-  "totalBillModel": [],
   "testModel": [
     {
       "id": "50880c9a-e2f1-454c-bfee-3c93ed6c7b4b",
@@ -568,6 +581,366 @@
       "address": "lkjkl",
       "contactNumber": "09876",
       "email": "suprova@gmail.com"
+    }
+  ],
+  "testInvoice": [
+    {
+      "id": "301c",
+      "patientId": {
+        "id": "5b4b",
+        "date": "01-4-2",
+        "name": "Suprova Shemanto",
+        "age": "25",
+        "gender": "Female ",
+        "contact": "01628195945",
+        "address": "Agargaon,dhaka",
+        "medicalHistory": "",
+        "reason": "fever",
+        "status": "",
+        "department": "medecine",
+        "doctorName": ""
+      },
+      "doctorId": {
+        "id": "a5ea",
+        "name": "Prof. Dr. H. A.Nazmul Hakim (Shaheen)",
+        "designation": "Senior Consultant",
+        "degree": "MBBS(DMCH)",
+        "photo": "https://www.doctorbangladesh.com/wp-content/uploads/2025/07/Dr.-Suman-Ghosh.jpg",
+        "schedule": "Mon,Wed,Sun",
+        "departmentId": "a1f9"
+      },
+      "invoiceDate": "2025-07-22T09:34:18.114Z",
+      "tests": [
+        {
+          "testName": "CBC",
+          "testPrice": 400
+        },
+        {
+          "testName": "MRI",
+          "testPrice": 6000
+        },
+        {
+          "testName": "CT Scan",
+          "testPrice": 10500
+        }
+      ],
+      "amount": 16900,
+      "discount": 10,
+      "totalAmount": 16890,
+      "totalDiscount": 10,
+      "payable": 16890,
+      "received": 10000,
+      "due": 6890,
+      "deliveryDate": "2025-07-22T09:34:18.114Z",
+      "deliveryTime": 0,
+      "status": false,
+      "preparedBy": ""
+    },
+    {
+      "id": "1a34",
+      "patientId": {
+        "id": "5b4b",
+        "date": "01-4-2",
+        "name": "Suprova Shemanto",
+        "age": "25",
+        "gender": "Female ",
+        "contact": "01628195945",
+        "address": "Agargaon,dhaka",
+        "medicalHistory": "",
+        "reason": "fever",
+        "status": "",
+        "department": "medecine",
+        "doctorName": ""
+      },
+      "doctorId": {
+        "id": "a5ea",
+        "name": "Prof. Dr. H. A.Nazmul Hakim (Shaheen)",
+        "designation": "Senior Consultant",
+        "degree": "MBBS(DMCH)",
+        "photo": "https://www.doctorbangladesh.com/wp-content/uploads/2025/07/Dr.-Suman-Ghosh.jpg",
+        "schedule": "Mon,Wed,Sun",
+        "departmentId": "a1f9"
+      },
+      "invoiceDate": "2025-07-22T09:57:36.730Z",
+      "tests": [
+        {
+          "testName": "CBC",
+          "testPrice": 400
+        },
+        {
+          "testName": "CT Scan",
+          "testPrice": 10500
+        }
+      ],
+      "amount": 10900,
+      "discount": 10,
+      "totalAmount": 10890,
+      "totalDiscount": 10,
+      "payable": 10890,
+      "received": 10000,
+      "due": 890,
+      "deliveryDate": "2025-07-22T09:57:36.730Z",
+      "deliveryTime": 0,
+      "status": false,
+      "preparedBy": ""
+    },
+    {
+      "id": "b172",
+      "patientId": {
+        "id": "5b4b",
+        "date": "01-4-2",
+        "name": "Suprova Shemanto",
+        "age": "25",
+        "gender": "Female ",
+        "contact": "01628195945",
+        "address": "Agargaon,dhaka",
+        "medicalHistory": "",
+        "reason": "fever",
+        "status": "",
+        "department": "medecine",
+        "doctorName": ""
+      },
+      "doctorId": {
+        "id": "a5ea",
+        "name": "Prof. Dr. H. A.Nazmul Hakim (Shaheen)",
+        "designation": "Senior Consultant",
+        "degree": "MBBS(DMCH)",
+        "photo": "https://www.doctorbangladesh.com/wp-content/uploads/2025/07/Dr.-Suman-Ghosh.jpg",
+        "schedule": "Mon,Wed,Sun",
+        "departmentId": "a1f9"
+      },
+      "invoiceDate": "2025-07-22T09:57:36.730Z",
+      "tests": [
+        {
+          "testName": "CBC",
+          "testPrice": 400
+        },
+        {
+          "testName": "CT Scan",
+          "testPrice": 10500
+        }
+      ],
+      "amount": 10900,
+      "discount": 10,
+      "totalAmount": 10890,
+      "totalDiscount": 10,
+      "payable": 10890,
+      "received": 10000,
+      "due": 890,
+      "deliveryDate": "2025-07-22T09:57:36.730Z",
+      "deliveryTime": 0,
+      "status": false,
+      "preparedBy": ""
+    },
+    {
+      "id": "159d",
+      "patientId": {
+        "id": "5b4b",
+        "date": "01-4-2",
+        "name": "Suprova Shemanto",
+        "age": "25",
+        "gender": "Female ",
+        "contact": "01628195945",
+        "address": "Agargaon,dhaka",
+        "medicalHistory": "",
+        "reason": "fever",
+        "status": "",
+        "department": "medecine",
+        "doctorName": ""
+      },
+      "doctorId": {
+        "id": "a5ea",
+        "name": "Prof. Dr. H. A.Nazmul Hakim (Shaheen)",
+        "designation": "Senior Consultant",
+        "degree": "MBBS(DMCH)",
+        "photo": "https://www.doctorbangladesh.com/wp-content/uploads/2025/07/Dr.-Suman-Ghosh.jpg",
+        "schedule": "Mon,Wed,Sun",
+        "departmentId": "a1f9"
+      },
+      "invoiceDate": "2025-07-22T10:02:36.905Z",
+      "tests": [
+        {
+          "testName": "CBC",
+          "testPrice": 400
+        },
+        {
+          "testName": "MRI",
+          "testPrice": 6000
+        }
+      ],
+      "amount": 6400,
+      "discount": 150,
+      "totalAmount": 6250,
+      "totalDiscount": 150,
+      "payable": 6250,
+      "received": 5000,
+      "due": 1250,
+      "deliveryDate": "2025-07-22T10:02:36.905Z",
+      "deliveryTime": 0,
+      "status": false,
+      "preparedBy": ""
+    },
+    {
+      "id": "4adc",
+      "patientId": {
+        "id": "5b4b",
+        "date": "01-4-2",
+        "name": "Suprova Shemanto",
+        "age": "25",
+        "gender": "Female ",
+        "contact": "01628195945",
+        "address": "Agargaon,dhaka",
+        "medicalHistory": "",
+        "reason": "fever",
+        "status": "",
+        "department": "medecine",
+        "doctorName": ""
+      },
+      "doctorId": {
+        "id": "a5ea",
+        "name": "Prof. Dr. H. A.Nazmul Hakim (Shaheen)",
+        "designation": "Senior Consultant",
+        "degree": "MBBS(DMCH)",
+        "photo": "https://www.doctorbangladesh.com/wp-content/uploads/2025/07/Dr.-Suman-Ghosh.jpg",
+        "schedule": "Mon,Wed,Sun",
+        "departmentId": "a1f9"
+      },
+      "invoiceDate": "2025-07-22T10:02:36.905Z",
+      "tests": [
+        {
+          "testName": "CBC",
+          "testPrice": 400
+        },
+        {
+          "testName": "MRI",
+          "testPrice": 6000
+        }
+      ],
+      "amount": 6400,
+      "discount": 150,
+      "totalAmount": 6250,
+      "totalDiscount": 150,
+      "payable": 6250,
+      "received": 5000,
+      "due": 1250,
+      "deliveryDate": "2025-07-22T10:02:36.905Z",
+      "deliveryTime": 0,
+      "status": false,
+      "preparedBy": ""
+    },
+    {
+      "id": "04d5",
+      "patientId": {
+        "id": "5b4b",
+        "date": "01-6-2",
+        "name": "Atik Islam",
+        "age": "25",
+        "gender": "Male",
+        "contact": "0123456789",
+        "address": "Mohammadpur,dhaka",
+        "medicalHistory": "Headech,cold problem",
+        "reason": "fever",
+        "status": "",
+        "department": "medecine",
+        "doctorName": ""
+      },
+      "doctorId": {
+        "id": "e62f",
+        "name": "Sehzil Munjir Arish",
+        "designation": "Specialist",
+        "degree": "MBBS",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcxz8furzKc5vmRx63Kw-aU4VqmoJ3luSbrQ&s",
+        "schedule": "Tue",
+        "departmentId": "2eeb"
+      },
+      "invoiceDate": "2025-07-22T10:02:36.905Z",
+      "tests": [
+        {
+          "testName": "CBC",
+          "testPrice": 400
+        },
+        {
+          "testName": "Haemoglobin (Hb)",
+          "testPrice": 200
+        }
+      ],
+      "amount": 600,
+      "discount": 60,
+      "totalAmount": 540,
+      "totalDiscount": 60,
+      "payable": 540,
+      "received": 300,
+      "due": 240,
+      "deliveryDate": "2025-07-22T10:02:36.905Z",
+      "deliveryTime": 0,
+      "status": false,
+      "preparedBy": ""
+    },
+    {
+      "id": "5d4c",
+      "patientId": {},
+      "doctorId": {},
+      "invoiceDate": "2025-07-22T10:19:16.899Z",
+      "tests": [],
+      "amount": 0,
+      "discount": 0,
+      "totalAmount": 0,
+      "totalDiscount": 0,
+      "payable": 0,
+      "received": 0,
+      "due": 0,
+      "deliveryDate": "2025-07-22T10:19:16.899Z",
+      "deliveryTime": 0,
+      "status": false,
+      "preparedBy": ""
+    },
+    {
+      "id": "daf1",
+      "patientId": {
+        "id": "5b4b",
+        "date": "01-6-2",
+        "name": "Atik Islam",
+        "age": "25",
+        "gender": "Male",
+        "contact": "0123456789",
+        "address": "Mohammadpur,dhaka",
+        "medicalHistory": "Headech,cold problem",
+        "reason": "fever",
+        "status": "",
+        "department": "medecine",
+        "doctorName": ""
+      },
+      "doctorId": {
+        "id": "a5ea",
+        "name": "Prof. Dr. H. A.Nazmul Hakim (Shaheen)",
+        "designation": "Senior Consultant",
+        "degree": "MBBS(DMCH)",
+        "photo": "https://www.doctorbangladesh.com/wp-content/uploads/2025/07/Dr.-Suman-Ghosh.jpg",
+        "schedule": "Mon,Wed,Sun",
+        "departmentId": "a1f9"
+      },
+      "invoiceDate": "2025-07-22T10:34:14.089Z",
+      "tests": [
+        {
+          "testName": "CBC",
+          "testPrice": 400
+        },
+        {
+          "testName": "MRI",
+          "testPrice": 6000
+        }
+      ],
+      "amount": 6400,
+      "discount": 400,
+      "totalAmount": 6000,
+      "totalDiscount": 400,
+      "payable": 6000,
+      "received": 2000,
+      "due": 4000,
+      "deliveryDate": "2025-07-22T10:34:14.089Z",
+      "deliveryTime": 0,
+      "status": false,
+      "preparedBy": ""
     }
   ]
 }

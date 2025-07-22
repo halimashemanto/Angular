@@ -60,6 +60,7 @@ import { AdminProfile } from './profile/admin-profile/admin-profile';
 import { DoctorProfile } from './profile/doctor-profile/doctor-profile';
 import { NurseProfile } from './profile/nurse-profile/nurse-profile';
 import { ReceptionistProfile } from './profile/receptionist-profile/receptionist-profile';
+import { recAdminGurde } from './gurde/rec-admin-guard';
 
 
 const routes: Routes = [
@@ -111,9 +112,8 @@ const routes: Routes = [
   { path: 'uprec', component:Updatereciptionist, canActivate:[adminGuard] },
 
   // Invoice
-  { path: 'addbill', component:AddBill  },
-  { path: 'viewbill', component:ViewBill  },
-   { path: 'addtest', component:AddTest  },
+  { path: 'addbill', component:AddBill, },
+   { path: 'addtest', component:AddTest,  canActivate:[doctorGurd]},
  
    // Prescription
   { path: 'addprescription', component:AddPrescription,  canActivate:[doctorGurd]},
