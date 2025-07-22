@@ -6,7 +6,6 @@ import { Login } from './auth/login/login';
 import { AboutHospital } from './about hospital/about-hospital/about-hospital';
 import { AboutChairman } from './about hospital/about-chairman/about-chairman';
 import { AboutManagingdirector } from './about hospital/about-managingdirector/about-managingdirector';
-
 import { Contact } from './about hospital/contact/contact';
 import { ServiceFeatures } from './about hospital/service-features/service-features';
 import { HealthCheckUp } from './about hospital/health-check-up/health-check-up';
@@ -16,7 +15,6 @@ import { AddNurse } from './NurseComponent/add-nurse/add-nurse';
 import { AddPatient } from './patient/add-patient/add-patient';
 import { ViewPatient } from './patient/view-patient/view-patient';
 import { UpdatePatient } from './patient/update-patient/update-patient';
-
 import { DepartmentName } from './dropdown/department-name/department-name';
 import { Addreciptionist } from './Reciptionist/addreciptionist/addreciptionist';
 import { Viewreciptionist } from './Reciptionist/viewreciptionist/viewreciptionist';
@@ -102,8 +100,8 @@ const routes: Routes = [
 
   { path: 'dep', component:DepartmentName,  canActivate:[adminGuard]},
   { path: 'editDepartment', component:DepartmentName, canActivate:[adminGuard]},
-  { path: 'adddoc', component:AddDoctorComponent, canActivate:[authGuard]},
-  { path: 'viewdoc', component:ViewDoctorComponent, canActivate:[adminGuard]},
+  { path: 'adddoc', component:AddDoctorComponent},
+  { path: 'viewdoc', component:ViewDoctorComponent},
   { path: 'edit-doctor/:id', component:UpdateDoctorComponent, canActivate:[adminGuard]},
 
   //Reciptionsist
@@ -112,7 +110,7 @@ const routes: Routes = [
   { path: 'uprec', component:Updatereciptionist, canActivate:[adminGuard] },
 
   // Invoice
-  { path: 'addbill', component:AddBill, },
+  { path: 'addbill', component:AddBill, canActivate: [recAdminGurde] },
    { path: 'addtest', component:AddTest,  canActivate:[doctorGurd]},
  
    // Prescription
@@ -126,7 +124,7 @@ const routes: Routes = [
   { path: 'upreport/:id', component:UpdateReport, canActivate:[doctorGurd] },
 
   //appointment
-  { path: 'addslot', component:AddScheduleSlotComponent, canActivate:[receptionistGurd] },
+  { path: 'addslot', component:AddScheduleSlotComponent, canActivate:[recAdminGurde] },
   { path: 'addapp', component:AddAppointmentComponent,  },
 
   
