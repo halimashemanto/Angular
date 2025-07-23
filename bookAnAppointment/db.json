@@ -309,6 +309,323 @@
       "phone": "0162819963258",
       "gender": "Male",
       "address": "Agargaon,dhaka"
+    },
+    {
+      "id": "7f25",
+      "patientId": {
+        "id": "5b4b",
+        "date": "01-4-2",
+        "name": "Suprova Shemanto",
+        "age": "25",
+        "gender": "Female ",
+        "contact": "01628195945",
+        "address": "Agargaon,dhaka",
+        "medicalHistory": "",
+        "reason": "fever",
+        "status": "",
+        "department": "medecine",
+        "doctorName": ""
+      },
+      "doctorId": {
+        "id": "a5ea",
+        "name": "Prof. Dr. H. A.Nazmul Hakim (Shaheen)",
+        "designation": "Senior Consultant",
+        "degree": "MBBS(DMCH)",
+        "photo": "https://www.doctorbangladesh.com/wp-content/uploads/2025/07/Dr.-Suman-Ghosh.jpg",
+        "schedule": "Mon,Wed,Sun",
+        "departmentId": "a1f9"
+      },
+      "date": "2025-07-22T18:05:52.153Z",
+      "tests": [
+        {
+          "testName": "CBC",
+          "testPrice": 0
+        },
+        {
+          "testName": "MRI",
+          "testPrice": 0
+        }
+      ],
+      "note": "",
+      "advice": "",
+      "height": "",
+      "weight": "",
+      "bp": ""
+    },
+    {
+      "id": "1d11",
+      "patientId": {
+        "id": "5b4b",
+        "date": "01-4-2",
+        "name": "Suprova Shemanto",
+        "age": "25",
+        "gender": "Female ",
+        "contact": "01628195945",
+        "address": "Agargaon,dhaka",
+        "medicalHistory": "",
+        "reason": "fever",
+        "status": "",
+        "department": "medecine",
+        "doctorName": ""
+      },
+      "doctorId": {
+        "id": "a5ea",
+        "name": "Prof. Dr. H. A.Nazmul Hakim (Shaheen)",
+        "designation": "Senior Consultant",
+        "degree": "MBBS(DMCH)",
+        "photo": "https://www.doctorbangladesh.com/wp-content/uploads/2025/07/Dr.-Suman-Ghosh.jpg",
+        "schedule": "Mon,Wed,Sun",
+        "departmentId": "a1f9"
+      },
+      "date": "2025-07-22T18:05:52.153Z",
+      "tests": [
+        {
+          "testName": "CBC",
+          "testPrice": 0
+        },
+        {
+          "testName": "MRI",
+          "testPrice": 0
+        }
+      ],
+      "note": "",
+      "advice": "",
+      "height": "",
+      "weight": "",
+      "bp": ""
+    },
+    {
+      "id": "e7f8",
+      "patientId": {
+        "id": "5b4b",
+        "date": "01-4-2",
+        "name": "Suprova Shemanto",
+        "age": "25",
+        "gender": "Female ",
+        "contact": "01628195945",
+        "address": "Agargaon,dhaka",
+        "medicalHistory": "",
+        "reason": "fever",
+        "status": "",
+        "department": "medecine",
+        "doctorName": ""
+      },
+      "doctorId": {
+        "id": "a5ea",
+        "name": "Prof. Dr. H. A.Nazmul Hakim (Shaheen)",
+        "designation": "Senior Consultant",
+        "degree": "MBBS(DMCH)",
+        "photo": "https://www.doctorbangladesh.com/wp-content/uploads/2025/07/Dr.-Suman-Ghosh.jpg",
+        "schedule": "Mon,Wed,Sun",
+        "departmentId": "a1f9"
+      },
+      "date": "2025-07-22T18:05:52.153Z",
+      "tests": [
+        {
+          "testName": "CBC",
+          "testPrice": 0
+        },
+        {
+          "testName": "MRI",
+          "testPrice": 0
+        }
+      ],
+      "note": "",
+      "advice": "",
+      "height": "",
+      "weight": "",
+      "bp": ""
+    },
+    {
+      "id": "6649",
+      "patientId": {
+        "id": "5b4b",
+        "date": "01-4-2",
+        "name": "Suprova Shemanto",
+        "age": "25",
+        "gender": "Female ",
+        "contact": "01628195945",
+        "address": "Agargaon,dhaka",
+        "medicalHistory": "",
+        "reason": "fever",
+        "status": "",
+        "department": "medecine",
+        "doctorName": ""
+      },
+      "doctorId": {
+        "id": "e62f",
+        "name": "Sehzil Munjir Arish",
+        "designation": "Specialist",
+        "degree": "MBBS",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcxz8furzKc5vmRx63Kw-aU4VqmoJ3luSbrQ&s",
+        "schedule": "Tue",
+        "departmentId": "2eeb"
+      },
+      "date": "2025-07-22T18:21:39.322Z",
+      "tests": [
+        {
+          "testName": "CBC",
+          "testPrice": 0
+        }
+      ],
+      "note": "fever",
+      "advice": "take rest",
+      "height": "5.2",
+      "weight": "62",
+      "bp": "100/80"
+    },
+    {
+      "id": "3451",
+      "patientId": {
+        "id": "",
+        "name": "Rahim Khan",
+        "age": "28",
+        "gender": "Male",
+        "contact": "0987654321",
+        "address": "Muladi,Barishal",
+        "date": "",
+        "doctorName": "",
+        "medicalHistory": "",
+        "reason": "",
+        "status": "",
+        "department": ""
+      },
+      "doctorId": {
+        "id": "8b45",
+        "name": "Dr. Abu Md. Towab",
+        "designation": "Ex. Consultant ",
+        "degree": "MBBS, BCS (Health), MACP (USA), CCD (UK), MD (Cardiology)",
+        "photo": "https://www.doctorbangladesh.com/wp-content/uploads/2025/07/Dr.-Abu-Md.-Towab.jpg",
+        "schedule": "Fri-Sun",
+        "departmentId": "85ac"
+      },
+      "date": "2025-07-22T18:47:30.087Z",
+      "tests": [
+        {
+          "testName": "CBC",
+          "testPrice": 0
+        }
+      ],
+      "note": "Fever for 3days",
+      "advice": "Keep Your Mouth Shut",
+      "height": "5.8",
+      "weight": "60",
+      "bp": "120/80"
+    },
+    {
+      "id": "808f",
+      "patientId": {
+        "id": "",
+        "name": "Sadiar Rahman",
+        "age": "28",
+        "gender": "Male",
+        "contact": "0987654321",
+        "address": "Norail,Khulna",
+        "date": "",
+        "doctorName": "",
+        "medicalHistory": "",
+        "reason": "",
+        "status": "",
+        "department": ""
+      },
+      "doctorId": {
+        "id": "d005",
+        "name": "Dr. Md. Aminul Haque Palash",
+        "designation": "Consultant ",
+        "degree": "MBBS, BCS (Health), MD (Nephrology), MACP (USA), FCPS (Medicine, FP)",
+        "photo": "https://www.doctorbangladesh.com/wp-content/uploads/2025/07/Dr.-Md.-Aminul-Haque-Palash.jpg",
+        "schedule": "sun-fri",
+        "departmentId": "a1f9"
+      },
+      "date": "2025-07-22T18:47:30.087Z",
+      "tests": [
+        {
+          "testName": "CBC",
+          "testPrice": 0
+        }
+      ],
+      "note": "Fever for 3days",
+      "advice": "Take Rest",
+      "height": "5.9",
+      "weight": "55",
+      "bp": "120/80"
+    },
+    {
+      "id": "27d5",
+      "patientId": {
+        "id": "",
+        "name": "Rahmatullah",
+        "age": "27",
+        "gender": "Male",
+        "contact": "0987654321",
+        "address": "Shamoly,Dhaka",
+        "date": "",
+        "doctorName": "",
+        "medicalHistory": "",
+        "reason": "",
+        "status": "",
+        "department": ""
+      },
+      "doctorId": {
+        "id": "d005",
+        "name": "Dr. Md. Aminul Haque Palash",
+        "designation": "Consultant ",
+        "degree": "MBBS, BCS (Health), MD (Nephrology), MACP (USA), FCPS (Medicine, FP)",
+        "photo": "https://www.doctorbangladesh.com/wp-content/uploads/2025/07/Dr.-Md.-Aminul-Haque-Palash.jpg",
+        "schedule": "sun-fri",
+        "departmentId": "a1f9"
+      },
+      "date": "2025-07-22T18:47:30.087Z",
+      "tests": [
+        {
+          "testName": "CBC",
+          "testPrice": 0
+        }
+      ],
+      "note": "Fever for 3days",
+      "advice": "Take Rest",
+      "height": "5.6",
+      "weight": "60",
+      "bp": "120/80"
+    },
+    {
+      "id": "a0b8",
+      "patientId": {
+        "name": "Abdullah Al Masud",
+        "age": "28",
+        "gender": "Male",
+        "address": "Savar,Dhaka"
+      },
+      "doctorId": {
+        "id": "f31b",
+        "name": "Dr. Fariha Binte Quayum",
+        "designation": "Consultant",
+        "degree": "BDS, PGT, FCPS",
+        "photo": "https://www.doctorbangladesh.com/wp-content/uploads/2025/07/Dr.-Fariha-Binte-Quayum.jpg",
+        "schedule": "mon, wed",
+        "departmentId": "04ea"
+      },
+      "date": "2025-07-22T20:16:49.842Z",
+      "tests": [
+        {
+          "testName": "CBC",
+          "testPrice": 0
+        }
+      ],
+      "medicines": [
+        {
+          "medicineName": "Alatrol"
+        },
+        {
+          "medicineName": "Rupa"
+        }
+      ],
+      "note": "Allergy, High BP",
+      "advice": "Do not take any red meet",
+      "height": "5'6",
+      "weight": "70",
+      "bp": "140/100",
+      "applyWay": ""
     }
   ],
   "reportModel": [
@@ -847,7 +1164,88 @@
       "testPrice": 700
     }
   ],
-  "medicine": [],
+  "medicine": [
+    {
+      "id": "52e4a24d-16d9-476c-a52d-c71382584499",
+      "medicineName": "Napa"
+    },
+    {
+      "id": "f2a36847-df4e-4b4a-89bb-e0a92f36681e",
+      "medicineName": "Amoxicillin"
+    },
+    {
+      "id": "3b6f764b-075e-47a8-91a6-df39ca6213f6",
+      "medicineName": "Lisinopril"
+    },
+    {
+      "id": "dc0381a2-a647-4b0a-97b8-c420b05ba45a",
+      "medicineName": "Metformin"
+    },
+    {
+      "id": "19656cca-580b-44f9-a763-c5e3c8a2d676",
+      "medicineName": "Empa 10"
+    },
+    {
+      "id": "be093a82-ced4-47c9-b742-448ddf6c6d00",
+      "medicineName": "Linaglip-M 2.5/500"
+    },
+    {
+      "id": "54730722-103f-47bb-92c7-69664f27f046",
+      "medicineName": "RTV 10"
+    },
+    {
+      "id": "29fa0ec6-c13f-47dd-a7cc-d94031e068f7",
+      "medicineName": "Anclog Plus"
+    },
+    {
+      "id": "d815987c-cc3a-4b1b-8d25-217fd61fc8da",
+      "medicineName": "Numira 2.5"
+    },
+    {
+      "id": "c8cfed6f-ec1a-492e-84e4-2a941092b4ec",
+      "medicineName": "Tems 40"
+    },
+    {
+      "id": "5d880b8a-46ba-40fb-836f-67af1a4710f6",
+      "medicineName": "Lasix 40"
+    },
+    {
+      "id": "4afe59eb-a9b8-423c-9d3c-f3857ff655bb",
+      "medicineName": "D-Balance 20000"
+    },
+    {
+      "id": "351985b7-b333-4d64-b754-0fabaf8d5d3b",
+      "medicineName": "Frulac 40"
+    },
+    {
+      "id": "ba2e92b0-b07c-43b0-bb8c-2df5f1aa436f",
+      "medicineName": "LNC 5"
+    },
+    {
+      "id": "aa55b085-0a04-4b3a-bbb3-00bf99a0c7bc",
+      "medicineName": "NapaDol"
+    },
+    {
+      "id": "bfc355e7-b529-4488-af13-7f49da1b84bc",
+      "medicineName": "Napa One"
+    },
+    {
+      "id": "ddf15241-d728-4ad3-9b2d-c0e0eb414217",
+      "medicineName": "Alatrol"
+    },
+    {
+      "id": "f4a9440a-fc67-481b-9fda-31201eb99fcf",
+      "medicineName": "Rupa"
+    },
+    {
+      "id": "d3a3d6a7-7edd-4e9f-b95e-aa2332e6079d",
+      "medicineName": "Fexo"
+    },
+    {
+      "id": "33b5260f-3f8a-470b-9ec3-f56c72b55cd2",
+      "medicineName": "Fenat"
+    }
+  ],
   "manufacture": [
     {
       "id": "2d89",

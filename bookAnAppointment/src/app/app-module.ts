@@ -40,8 +40,8 @@ import { UpdateReport } from './Report/update-report/update-report';
 import { AddScheduleSlotComponent } from './Appoinment/add-schedule-slot-component/add-schedule-slot-component';
 import { AddAppointmentComponent } from './Appoinment/add-appointment-component/add-appointment-component';
 import { AddMedicine } from './Pharmacy/add-medicine/add-medicine';
-import { ViewMedicine } from './Pharmacy/view-medicine/view-medicine';
-import { UpdateMedicine } from './Pharmacy/update-medicine/update-medicine';
+
+
 import { HealthCareOfBangladesh } from './health-care-of-bangladesh/health-care-of-bangladesh';
 import { AddTest } from './test/add-test/add-test';
 import { ViewTest } from './test/view-test/view-test';
@@ -104,8 +104,8 @@ import { DoctorProfile } from './profile/doctor-profile/doctor-profile';
     AddScheduleSlotComponent,
     AddAppointmentComponent,
     AddMedicine,
-    ViewMedicine,
-    UpdateMedicine,
+   
+ 
     HealthCareOfBangladesh,
     AddTest,
     ViewTest,

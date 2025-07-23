@@ -52,8 +52,7 @@ import { AddManufacture } from './manufacture/add-manufacture/add-manufacture';
 import { ViewManufacture } from './manufacture/view-manufacture/view-manufacture';
 import { UpdateManufacture } from './manufacture/update-manufacture/update-manufacture';
 import { AddMedicine } from './Pharmacy/add-medicine/add-medicine';
-import { ViewMedicine } from './Pharmacy/view-medicine/view-medicine';
-import { UpdateMedicine } from './Pharmacy/update-medicine/update-medicine';
+
 import { AdminProfile } from './profile/admin-profile/admin-profile';
 import { DoctorProfile } from './profile/doctor-profile/doctor-profile';
 import { NurseProfile } from './profile/nurse-profile/nurse-profile';
@@ -114,7 +113,8 @@ const routes: Routes = [
    { path: 'addtest', component:AddTest,  canActivate:[doctorGurd]},
  
    // Prescription
-  { path: 'addprescription', component:AddPrescription,  canActivate:[doctorGurd]},
+  { path: 'addprescription', component:AddPrescription, },
+   {path:'addmedi', component:AddMedicine},
   { path: 'viewprescription', component:ViewPrescription, canActivate:[doctorGurd] },
   { path: 'upprescription/:id', component:UpdatePrescription, canActivate:[doctorGurd] },
  
@@ -141,9 +141,8 @@ const routes: Routes = [
   {path:'uomenu/:id', component:UpdateManufacture},
 
   //medicine
-  {path:'addmedi', component:AddMedicine},
-  {path:'viewmedi', component:ViewMedicine},
-  {path:'upmedi/:id', component:UpdateMedicine},
+ 
+  
 
 
  //profile

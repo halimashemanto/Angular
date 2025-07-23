@@ -3,6 +3,8 @@ import { MedicineService } from '../medicine-service';
 import { Router } from '@angular/router';
 import { Manufacturer } from '../../manufacture/model/manufacture.model';
 import { ManufectureService } from '../../manufacture/manufecture-service';
+import { Medicine } from '../model/medicine';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-medicine',
@@ -11,63 +13,60 @@ import { ManufectureService } from '../../manufacture/manufecture-service';
   styleUrl: './add-medicine.css'
 })
 export class AddMedicine implements OnInit {
-  manufacturer: Manufacturer = new Manufacturer();
-  manufacturers: Manufacturer[] = [];
+ 
+  medi: Medicine[] = [];
+  mediForm!: FormGroup;
+  editMode = false;
 
-  medicine: {
-    medicineStrength: string;
-    instructions: string;
-    price: number;
-    dosageForm: string;
-    id: number;
-    stock: number;
-    medicineName: string;
-    manufacturer: { id: number }
-  } = {
-      id: 0,
-      medicineName: '',
-      dosageForm: '',
-      instructions: '',
-      medicineStrength: '',
-      price: 0,
-      stock: 0,
-      manufacturer: { id: 0 }
-    };
-
-  constructor(
-    private medicineService: MedicineService,
-    private router: Router,
-    private manufacturerService: ManufectureService
-  ) { }
+  constructor(private medicineService: MedicineService,
+     private fb: FormBuilder) {}
 
   ngOnInit(): void {
-    this.manufacturerService.getManufacturers().subscribe({
-      next: (response) => {
-        this.manufacturers = response.data['manufacturers']; 
-      },
-      error: (error) => {
-        console.error("Error fetching manufacturers", error);
-        alert('Failed to load manufacturers.');
-      }
+    this.loadMedicine();
+
+    this.mediForm = this.fb.group({
+      id: [], // let JSON Server auto-generate or handle manually
+      medicineName: ['', Validators.required],
     });
   }
 
-  onSubmit(): void {
-    //this.medicine.manufacturer.id = this.manufacturer.id;
-    if (!this.medicine.manufacturer.id) {
-      alert('Please select a manufacturer.');
-      return;
-    }
-
-    this.medicineService.addMedicine(this.medicine).subscribe({
-      next: () => {
-        alert('Medicine added successfully!');
-        this.router.navigate(['/medicines']); 
-      },
-      error: (error) => {
-        console.error(error);
-        alert('Failed to add medicine.');
-      },
+  loadMedicine(): void {
+    this.medicineService.getAllMedicine().subscribe(data => {
+      this.medi = data;
     });
   }
+
+ onSubmit(): void {
+  const medi: Medicine = this.mediForm.value;
+
+  // Assign UUID manually if it's a new test
+  if (!this.editMode) {
+    medi.id = window.crypto.randomUUID(); // ✅ UUID as string
+  }
+
+  if (this.editMode) {
+    this.medicineService.updateMedicine(medi).subscribe(() => {
+      this.loadMedicine();
+      this.mediForm.reset();
+      this.editMode = false;
+    });
+  } else {
+    this.medicineService.createMedicine(medi).subscribe(() => {
+      this.loadMedicine();
+      this.mediForm.reset();
+    });
+  }
+}
+
+  onEdit(medi: Medicine): void {
+    this.mediForm.patchValue(medi);
+    this.editMode = true;
+  }
+
+  onDelete(id: string): void {
+  if (confirm('Are you sure to delete this test?')) {
+    this.medicineService.deleteMedicine(id).subscribe(() => this.loadMedicine());
+  }
+}
+
 }

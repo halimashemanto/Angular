@@ -1,43 +1,45 @@
+<div class="container mt-4">
+  <h2 class="text-primary mb-4">List of Generic </h2>
 
-<div class="container">
-  <h2>Add New Medicine</h2>
-  <form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="medicineName">Medicine Name</label>
-      <input type="text" id="medicineName" [(ngModel)]="medicine.medicineName" name="medicineName" required
-        class="form-control" />
-    </div>
-    <div class="form-group">
-      <label for="dosageForm">Dosage Form</label>
-      <input type="text" id="dosageForm" [(ngModel)]="medicine.dosageForm" name="dosageForm" required
-        class="form-control" />
-    </div>
-    <div class="form-group">
-      <label for="instructions">Instructions</label>
-      <textarea id="instructions" [(ngModel)]="medicine.instructions" name="instructions" required
-        class="form-control"></textarea>
-    </div>
-    <div class="form-group">
-      <label for="medicineStrength">Medicine Strength</label>
-      <input type="text" id="medicineStrength" [(ngModel)]="medicine.medicineStrength" name="medicineStrength" required
-        class="form-control" />
-    </div>
-    <div class="form-group">
-      <label for="price">Price</label>
-      <input type="number" id="price" [(ngModel)]="medicine.price" name="price" required class="form-control" />
-    </div>
-    <div class="form-group">
-      <label for="stock">Stock</label>
-      <input type="number" id="stock" [(ngModel)]="medicine.stock" name="stock" required class="form-control" />
+  <form [formGroup]="mediForm" (ngSubmit)="onSubmit()" class="row g-3">
+    <input type="hidden" formControlName="id" />
+
+    <div class="col-md-6">
+      <label for="medicineName" class="form-label">Medicine Name</label>
+      <input type="text" formControlName="medicineName" id="medicineName" class="form-control" placeholder="Napa, Ace etc" />
     </div>
 
-    <div class="form-group">
-      <label for="manufacturer">Manufacturer:</label>
-      <select [(ngModel)]="medicine.manufacturer.id" class="form-control" id="manufacturer" name="manufacturer">
-        <option *ngFor="let manufacturer of manufacturers" [value]="manufacturer.id">{{ manufacturer.manufacturerName }}</option>
-      </select>
+    <div class="col-12">
+      <button type="submit" class="btn btn-success">
+        {{ editMode ? 'Update Generic' : 'Add Generic' }}
+      </button>
+      <button type="button" class="btn btn-secondary ms-2" (click)="mediForm.reset(); editMode = false" *ngIf="editMode">
+        Cancel
+      </button>
     </div>
-
-    <button type="submit" class="btn btn-primary">Add Medicine</button>
   </form>
+
+  <hr class="my-4" />
+
+  <h4 class="mb-3">Medicine List</h4>
+  <table class="table table-bordered table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Medicine Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let m of medi">
+        <td>{{ m.id }}</td>
+        <td>{{ m.medicineName }}</td>
+        
+        <td>
+          <button class="btn btn-sm btn-primary me-2" (click)="onEdit(m)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="onDelete(m.id!)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
