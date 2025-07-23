@@ -84,42 +84,39 @@
 
     <!-- medicine item -->
 
-    <div class="card p-3 mb-3" style="position: relative;">
-        <h5>Medicine</h5>
+   <div class="card p-3 mb-3" style="position: relative;">
+        <h5>Medecine</h5>
         <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>Medicine Name</th>
-
-                    <th><button class="btn btn-success btn-sm" (click)="addMedicine()">+ Add</button></th>
+                    <th>When/How to apply</th>
+                    <th><button class="btn btn-success btn-sm" (click)="addMedecine()">+ Add</button></th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let m of prescription.medicines; let i = index" style="position: relative;">
                     <td style="position: relative;">
                         <input [(ngModel)]="m.medicineName" name="medicineName{{i}}" class="form-control"
-                            (input)="onMedicineNameInput(m.medicineName, i)" autocomplete="off" />
+                            (input)="onMedecineNameInput(m.medicineName, i)" autocomplete="off" />
                         <ul class="list-group" *ngIf="medicineSuggestions[i]?.length"
                             style="position: absolute; z-index: 1000; background: white; width: 100%; max-height: 150px; overflow-y: auto; padding-left: 0; margin-top: 0;">
                             <li class="list-group-item list-group-item-action" *ngFor="let m of medicineSuggestions[i]"
-                                (click)="onSelectMedicine(m, i)" style="cursor: pointer;">
-                                {{ m.medicineName }}
+                                (click)="onSelectMedecine(m, i)" style="cursor: pointer;">
+                                {{ m.medicineName }} - {{ m.applyWay }}
                             </li>
                         </ul>
                     </td>
                     <td>
-                        <button class="btn btn-danger btn-sm" (click)="removeMedicine(i)">Remove</button>
+                        <input [(ngModel)]="m.applyWay" class="form-control" type="text"
+                            />
+                    </td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" (click)="removeMedecine(i)">Remove</button>
                     </td>
                 </tr>
             </tbody>
         </table>
-
-        <div>
-            <input [(ngModel)]="prescription.applyWay" type="text" class="form-control mb-2" placeholder="When Take">
-
-          
-
-        </div>
     </div>
 
     <button class="btn btn-primary" (click)="submitPrescription()">Submit Prescription</button>
@@ -140,8 +137,8 @@ for invoice print  -->
 
 <div id="invoiceToPrint"
     style="display:none; padding:30px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#333; max-width:700px; margin:auto; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); background-color: #fff;">
-    <h2 style="text-align:center; color:#007b5e; margin-bottom:5px;">Health Care of Bangladesh</h2>
-    <h4 style="text-align:center; margin-top:0; margin-bottom:20px; font-weight: normal; color: #444;">Patient
+    <h2 style="text-align:center; color:#ce1380; margin-bottom:5px;">Health Care of Bangladesh</h2>
+    <h4 style="text-align:center; margin-top:0; margin-bottom:20px; font-weight: normal; color: #87a6eb;">Patient
         Prescription</h4>
 
     <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
@@ -204,24 +201,20 @@ for invoice print  -->
     </table>
 
 <!-- medicine -->
-  <table width="100%" cellspacing="0" cellpadding="8"
-        style="border-collapse: collapse; margin-top: 20px; font-size: 14px;">
-        <thead style="background-color:#f2f2f2; border-bottom: 2px solid #007b5e;">
-            <tr>
-                <th style="text-align:left; border: 1px solid #ddd;">Medicine Name</th>
-                <th style="text-align:left; border: 1px solid #ddd;">When Apply/Take</th>
-
-            </tr>
-        </thead>
-        <tbody>
-
-            <tr *ngFor="let m of prescription.medicines" style="border-bottom: 1px solid #eee;">
-
-                <td style="border: 1px solid #ddd;">{{ m.medicineName }}</td>
-                <td style="border: 1px solid #ddd;">{{ prescription.applyWay }}</td>
-            </tr>
-        </tbody>
-    </table>
+<table width="100%" cellspacing="0" cellpadding="8" style="border-collapse: collapse; margin-top: 20px; font-size: 14px;">
+    <thead style="background-color:#f2f2f2; border-bottom: 2px solid #007b5e;">
+      <tr>
+        <th style="text-align:left; border: 1px solid #ddd;">Medicine Name</th>
+        <th style="text-align:left; border: 1px solid #ddd;">Apply Way</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let m of prescription.medicines" style="border-bottom: 1px solid #eee;">
+        <td style="border: 1px solid #ddd;">{{ m.medicineName }}</td>
+        <td style="text-align:left; border: 1px solid #ddd;">{{ m.applyWay }}</td>
+      </tr>
+    </tbody>
+  </table>
    
     <!-- test  -->
     <table width="100%" cellspacing="0" cellpadding="8"

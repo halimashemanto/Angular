@@ -49,7 +49,7 @@ onSubmit(): void {
       if (role === 'admin') {
         this.router.navigate(['/admin']);
       } else if (role === 'nurse') {
-        this.router.navigate(['/nurseprofile']);
+        this.router.navigate(['/nursepanel']);
       } 
        else if (role === 'receptionist') {
         this.router.navigate(['/recpanel']);

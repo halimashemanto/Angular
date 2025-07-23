@@ -14,7 +14,6 @@ import { AppointmentService } from '../Appoinment/appointment-service';
   styleUrl: './home.css'
 })
 export class Home {
-
   appointmentForm: FormGroup;
 
   departments: Department[] = [];

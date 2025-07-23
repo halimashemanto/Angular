@@ -40,8 +40,8 @@ export class AddPrescription implements OnInit {
     advice: '',
     height: '',
     weight: '',
-    bp: '',
-    applyWay:''
+    bp: ''
+   
 
   };
 
@@ -124,32 +124,34 @@ export class AddPrescription implements OnInit {
   }
 
   // medicine
-   addMedicine() {
-    this.prescription.medicines.push({ medicineName: ''});
+ 
+  addMedecine() {
+    this.prescription.medicines.push({ medicineName: '', applyWay: '' });
   }
 
-
-  removeMedicine(index: number) {
+  removeMedecine(index: number) {
     this.prescription.medicines.splice(index, 1);
-
+   
   }
 
 
-  onMedicineNameInput(value: string, index: number): void {
-    if (value.length >= 1) {
-      this.mediService.searchMedicine(value).subscribe(data => {
-        this.medicineSuggestions[index] = data;
-      });
-    } else {
-      this.medicineSuggestions[index] = [];
-    }
-  }
-
-  onSelectMedicine(medi: Medicine, index: number): void {
-    this.prescription.medicines[index].medicineName = medi.medicineName;
+  onMedecineNameInput(value: string, index: number): void {
+  if (value.length >= 1) {
+    this.mediService.searchMedicine(value).subscribe(data => {
+      this.medicineSuggestions[index] = data;
+    });
+  } else {
     this.medicineSuggestions[index] = [];
-
   }
+}
+
+onSelectMedecine(medi: Medicine, index: number): void {
+  this.prescription.medicines[index].medicineName = medi.medicineName;
+  this.prescription.medicines[index].applyWay = medi.applyWay;
+  this.medicineSuggestions[index] = [];
+  
+}
+
 
 
   submitPrescription() {

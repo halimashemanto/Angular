@@ -27,6 +27,7 @@ export class AddMedicine implements OnInit {
     this.mediForm = this.fb.group({
       id: [], // let JSON Server auto-generate or handle manually
       medicineName: ['', Validators.required],
+      applyWay:['']
     });
   }
 

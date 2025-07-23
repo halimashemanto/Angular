@@ -22,7 +22,7 @@ export class Prescription {
     height!: string;
     weight!: string;
     bp!: string;
-    applyWay!: string;
+    
 
 
 }

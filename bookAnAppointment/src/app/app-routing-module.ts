@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Home } from './home/home';
+
 import { Registration } from './auth/registration/registration';
 import { Login } from './auth/login/login';
 import { AboutHospital } from './about hospital/about-hospital/about-hospital';
@@ -58,6 +58,7 @@ import { DoctorProfile } from './profile/doctor-profile/doctor-profile';
 import { NurseProfile } from './profile/nurse-profile/nurse-profile';
 import { ReceptionistProfile } from './profile/receptionist-profile/receptionist-profile';
 import { recAdminGurde } from './gurde/rec-admin-guard';
+import { Home } from './home/home';
 
 
 const routes: Routes = [
@@ -88,7 +89,7 @@ const routes: Routes = [
   // nurse
   { path: 'an', component: AddNurse,  canActivate:[bothGuard]},  //nurse & admin bothgurde
   { path: 'n', component: Nurse,  canActivate:[adminGuard]},
-  { path: 'un/:id', component: UpdateNurse  },
+  { path: 'un/:id', component: UpdateNurse ,  canActivate:[bothGuard] },
 
   // patient
   { path: 'addp', component: AddPatient, canActivate:[doctorGurd] },
@@ -99,8 +100,8 @@ const routes: Routes = [
 
   { path: 'dep', component:DepartmentName,  canActivate:[adminGuard]},
   { path: 'editDepartment', component:DepartmentName, canActivate:[adminGuard]},
-  { path: 'adddoc', component:AddDoctorComponent},
-  { path: 'viewdoc', component:ViewDoctorComponent},
+  { path: 'adddoc', component:AddDoctorComponent,  canActivate:[authGuard] },
+  { path: 'viewdoc', component:ViewDoctorComponent, canActivate:[authGuard] },
   { path: 'edit-doctor/:id', component:UpdateDoctorComponent, canActivate:[adminGuard]},
 
   //Reciptionsist
@@ -110,11 +111,11 @@ const routes: Routes = [
 
   // Invoice
   { path: 'addbill', component:AddBill, canActivate: [recAdminGurde] },
-   { path: 'addtest', component:AddTest,  canActivate:[doctorGurd]},
+   { path: 'addtest', component:AddTest,  canActivate:[adminGuard]},
  
    // Prescription
-  { path: 'addprescription', component:AddPrescription, },
-   {path:'addmedi', component:AddMedicine},
+  { path: 'addprescription', component:AddPrescription, canActivate:[doctorGurd]},
+   {path:'addmedi', component:AddMedicine ,canActivate:[authGuard]},
   { path: 'viewprescription', component:ViewPrescription, canActivate:[doctorGurd] },
   { path: 'upprescription/:id', component:UpdatePrescription, canActivate:[doctorGurd] },
  
@@ -139,10 +140,6 @@ const routes: Routes = [
   {path:'addmenu', component:AddManufacture},
   {path:'viewmenu', component:ViewManufacture},
   {path:'uomenu/:id', component:UpdateManufacture},
-
-  //medicine
- 
-  
 
 
  //profile

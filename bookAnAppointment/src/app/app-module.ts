@@ -2,7 +2,7 @@ import { NgModule, provideBrowserGlobalErrorListeners, provideZonelessChangeDete
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { Home } from './home/home';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { Registration } from './auth/registration/registration';
@@ -59,6 +59,7 @@ import { NurseProfile } from './profile/nurse-profile/nurse-profile';
 import { AdminProfile } from './profile/admin-profile/admin-profile';
 import { ReceptionistProfile } from './profile/receptionist-profile/receptionist-profile';
 import { DoctorProfile } from './profile/doctor-profile/doctor-profile';
+import { Home } from './home/home';
 
 
 
@@ -67,10 +68,8 @@ import { DoctorProfile } from './profile/doctor-profile/doctor-profile';
 @NgModule({
   declarations: [
     App,
-    Home,
     Registration,
-    Login,
-    
+    Login, 
     AboutHospital,
     AboutChairman,
     AboutManagingdirector,
@@ -122,7 +121,8 @@ import { DoctorProfile } from './profile/doctor-profile/doctor-profile';
     NurseProfile,
     AdminProfile,
     ReceptionistProfile,
-    DoctorProfile
+    DoctorProfile,
+    Home
 
   ],
   imports: [
