@@ -35,6 +35,7 @@ export class ViewDoctorComponent {
   loadDepartments() {
     this.departmentService.getAllDepartment().subscribe(data => {
       this.departments = data;
+      this.cdr.markForCheck();
     });
   }
 
@@ -42,6 +43,7 @@ export class ViewDoctorComponent {
     this.doctorService.getAllDoctorName().subscribe(data => {
       this.doctors = data;
       this.filteredDoctors = data;
+      this.cdr.markForCheck();
     });
   }
 
@@ -49,6 +51,7 @@ export class ViewDoctorComponent {
     if (this.selectedDepartment) {
       this.filteredDoctors = this.doctors.filter(
         doctor => doctor.departmentId === this.selectedDepartment
+        
       );
     } else {
       this.filteredDoctors = this.doctors;

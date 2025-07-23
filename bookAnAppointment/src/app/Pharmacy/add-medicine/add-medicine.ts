@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { MedicineService } from '../medicine-service';
 import { Router } from '@angular/router';
 import { Manufacturer } from '../../manufacture/model/manufacture.model';
@@ -19,7 +19,8 @@ export class AddMedicine implements OnInit {
   editMode = false;
 
   constructor(private medicineService: MedicineService,
-     private fb: FormBuilder) {}
+     private fb: FormBuilder,
+    private cdr:ChangeDetectorRef) {}
 
   ngOnInit(): void {
     this.loadMedicine();
@@ -34,6 +35,7 @@ export class AddMedicine implements OnInit {
   loadMedicine(): void {
     this.medicineService.getAllMedicine().subscribe(data => {
       this.medi = data;
+      this.cdr.markForCheck();
     });
   }
 

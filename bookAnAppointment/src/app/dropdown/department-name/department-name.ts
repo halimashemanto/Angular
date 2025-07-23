@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DepartmentService } from '../department-service';
 import { Department } from '../model/departmentModel';
@@ -20,7 +20,8 @@ export class DepartmentName implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private departmentService: DepartmentService
+    private departmentService: DepartmentService,
+    private cdr: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
@@ -35,6 +36,7 @@ export class DepartmentName implements OnInit {
   loadDepartments() {
     this.departmentService.getAllDepartment().subscribe(data => {
       this.departments = data;
+      this.cdr.markForCheck();
     });
   }
 

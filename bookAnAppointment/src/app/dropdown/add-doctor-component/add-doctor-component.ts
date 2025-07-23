@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Department } from '../model/departmentModel';
 import { DoctorService } from '../doctor-service';
@@ -20,7 +20,8 @@ export class AddDoctorComponent {
   constructor(
     private fb: FormBuilder,
     private doctorService: DoctorService,
-    private departmentService: DepartmentService
+    private departmentService: DepartmentService,
+    private cdr:ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -39,6 +40,7 @@ export class AddDoctorComponent {
   loadDepartments() {
     this.departmentService.getAllDepartment().subscribe(data => {
       this.departments = data;
+      this.cdr.markForCheck();
     });
   }
 
